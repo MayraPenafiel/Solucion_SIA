@@ -10,6 +10,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
         <activity
+                android:name=".ActivityRecuperaC"
+                android:exported="false"/>
+        <activity
+                android:name=".ActivityInicio"
+                android:exported="false"/>
+        <activity
                 android:name=".Person"
                 android:exported="false"/>
         <activity
