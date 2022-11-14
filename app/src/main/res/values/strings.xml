@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SubastaInversaApp</string>
+    <string name="correo">Correo</string>
+
 </resources>

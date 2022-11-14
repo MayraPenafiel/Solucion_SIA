@@ -1,6 +1,7 @@
 package com.example.subastainversaapp;
 
 import android.content.Intent;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import com.example.subastainversaapp.activity.ActivityLogin;
+import com.example.subastainversaapp.activity.ActivityRecuperaC;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,14 +25,21 @@ public class MainActivity extends AppCompatActivity {
         //ImageView logo_galeria= findViewById(R.id.logo_galeria);
         //logo_galeria.setAnimation(animacion1);
 
-        new Handler().postDelayed(new Runnable() {
+        /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this,ActivityLogin.class);
+                Intent intent = new Intent(MainActivity.this, ActivityLogin.class);
                 startActivity(intent);
-                finish();
+                //finish();
 
             }
-        }, 3000);
+        }, 3000);*/
     }
+
+    public void acercade(View view) {
+        Intent i = new Intent(this, ActivityLogin.class );
+        startActivity(i);
+    }
+
+
 }

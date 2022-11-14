@@ -16,6 +16,7 @@ public class ActivityRecuperaC extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recupera_c);
         btn_enviar_codigo = (Button) findViewById(R.id.btn_enviar_codigo);
+
         btn_enviar_codigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,5 +25,8 @@ public class ActivityRecuperaC extends AppCompatActivity {
                 dc.show(fm, "tagAlerta");
             }
         });
+
     }
+
+
 }

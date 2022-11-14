@@ -8,4 +8,11 @@
         tools:context=".MainActivity">
 
 
+    <ImageView
+            android:layout_width="271dp"
+            android:layout_height="328dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:id="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="86dp"
+            android:layout_marginEnd="54dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="173dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
