@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.activity;
+package com.example.subastainversaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
