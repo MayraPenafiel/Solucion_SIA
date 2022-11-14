@@ -1,11 +1,10 @@
-package com.example.subastainversaapp.activity;
+package com.example.subastainversaapp;
 
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
-import com.example.subastainversaapp.R;
 
 public class ActivityRecuperaC extends AppCompatActivity {
 

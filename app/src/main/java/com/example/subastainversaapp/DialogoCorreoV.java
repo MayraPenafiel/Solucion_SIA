@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.activity;
+package com.example.subastainversaapp;
 
 import android.app.Dialog;
 import android.content.DialogInterface;

@@ -1,17 +1,9 @@
 package com.example.subastainversaapp;
 
 import android.content.Intent;
-import android.view.View;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
-import com.example.subastainversaapp.activity.ActivityLogin;
-import com.example.subastainversaapp.activity.ActivityPerson;
-import com.example.subastainversaapp.activity.ActivityRecuperaC;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(MainActivity.this, ActivityLogin.class);
                 startActivity(intent);
-                finish();
+                //finish();
 
             }
         }, 3000);

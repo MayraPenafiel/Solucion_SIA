@@ -1,13 +1,10 @@
-package com.example.subastainversaapp.activity;
+package com.example.subastainversaapp;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.subastainversaapp.MainActivity;
-import com.example.subastainversaapp.R;
 
 public class ActivityLogin extends AppCompatActivity {
 
