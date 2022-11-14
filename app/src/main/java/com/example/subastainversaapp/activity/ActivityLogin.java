@@ -23,13 +23,13 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //METODO PARA CAMBIAR VENTANA
-                /*Intent recuperarC = new Intent(ActivityLogin.this, ActivityRecuperaC.class);
+                Intent recuperarC = new Intent(ActivityLogin.this, ActivityRecuperaC.class);
                 startActivity(recuperarC);
-                finish();*/
+                //finish();
                 //startActivity(new Intent(ActivityLogin.this, ActivityRecuperaC.class));
            }
         });
-        new Handler().postDelayed(new Runnable() {
+        /*new Handler().postDelayed(new Runnable() {
         @Override
         public void run() {
             Intent intent = new Intent(ActivityLogin.this, ActivityRecuperaC.class);
@@ -37,6 +37,6 @@ public class ActivityLogin extends AppCompatActivity {
             //finish();
 
         }
-        }, 3000);
+        }, 3000);*/
     }
 }
