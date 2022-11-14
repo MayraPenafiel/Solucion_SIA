@@ -8,15 +8,26 @@ import androidx.fragment.app.FragmentManager;
 
 public class ActivityRecuperaC extends AppCompatActivity {
 
-    Button btn_enviar_codigo;
+    Button btnDiacorreo, btnCodigo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recupera_c);
-        btn_enviar_codigo = (Button) findViewById(R.id.btn_enviar_codigo);
+        btnDiacorreo= (Button) findViewById(R.id.btnDiacorreo);
+        btnCodigo= (Button) findViewById(R.id.btnCodigo);
+        //METODO PARA VALIDAR EL CORREO DE LA VENTANA DE DIALOGO.
+        btnDiacorreo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                DialogoCorreoV dc = new DialogoCorreoV();
+                dc.show(fm, "tagAlerta");
+            }
+        });
 
-        btn_enviar_codigo.setOnClickListener(new View.OnClickListener() {
+        //METODO PARA VALIDAR EL CODIGO DE LA VENTANA DE DIALOGO
+        btnCodigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
