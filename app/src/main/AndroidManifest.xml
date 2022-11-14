@@ -10,6 +10,30 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
         <activity
+                android:name=".DetalleOfertasRealizadas"
+                android:exported="false"/>
+        <activity
+                android:name=".OfertasRealizadas"
+                android:exported="false"/>
+        <activity
+                android:name=".DetalleNotificacion"
+                android:exported="false"/>
+        <activity
+                android:name=".Notificaciones"
+                android:exported="false"/>
+        <activity
+                android:name=".DetalleOfertaprov"
+                android:exported="false"/>
+        <activity
+                android:name=".OfertasActivas"
+                android:exported="false"/>
+        <activity
+                android:name=".RealizarOferta"
+                android:exported="false"/>
+        <activity
+                android:name=".InicioProveedor"
+                android:exported="false"/>
+        <activity
                 android:name=".Person"
                 android:exported="false"/>
         <activity
