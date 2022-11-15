@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.example.subastainversaapp">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.subastainversaapp">
 
     <application
             android:allowBackup="true"
@@ -10,16 +11,24 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
         <activity
-                android:name=".ActivityLogin"
+                android:name=".activity.DialogoRecuperacionC"
+                android:exported="false" tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".activity.ActivityRestablecerC"
                 android:exported="false"/>
         <activity
-                android:name=".DialogoCorreoV"
-                android:exported="false" tools:ignore="Instantiatable"/>
+                android:name=".activity.ActivityLogin"
+                android:exported="false"/>
         <activity
-                android:name=".DialogoCodigo"
-                android:exported="false" tools:ignore="Instantiatable"/>
+                android:name=".activity.DialogoCorreoV"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
         <activity
-                android:name=".ActivityRecuperaC"
+                android:name=".activity.DialogoCodigo"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".activity.ActivityRecuperaC"
                 android:exported="false"/>
         <activity
                 android:name=".MainActivity"
@@ -31,5 +40,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

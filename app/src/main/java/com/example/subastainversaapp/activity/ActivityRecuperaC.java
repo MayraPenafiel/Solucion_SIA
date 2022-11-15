@@ -1,10 +1,11 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
+import com.example.subastainversaapp.R;
 
 public class ActivityRecuperaC extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class ActivityRecuperaC extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recupera_c);
         btnEnviar_codigo= (Button) findViewById(R.id.btnEnviar_codigo);
-        btnValidar= (Button) findViewById(R.id.btnValidar);
+        btnValidar= (Button) findViewById(R.id.btnValidarNueva);
         //METODO PARA VALIDAR EL CORREO DE LA VENTANA DE DIALOGO.
         btnEnviar_codigo.setOnClickListener(new View.OnClickListener() {
             @Override

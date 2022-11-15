@@ -1,4 +1,4 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
 import android.app.Dialog;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
+import com.example.subastainversaapp.R;
 
 public class DialogoCodigo extends DialogFragment {
 
@@ -25,7 +26,7 @@ public class DialogoCodigo extends DialogFragment {
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.activity_dialogo_codigo, null);
         builder.setView(v);
-        btnAceptarCodigo = v.findViewById(R.id.btnAceptarCodigo);
+        btnAceptarCodigo = v.findViewById(R.id.btnAceptarCambio);
 
         btnAceptarCodigo.setOnClickListener(new View.OnClickListener() {
             @Override
