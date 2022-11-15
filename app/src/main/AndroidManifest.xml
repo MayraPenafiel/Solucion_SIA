@@ -11,6 +11,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
         <activity
+                android:name=".ActivityCrearProveedor"
+                android:exported="false"/>
+        <activity
+                android:name=".DialogoAprovacionR"
+                android:exported="false"/>
+        <activity
                 android:name=".DialogoAgregarServicio"
                 android:exported="false"/>
         <activity

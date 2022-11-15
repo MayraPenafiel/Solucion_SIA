@@ -19,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toTopOf="@+id/textView11"/>
     <TextView
-            android:text="REGISTRO CLIENTE"
+            android:text="REGISTRO PROVEEDOR"
             android:textAlignment="center"
             android:textSize="24sp"
             android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
     <Button
             android:text="Registrarse"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/btnCrear"
+            android:layout_height="wrap_content" android:id="@+id/btnCrearProveedor"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="156dp" android:layout_marginEnd="157dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
