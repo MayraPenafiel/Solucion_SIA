@@ -27,17 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(MainActivity.this, ActivityLogin.class);
                 startActivity(intent);
-                //finish();
-
             }
         }, 300);
     }
-
-    /*public void inicar(View view) {
-        Intent i = new Intent(this, ActivityLogin.class );
-        startActivity(i);
-        finish();
-    }*/
-
-
 }

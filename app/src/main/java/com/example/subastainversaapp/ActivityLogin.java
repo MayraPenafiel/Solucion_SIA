@@ -26,14 +26,5 @@ public class ActivityLogin extends AppCompatActivity {
                 //startActivity(new Intent(ActivityLogin.this, ActivityRecuperaC.class));
            }
         });
-        /*new Handler().postDelayed(new Runnable() {
-        @Override
-        public void run() {
-            Intent intent = new Intent(ActivityLogin.this, ActivityRecuperaC.class);
-            startActivity(intent);
-            //finish();
-
-        }
-        }, 3000);*/
     }
 }

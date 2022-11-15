@@ -30,7 +30,7 @@
     <Button
             android:text="Enviar Código"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/btn_enviar_codigo"
+            android:layout_height="wrap_content" android:id="@+id/btnEnviar_codigo"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="134dp"
             android:layout_marginEnd="125dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="18dp"
@@ -51,7 +51,7 @@
             style="@style/Widget.AppCompat.TextView.SpinnerItem" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="141dp" android:layout_marginEnd="128dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="79dp"
-            app:layout_constraintTop_toBottomOf="@+id/btn_enviar_codigo"/>
+            app:layout_constraintTop_toBottomOf="@+id/btnEnviar_codigo"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

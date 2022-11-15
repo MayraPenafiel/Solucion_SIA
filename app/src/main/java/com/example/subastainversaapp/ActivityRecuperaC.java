@@ -8,16 +8,16 @@ import androidx.fragment.app.FragmentManager;
 
 public class ActivityRecuperaC extends AppCompatActivity {
 
-    Button btnDiacorreo, btnCodigo;
+    Button btnValidar, btnEnviar_codigo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recupera_c);
-        btnDiacorreo= (Button) findViewById(R.id.btnDiacorreo);
-        btnCodigo= (Button) findViewById(R.id.btnCodigo);
+        btnEnviar_codigo= (Button) findViewById(R.id.btnEnviar_codigo);
+        btnValidar= (Button) findViewById(R.id.btnValidar);
         //METODO PARA VALIDAR EL CORREO DE LA VENTANA DE DIALOGO.
-        btnDiacorreo.setOnClickListener(new View.OnClickListener() {
+        btnEnviar_codigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
@@ -27,12 +27,12 @@ public class ActivityRecuperaC extends AppCompatActivity {
         });
 
         //METODO PARA VALIDAR EL CODIGO DE LA VENTANA DE DIALOGO
-        btnCodigo.setOnClickListener(new View.OnClickListener() {
+        btnValidar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
-                DialogoCorreoV dc = new DialogoCorreoV();
-                dc.show(fm, "tagAlerta");
+                DialogoCodigo dco = new DialogoCodigo();
+                dco.show(fm, "tagAlerta");
             }
         });
 
