@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/Desktop/Subasta-Inversa-App/Subasta-Inversa-App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.231" />
         <entry key="..\:/Users/ASUS/Desktop/Subasta-Inversa-App/Subasta-Inversa-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/Desktop/Subasta-Inversa-App/Subasta-Inversa-App/app/src/main/res/layout/activity_person.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/ASUS/Desktop/Subasta-Inversa-App/Subasta-Inversa-App/app/src/main/res/layout/activity_provider_home.xml" value="0.264" />
         <entry key="..\:/Users/velez/OneDrive/Documentos/GitHub/SubastaInversaApp/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
       </map>
     </option>
