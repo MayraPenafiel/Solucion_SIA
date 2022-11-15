@@ -8,68 +8,188 @@
         tools:context=".activity.ActivityRecuperaC">
 
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="167dp"
+            android:layout_height="43dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/txtNuevaContrasena"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="100dp" android:layout_marginEnd="101dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView6" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="1.0"/>
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="122dp" android:layout_marginEnd="122dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"/>
     <TextView
-            android:text="REGISTRO"
+            android:text="REGISTRO CLIENTE"
+            android:textAlignment="center"
             android:textSize="24sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="115dp"
             android:layout_marginEnd="116dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="104dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="36dp"
             style="@style/Widget.AppCompat.TextView.SpinnerItem" app:fontFamily="sans-serif-black"
             app:guidelineUseRtl="false" app:layout_wrapBehaviorInParent="included"
-            app:layout_constraintHorizontal_bias="0.494"
-            android:layout_marginBottom="68dp" app:layout_constraintBottom_toTopOf="@+id/textView3"/>
+            app:layout_constraintHorizontal_bias="0.51"
+            android:layout_marginBottom="13dp" app:layout_constraintBottom_toTopOf="@+id/imageView2"/>
     <TextView
-            android:text="Nueva Contraseña"
-            android:layout_width="150dp"
-            android:layout_height="21dp" android:id="@+id/textView3"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="150dp"
-            android:layout_marginEnd="128dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintHorizontal_bias="1.0"
+            android:text="Nombre"
+            android:textAlignment="center"
+            android:layout_width="79dp"
+            android:layout_height="24dp" android:id="@+id/textView3"
             style="@style/Widget.AppCompat.TextView.SpinnerItem"
-            app:fontFamily="sans-serif-medium" android:layout_marginBottom="28dp"
-            app:layout_constraintBottom_toTopOf="@+id/txtNuevaContrasena"/>
-    <TextView
-            android:text="Repetir Nueva Contraseña"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView6"
-            style="@style/Widget.AppCompat.TextView.SpinnerItem" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="110dp" android:layout_marginEnd="128dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:fontFamily="sans-serif-medium"
-            app:layout_constraintHorizontal_bias="0.1" android:layout_marginTop="44dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtNuevaContrasena" android:layout_marginBottom="47dp"
-            app:layout_constraintBottom_toTopOf="@+id/txtRepetirC"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtRepetirC"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="100dp" android:layout_marginEnd="101dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="210dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="49dp" app:layout_constraintEnd_toStartOf="@+id/textView7"
+            android:layout_marginEnd="80dp" android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"/>
+    <TextView
+            android:text="Apellido"
+            android:textAlignment="center"
+            android:layout_width="79dp"
+            android:layout_height="24dp" android:id="@+id/textView7"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            app:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="210dp"
+            android:layout_marginStart="30dp" app:layout_constraintStart_toEndOf="@+id/textView3"
+            android:layout_marginEnd="68dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"/>
+    <TextView
+            android:text="Correo"
+            android:textAlignment="center"
+            android:layout_width="79dp"
+            android:layout_height="24dp" android:id="@+id/textView8"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            app:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="49dp" app:layout_constraintEnd_toStartOf="@+id/textView9"
+            android:layout_marginEnd="60dp" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"/>
+    <TextView
+            android:text="Telefono"
+            android:textAlignment="center"
+            android:layout_width="86dp"
+            android:layout_height="23dp" android:id="@+id/textView9"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            app:fontFamily="sans-serif-medium"
+            android:layout_marginStart="60dp"
+            app:layout_constraintStart_toEndOf="@+id/textView8" android:layout_marginEnd="70dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"/>
+    <TextView
+            android:text="Dirección"
+            android:textAlignment="center"
+            android:layout_width="86dp"
+            android:layout_height="23dp" android:id="@+id/textView10"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            app:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="162dp" android:layout_marginEnd="163dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            android:layout_marginTop="220dp" android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName6"/>
+    <TextView
+            android:text="Contraseña"
+            android:textAlignment="center"
+            android:layout_width="101dp"
+            android:layout_height="25dp" android:id="@+id/textView11"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            app:fontFamily="sans-serif-medium"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="37dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView12" android:layout_marginEnd="40dp"
+            android:layout_marginBottom="5dp" app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"/>
+    <TextView
+            android:text="Rep. Contraseña"
+            android:textAlignment="center"
+            android:layout_width="137dp"
+            android:layout_height="25dp" android:id="@+id/textView12"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            app:fontFamily="sans-serif-medium"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" android:layout_marginStart="40dp"
+            app:layout_constraintStart_toEndOf="@+id/textView11" android:layout_marginEnd="41dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnValidarNueva"/>
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword3"/>
     <Button
-            android:text="Validar"
+            android:text="Registrarse"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/btnValidarNueva"
+            android:layout_height="wrap_content" android:id="@+id/btnCrear"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="156dp" android:layout_marginEnd="157dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="169dp" android:layout_marginTop="27dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtRepetirC"/>
+            android:layout_marginBottom="40dp"
+            app:layout_constraintHorizontal_bias="0.41" android:layout_marginTop="52dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:srcCompat="@drawable/ic_launcher_foreground"
+            android:id="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="143dp" android:layout_marginEnd="140dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="13dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+    <EditText
+            android:layout_width="167dp"
+            android:layout_height="43dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextTextPersonName2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3" android:layout_marginEnd="16dp"
+            android:layout_marginTop="5dp" app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:layout_marginBottom="5dp" app:layout_constraintBottom_toTopOf="@+id/textView8"/>
+    <EditText
+            android:layout_width="167dp"
+            android:layout_height="43dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextTextPersonName5"
+            android:layout_marginStart="14dp" app:layout_constraintStart_toEndOf="@+id/editTextTextEmailAddress"
+            android:layout_marginEnd="26dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"/>
+    <EditText
+            android:layout_width="167dp"
+            android:layout_height="43dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+            android:layout_marginEnd="26dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"/>
+    <EditText
+            android:layout_width="167dp"
+            android:layout_height="43dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editTextTextEmailAddress"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName5" android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp" app:layout_constraintTop_toBottomOf="@+id/textView8"
+            android:layout_marginBottom="20dp" app:layout_constraintBottom_toTopOf="@+id/textView10"/>
+    <EditText
+            android:layout_width="161dp"
+            android:layout_height="39dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editTextTextPassword2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword3" android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp" app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="140dp"/>
+    <EditText
+            android:layout_width="167dp"
+            android:layout_height="38dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editTextTextPassword3"
+            android:layout_marginStart="20dp" app:layout_constraintStart_toEndOf="@+id/editTextTextPassword2"
+            android:layout_marginEnd="26dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="140dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

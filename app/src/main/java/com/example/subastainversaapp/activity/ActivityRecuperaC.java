@@ -16,7 +16,7 @@ public class ActivityRecuperaC extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recupera_c);
         btnEnviar_codigo= (Button) findViewById(R.id.btnEnviar_codigo);
-        btnValidar= (Button) findViewById(R.id.btnValidarNueva);
+        btnValidar= (Button) findViewById(R.id.btnCrear);
         //METODO PARA VALIDAR EL CORREO DE LA VENTANA DE DIALOGO.
         btnEnviar_codigo.setOnClickListener(new View.OnClickListener() {
             @Override

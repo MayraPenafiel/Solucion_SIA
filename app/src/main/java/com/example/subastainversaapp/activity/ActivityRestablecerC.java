@@ -15,7 +15,7 @@ public class ActivityRestablecerC extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restablecer_c);
-        btnValidarNueva= (Button) findViewById(R.id.btnValidarNueva);
+        btnValidarNueva= (Button) findViewById(R.id.btnCrear);
 
         btnValidarNueva.setOnClickListener(new View.OnClickListener() {
             @Override
