@@ -11,8 +11,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
         <activity
+                android:name=".ActivityCrearCliente"
+                android:exported="false"/>
+        <activity
                 android:name=".activity.DialogoRecuperacionC"
-                android:exported="false" tools:ignore="Instantiatable"/>
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
         <activity
                 android:name=".activity.ActivityRestablecerC"
                 android:exported="false"/>
@@ -40,4 +44,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
