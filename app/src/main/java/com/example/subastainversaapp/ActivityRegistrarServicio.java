@@ -31,10 +31,20 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         spinn.setAdapter(aa);
 
         //
-        btnAceptarServi.setOnClickListener(new View.OnClickListener() {
+        /*btnAceptarServi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityRegistrarServicio.this, DialogoAprovacionR.class));
+            }
+        });*/
+
+        btnAceptarServi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                DialogoAprovacionR dc = new DialogoAprovacionR();
+                dc.show(fm, "tagAlerta");
+                //finish();
             }
         });
     }
