@@ -26,7 +26,7 @@ public class DialogoCodigo extends DialogFragment {
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.activity_dialogo_codigo, null);
         builder.setView(v);
-        btnAceptarCodigo = v.findViewById(R.id.btnAceptarCambio);
+        btnAceptarCodigo = v.findViewById(R.id.btnAceptarServi);
 
         btnAceptarCodigo.setOnClickListener(new View.OnClickListener() {
             @Override

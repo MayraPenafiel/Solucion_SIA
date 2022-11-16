@@ -23,7 +23,9 @@ public class ActivityCrearCliente extends AppCompatActivity {
         onClickListeners();
     }
 
+    //AQUI AGREGAMOS EL CODIGO PARA GUARDAR
     private void onClickListeners() {
+        //MOSTRAR VENTANA DE APROVACION
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

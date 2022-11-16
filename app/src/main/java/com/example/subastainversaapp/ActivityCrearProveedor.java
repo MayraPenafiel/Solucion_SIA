@@ -19,7 +19,9 @@ public class ActivityCrearProveedor extends AppCompatActivity {
         onClickListeners();
     }
 
+    //AQUI AGREGAMOS EL CODIGO PARA GUARDAR
     private void onClickListeners() {
+        //MOSTRARA LA VENTANA PARA AGREGAR SERVICIO
         btnCrearProveedor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -26,7 +26,7 @@ public class DialogoRecuperacionC extends DialogFragment {
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.activity_dialogo_recuperacion_c, null);
         builder.setView(v);
-        btnAceptarCambio = v.findViewById(R.id.btnAceptarCambio);
+        btnAceptarCambio = v.findViewById(R.id.btnAceptarServi);
 
         btnAceptarCambio.setOnClickListener(new View.OnClickListener() {
             @Override

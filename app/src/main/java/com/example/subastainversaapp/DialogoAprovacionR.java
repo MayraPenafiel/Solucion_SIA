@@ -13,7 +13,7 @@ import androidx.fragment.app.DialogFragment;
 
 public class DialogoAprovacionR extends DialogFragment {
 
-    Button btnAceptarExitoso;
+    Button btnAceptarExitoso,btnAceptarServi;
 
     @NonNull
     @Override
@@ -27,12 +27,20 @@ public class DialogoAprovacionR extends DialogFragment {
         View v = inflater.inflate(R.layout.activity_dialogo_aprovacion_r, null);
         builder.setView(v);
         btnAceptarExitoso = v.findViewById(R.id.btnAceptarExitoso);
+        btnAceptarServi = v.findViewById(R.id.btnAceptarServi);
 
+        //SE MOSTRARA LA VENTANA DE APROVACION EN CLIENTES
         btnAceptarExitoso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dismiss();
             }
+        });
+
+        //SE MOSTRARA LA VENTANA DE APROVACION EN PROVEEDORES/AGREGAR SERVICIO
+        btnAceptarServi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { dismiss();}
         });
 
         return builder.create();
