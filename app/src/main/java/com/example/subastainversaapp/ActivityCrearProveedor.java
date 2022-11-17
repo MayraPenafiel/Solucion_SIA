@@ -25,9 +25,6 @@ public class ActivityCrearProveedor extends AppCompatActivity {
         btnCrearProveedor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*FragmentManager fm = getSupportFragmentManager();
-                DialogoAprovacionR dc = new DialogoAprovacionR();
-                dc.show(fm, "tagAlerta");*/
                 startActivity(new Intent(ActivityCrearProveedor.this, ActivityRegistrarServicio.class));
             }
         });

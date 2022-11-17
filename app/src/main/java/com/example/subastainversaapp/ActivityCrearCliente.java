@@ -31,19 +31,12 @@ public class ActivityCrearCliente extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
-                DialogoAprovacionR dc = new DialogoAprovacionR();
-                dc.show(fm, "tagAlerta");
+                //DialogoAprovacionR dc = new DialogoAprovacionR();
+                DialogoConfirmarDatos dcd = new DialogoConfirmarDatos();
+                dcd.show(fm, "tagAlerta");
+                //dc.show(fm, "tagAlerta");
             }
         });
-
-        /*btnCrear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), DialogoAprovacionR.class);
-                startActivityForResult(intent, 0);
-            }
-
-        });*/
 
     }
 

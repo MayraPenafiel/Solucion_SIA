@@ -11,6 +11,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
         <activity
+                android:name=".DialogoConfirmarDatos"
+                android:exported="false"/>
+        <activity
                 android:name=".ActivityCrearProveedor"
                 android:exported="false"/>
         <activity
