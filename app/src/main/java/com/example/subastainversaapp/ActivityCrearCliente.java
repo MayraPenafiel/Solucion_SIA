@@ -1,5 +1,6 @@
 package com.example.subastainversaapp;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,16 @@ public class ActivityCrearCliente extends AppCompatActivity {
                 dc.show(fm, "tagAlerta");
             }
         });
+
+        /*btnCrear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), DialogoAprovacionR.class);
+                startActivityForResult(intent, 0);
+            }
+
+        });*/
+
     }
 
 

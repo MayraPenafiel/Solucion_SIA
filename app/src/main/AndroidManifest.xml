@@ -15,7 +15,8 @@
                 android:exported="false"/>
         <activity
                 android:name=".DialogoAprovacionR"
-                android:exported="false" tools:ignore="Instantiatable"/>
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
         <activity
                 android:name=".ActivityRegistrarServicio"
                 android:exported="false"/>

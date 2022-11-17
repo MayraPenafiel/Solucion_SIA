@@ -11,7 +11,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
 
     ImageButton IbtnAgregar;
 
-    Button btnAceptarServi;
+    Button btnAceptarServicio;
     //array de ejemplo
     String[] categorias = {"Carpinteria","Electricidad","Mecanica",};
 
@@ -20,7 +20,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_servicio);
         IbtnAgregar= (ImageButton) findViewById(R.id.IbtnAgregar);
-        btnAceptarServi= (Button) findViewById(R.id.btnAceptarServi);
+        btnAceptarServicio= (Button) findViewById(R.id.btnAceptarServicio);
         //onClickListeners();
 
         //implementando el spinner
@@ -34,11 +34,13 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         /*btnAceptarServi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivityRegistrarServicio.this, DialogoAprovacionR.class));
+                Intent intent = new Intent (v.getContext(), DialogoAprovacionR.class);
+                startActivityForResult(intent, 0);
             }
+
         });*/
 
-        btnAceptarServi.setOnClickListener(new View.OnClickListener() {
+        btnAceptarServicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
@@ -58,7 +60,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
     //AQUI AGREMAMOS EL CODIGO PARA GUARDAR DATOS
     private void onClickListeners() {
         //MOSTRAR VENTANA DE APROVACION
-        btnAceptarServi.setOnClickListener(new View.OnClickListener() {
+        btnAceptarServicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
