@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.example.subastainversaapp">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -9,8 +10,44 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
+
         <activity
-                android:name=".Person"
+                android:name=".DialogoConfirmarDatos"
+                tools:ignore="Instantiatable"
+                android:exported="false"/>
+        <activity
+                android:name=".ActivityCrearProveedor"
+                android:exported="false"/>
+        <activity
+                android:name=".DialogoAprovacionR"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".ActivityRegistrarServicio"
+                android:exported="false"/>
+        <activity
+                android:name=".ActivityCrearCliente"
+                android:exported="false"/>
+        <activity
+                android:name=".activity.DialogoRecuperacionC"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".activity.ActivityRestablecerC"
+                android:exported="false"/>
+        <activity
+                android:name=".activity.ActivityLogin"
+                android:exported="false"/>
+        <activity
+                android:name=".activity.DialogoCorreoV"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".activity.DialogoCodigo"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".activity.ActivityRecuperaC"
                 android:exported="false"/>
         <activity
                 android:name=".MainActivity"
