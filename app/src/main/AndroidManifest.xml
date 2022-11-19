@@ -13,6 +13,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
         <activity
+                android:name=".DiagoloAdvertenciaCli"
+                android:exported="false"/>
+        <activity
+                android:name=".ActivityConfigurarCli"
+                android:exported="false"/>
+        <activity
                 android:name=".ActivityConfigurarPro"
                 android:exported="false"/>
         <activity
