@@ -6,6 +6,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
+import com.example.subastainversaapp.entity.Servicio;
 import com.example.subastainversaapp.repository.ServiceServicio;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,6 +21,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
     Button btnAceptarServicio;
     //array de ejemplo
     String[] categorias = {"Carpinteria","Electricidad","Mecanica",};
+    ListAdapterCategorias adapatador = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,10 +79,10 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         });
     }
     public void cargaServicios(){
-        ServiceServicio api = ConnectionRest.getConnetion().create(ServiceCategoria.class);
+        ServiceServicio api = ConnectionRest.getConnetion().create(ServiceServicio.class);
 
-        Call<List<Categoria>> call = api.getCategorias();
-        call.enqueue(new Callback<List<Categoria>>() {
+        Call<List<Servicio>> call = api.getServicios();
+        call.enqueue(new Callback<List<Servicio>>() {
             @Override
             public void onResponse(Call<List<Categoria>> call, Response<List<Categoria>> response) {
                 List<Categoria> lista = response.body();
