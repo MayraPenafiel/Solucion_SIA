@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.subastainversaapp.*;
-import com.example.subastainversaapp.entity.ResponsesClass;
+import com.example.subastainversaapp.entity.ResponsesClassUsuario;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceUsuario;
 import retrofit2.Call;
@@ -66,9 +66,9 @@ public class ActivityLogin extends AppCompatActivity {
                 Usuario responseRegisterClass = new Usuario(txtUsuario.getText().toString(), txtContra.getText().toString());
 
                 ServiceUsuario apiService = Apis.getInstance().create(ServiceUsuario.class);
-                apiService.getUser(responseRegisterClass).enqueue(new Callback<ResponsesClass>() {
+                apiService.getUser(responseRegisterClass).enqueue(new Callback<ResponsesClassUsuario>() {
                     @Override
-                    public void onResponse(Call<ResponsesClass> call, Response<ResponsesClass> response) {
+                    public void onResponse(Call<ResponsesClassUsuario> call, Response<ResponsesClassUsuario> response) {
                         if (response.body() != null) {
                             Toast.makeText(ActivityLogin.this, "Login successful", Toast.LENGTH_SHORT).show();
                       //      Intent intent = new Intent(ActivityLogin.this, MainCategoria.class);
@@ -78,7 +78,7 @@ public class ActivityLogin extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onFailure(Call<ResponsesClass> call, Throwable t) {
+                    public void onFailure(Call<ResponsesClassUsuario> call, Throwable t) {
                         Toast.makeText(ActivityLogin.this, "Credenciales Invalidos", Toast.LENGTH_SHORT).show();
                     }
                 });

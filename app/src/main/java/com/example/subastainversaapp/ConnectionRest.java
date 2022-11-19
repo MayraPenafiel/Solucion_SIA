@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.repository;
+package com.example.subastainversaapp;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -6,6 +6,12 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
+import com.example.subastainversaapp.repository.ServiceServicio;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import java.util.List;
 
 public class ActivityRegistrarServicio extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -69,5 +75,25 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
                 //finish();
             }
         });
+    }
+    public void cargaServicios(){
+        ServiceServicio api = ConnectionRest.getConnetion().create(ServiceCategoria.class);
+
+        Call<List<Categoria>> call = api.getCategorias();
+        call.enqueue(new Callback<List<Categoria>>() {
+            @Override
+            public void onResponse(Call<List<Categoria>> call, Response<List<Categoria>> response) {
+                List<Categoria> lista = response.body();
+                for(Categoria x:lista){
+                    categoriaArrayList.add(x);
+                }
+                adapatador.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Categoria>> call, Throwable t) {}
+        });
+
     }
 }

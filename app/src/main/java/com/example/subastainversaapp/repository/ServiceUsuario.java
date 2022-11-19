@@ -1,6 +1,6 @@
 package com.example.subastainversaapp.repository;
 
-import com.example.subastainversaapp.entity.ResponsesClass;
+import com.example.subastainversaapp.entity.ResponsesClassUsuario;
 import com.example.subastainversaapp.entity.Usuario;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -17,5 +17,5 @@ public interface ServiceUsuario {
     Call<Usuario> createPost(@Body Usuario cliente);
 
     @POST("/api/getUser")
-    Call<ResponsesClass> getUser(@Body Usuario responseRegisterClass);
+    Call<ResponsesClassUsuario> getUser(@Body Usuario responseRegisterClass);
 }
