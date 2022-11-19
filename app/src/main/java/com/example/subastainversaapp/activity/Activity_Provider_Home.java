@@ -14,7 +14,7 @@ public class Activity_Provider_Home extends AppCompatActivity {
 
     Activity_Provider_Home binding;
     private ListView saleList;
-    ListAdapterCategorias adapatador = null;
+    //ListAdapterCategorias adapatador = null; CUANDO SE LE ACTIVA SALE UN ERROR QUE HAY QUE CREAR LA CLASE lIDT ADAPTEC :/
 
     private String nombres [] ={"Mateo","Mayra"};
     private String edades []={"21","22"};
@@ -26,32 +26,8 @@ public class Activity_Provider_Home extends AppCompatActivity {
 
         ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, R.layout.sale_list_item, nombres);
         saleList.setAdapter(adapter);
-   //     saleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        //          @Override
-        //           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//             }
-        //        });
+
 
     }
-    //    public void loadSale(){
-    //     ServiceCategoria api = ConnectionRest.getConnetion().create(ServiceCategoria.class);
 
-    //    Call<List<Categoria>> call = api.getCategorias();
-    //    call.enqueue(new Callback<List<Categoria>>() {
-    //         @Override
-    //        public void onResponse(Call<List<Categoria>> call, Response<List<Categoria>> response) {
-    //            List<Categoria> lista = response.body();
-    //            for(Categoria x:lista){
-    //                categoriaArrayList.add(x);
-    //            }
-    //            adapatador.notifyDataSetChanged();
-//
-    //       }
-
-    //        @Override
-    //       public void onFailure(Call<List<Categoria>> call, Throwable t) {}
-    //   });
-
-    }
 }
