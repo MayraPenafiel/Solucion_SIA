@@ -39,4 +39,5 @@
 
     //Hints
     <string name="buscar_hint">Busque una Subasta</string>
+    <string name="desc">desc</string>
 </resources>

@@ -25,10 +25,10 @@
             app:layout_constraintVertical_bias="0.0"/>
     <ListView
             android:id="@+id/listaOfertaActiva"
-            android:layout_width="399dp"
-            android:layout_height="644dp"
-            android:divider="@color/light_black"
-            android:listSelector="@color/light_black"
+            android:layout_width="375dp"
+            android:layout_height="693dp"
+            android:divider="@color/darkGrey"
+            android:listSelector="@color/clearBlue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.515"
             app:layout_constraintStart_toStartOf="parent"

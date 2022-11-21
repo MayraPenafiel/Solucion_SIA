@@ -1,57 +1,49 @@
 package com.example.subastainversaapp.entity;
 
 public class Service {
+    private Long id_servicio;
+    private String nombre_servicio;
+    private String descripcion_sercvicio;
 
-    //Atributos
-    private int id_service;
-    private String nombre_service;
-    private String desc_service;
-
-    //Constructores
     public Service() {
     }
 
-    public Service(int id_service, String nombre_service, String desc_service) {
-        this.id_service = id_service;
-        this.nombre_service = nombre_service;
-        this.desc_service = desc_service;
+    public Service(Long id_servicio, String nombre_servicio, String descripcion_sercvicio) {
+        this.id_servicio = id_servicio;
+        this.nombre_servicio = nombre_servicio;
+        this.descripcion_sercvicio = descripcion_sercvicio;
     }
 
-    //Getters y setters
-
-    public int getId_service() {
-        return id_service;
+    public Long getId_servicio() {
+        return id_servicio;
     }
 
-    public void setId_service(int id_service) {
-        this.id_service = id_service;
+    public void setId_servicio(Long id_servicio) {
+        this.id_servicio = id_servicio;
     }
 
-    public String getNombre_service() {
-        return nombre_service;
+    public String getNombre_servicio() {
+        return nombre_servicio;
     }
 
-    public void setNombre_service(String nombre_service) {
-        this.nombre_service = nombre_service;
+    public void setNombre_servicio(String nombre_servicio) {
+        this.nombre_servicio = nombre_servicio;
     }
 
-    public String getDesc_service() {
-        return desc_service;
+    public String getDescripcion_sercvicio() {
+        return descripcion_sercvicio;
     }
 
-    public void setDesc_service(String desc_service) {
-        this.desc_service = desc_service;
+    public void setDescripcion_sercvicio(String descripcion_sercvicio) {
+        this.descripcion_sercvicio = descripcion_sercvicio;
     }
-
-
-    //Metodo toString
 
     @Override
     public String toString() {
         return "Service{" +
-                "id_service=" + id_service +
-                ", nombre_service='" + nombre_service + '\'' +
-                ", desc_service='" + desc_service + '\'' +
+                "id_servicio=" + id_servicio +
+                ", nombre_servicio='" + nombre_servicio + '\'' +
+                ", descripcion_sercvicio='" + descripcion_sercvicio + '\'' +
                 '}';
     }
 }

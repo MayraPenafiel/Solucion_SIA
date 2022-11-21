@@ -19,7 +19,7 @@
                 android:name=".activity.Notificacion.DetalleNotificacion"
                 android:exported="false"/>
         <activity
-                android:name=".activity.Notificacion.Notificaciones"
+                android:name=".activity.Notificacion.ActivityNotificaciones"
                 android:exported="false"/>
         <activity
                 android:name=".activity.proveedor.DetalleOfertaprov"
@@ -34,7 +34,7 @@
                 android:name=".activity.proveedor.InicioProveedor"
                 android:exported="false"/>
         <activity
-                android:name=".Person"
+                android:name=".activity.ActivityPerson"
                 android:exported="false"/>
         <activity
                 android:name=".MainActivity"
