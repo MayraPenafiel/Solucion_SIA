@@ -21,7 +21,6 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
     Button btnAceptarServicio;
     //array de ejemplo
     String[] categorias = {"Carpinteria","Electricidad","Mecanica",};
-    ListAdapterCategorias adapatador = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

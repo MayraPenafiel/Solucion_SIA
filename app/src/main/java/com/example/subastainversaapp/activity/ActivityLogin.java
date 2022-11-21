@@ -66,7 +66,7 @@ public class ActivityLogin extends AppCompatActivity {
                 Usuario responseRegisterClass = new Usuario(txtUsuario.getText().toString(), txtContra.getText().toString());
 
                 ServiceUsuario apiService = Apis.getInstance().create(ServiceUsuario.class);
-                apiService.getUser(responseRegisterClass).enqueue(new Callback<ResponsesClassUsuario>() {
+                apiService.createUsuario(responseRegisterClass).enqueue(new Callback<ResponsesClassUsuario>() {
                     @Override
                     public void onResponse(Call<ResponsesClassUsuario> call, Response<ResponsesClassUsuario> response) {
                         if (response.body() != null) {

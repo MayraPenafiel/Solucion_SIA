@@ -8,13 +8,14 @@ public class Servicio implements Serializable {
 
     @SerializedName("id_servicio")
     private long idServicio;
-    @SerializedName("nombre")
-    private String nombre;
+    @SerializedName("nombreServicio")
+    private String nombreServicio;
     @SerializedName("descripcion_servicio")
     private String descripcion_servicio;
 
-    public Servicio(String nombre, String descripcion_servicio) {
-        this.nombre = nombre;
+    public Servicio(long idServicio, String nombreServicio, String descripcion_servicio) {
+        this.idServicio = idServicio;
+        this.nombreServicio = nombreServicio;
         this.descripcion_servicio = descripcion_servicio;
     }
 
@@ -29,12 +30,12 @@ public class Servicio implements Serializable {
         this.idServicio = idServicio;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreServicio() {
+        return nombreServicio;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreServicio(String nombreServicio) {
+        this.nombreServicio = nombreServicio;
     }
 
     public String getDescripcion_servicio() {

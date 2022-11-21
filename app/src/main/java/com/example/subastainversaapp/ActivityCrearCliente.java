@@ -103,7 +103,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
         ServiceCliente clienteservice = retrofit.create(ServiceCliente.class);
         Usuario usuario1= new Usuario(txtCorreo.getText().toString(),txtContraC.getText().toString());
         Cliente c = new Cliente(id_persona,nombre,apellido, email,telefono,direccion,usuario1);
-        Call<Cliente> call=clienteservice.createPost(c);
+        Call<Cliente> call=clienteservice.createCliente(c);
 
         call.enqueue(new Callback<Cliente>() {
             @Override
