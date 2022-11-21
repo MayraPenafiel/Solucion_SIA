@@ -15,26 +15,26 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintVertical_bias="0.023"/>
     <Button
-            android:text="@string/boton_buscar"
+            android:text="Agregar nuevo Servicio"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/btbuscarini"
+            android:layout_height="wrap_content" android:id="@+id/btbuscarServicio"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.053"
-            android:layout_marginEnd="28dp" app:layout_constraintStart_toEndOf="@+id/txtbuscariniprov"
-            app:layout_constraintHorizontal_bias="0.0" tools:ignore="TextContrastCheck"/>
+            app:layout_constraintVertical_bias="0.932"
+            android:layout_marginEnd="90dp" app:layout_constraintStart_toEndOf="@+id/txtbuscar"
+            app:layout_constraintHorizontal_bias="1.0" tools:ignore="TextContrastCheck"/>
     <ListView
             android:id="@+id/listaIniProv"
-            android:layout_width="389dp"
-            android:layout_height="614dp"
+            android:layout_width="380dp"
+            android:layout_height="461dp"
             android:divider="@color/light_black"
             android:listSelector="@color/light_black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="parent"
-            tools:listitem="@layout/inicio_prov_item"
+            tools:listitem="@layout/activity_item_servicios"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider2"/>
+            app:layout_constraintTop_toBottomOf="@+id/divider2" app:layout_constraintVertical_bias="0.139"/>
     <View
             android:id="@+id/divider2"
             android:layout_width="430dp"
@@ -42,15 +42,15 @@
             android:background="?android:attr/listDivider"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtbuscariniprov" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/txtbuscar" app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintVertical_bias="0.013"/>
     <EditText
             android:layout_width="257dp"
             android:layout_height="45dp"
             android:inputType="textPersonName"
-            android:text="@string/buscar_hint"
+            android:text="Buscar"
             android:ems="10"
-            android:id="@+id/txtbuscariniprov"
+            android:id="@+id/txtbuscar"
             app:layout_constraintTop_toBottomOf="@+id/txtsub_res" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
             app:layout_constraintHorizontal_bias="0.109" app:layout_constraintBottom_toBottomOf="parent"
