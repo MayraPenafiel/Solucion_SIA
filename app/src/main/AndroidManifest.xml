@@ -13,6 +13,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp">
         <activity
+                android:name=".itemServicios"
+                android:exported="false"/>
+        <activity
                 android:name=".ActivityServicios"
                 android:exported="false"/>
         <activity
