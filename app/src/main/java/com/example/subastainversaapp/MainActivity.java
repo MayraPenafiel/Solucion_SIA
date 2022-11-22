@@ -9,9 +9,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import com.example.subastainversaapp.activity.ActivityLogin;
 
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
+    public static List<String> messageList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

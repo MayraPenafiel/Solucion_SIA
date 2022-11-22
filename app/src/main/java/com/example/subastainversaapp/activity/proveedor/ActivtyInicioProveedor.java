@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.adapters.ListIniProvAdapter;
 import com.example.subastainversaapp.entity.Subasta;
+import com.example.subastainversaapp.repository.ServiceSubasta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,19 +15,19 @@ import java.util.List;
 public class ActivtyInicioProveedor extends AppCompatActivity {
 
     List<Subasta> auctions;
+    ServiceSubasta subasta;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_proveedor);
         init();
-
     }
 
     public void init(){
         auctions= new ArrayList<Subasta>();
 
-        auctions.add(new Subasta("Cocina"));
-        auctions.add(new Subasta("Madera"));
+        auctions.add(new Subasta());
+        auctions.add(new Subasta());
 
         RecyclerView recyclerView = findViewById(R.id.listaIniProv);
 

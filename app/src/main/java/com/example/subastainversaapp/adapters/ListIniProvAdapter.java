@@ -11,16 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.entity.Subasta;
 
 import java.util.List;
 
 public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.ViewHolder> {
 
-    private List<Auction> auctionList;
+    private List<Subasta> auctionList;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public ListIniProvAdapter(List<Auction> auctionList,Context context){
+    public ListIniProvAdapter(List<Subasta> auctionList, Context context){
         this.layoutInflater = LayoutInflater.from(context);
         this.auctionList = auctionList;
         this.context = context;
@@ -58,8 +59,8 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
             des= view.findViewById(R.id.txtserviniprov);
         }
 
-        void bindData (final Auction item){
-            des.setText(item.getDesc_auction());
+        void bindData (final Subasta item){
+            des.setText();
         }
     }
 }
