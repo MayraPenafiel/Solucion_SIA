@@ -77,5 +77,4 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
             }
         });
     }
-
 }
