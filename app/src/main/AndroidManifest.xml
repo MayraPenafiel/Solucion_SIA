@@ -14,10 +14,7 @@
             android:theme="@style/Theme.SubastaInversaApp"
             android:usesCleartextTraffic="true">
         <activity
-                android:name=".ActivityRealizarOferta"
-                android:exported="false"/>
-        <activity
-                android:name=".PrincipalFragment"
+                android:name=".activity.proveedor.ActivityRealizarOferta"
                 android:exported="false"/>
         <activity
                 android:name=".DialogoConfirmarDatos"
