@@ -9,5 +9,6 @@
     <color name="black">#000000</color>
     <color name="clearGrey">#B1AEAE</color>
     <color name="darkGrey">#615E5E</color>
-
+    <color name="teal_200">#615E5E</color>
+    <color name="teal_700">#615E5E</color>
 </resources>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.example.subastainversaapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:allowBackup="true"
@@ -8,33 +11,48 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.SubastaInversaApp">
+            android:theme="@style/Theme.SubastaInversaApp"
+            android:usesCleartextTraffic="true">
         <activity
-                android:name=".activity.proveedor.DetalleOfertasRealizadas"
+                android:name=".PrincipalFragment"
                 android:exported="false"/>
         <activity
-                android:name=".activity.proveedor.OfertasRealizadas"
+                android:name=".DialogoConfirmarDatos"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".ActivityCrearProveedor"
                 android:exported="false"/>
         <activity
-                android:name=".activity.Notificacion.DetalleNotificacion"
+                android:name=".DialogoAprovacionR"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".ActivityRegistrarServicio"
                 android:exported="false"/>
         <activity
-                android:name=".activity.Notificacion.ActivityNotificaciones"
+                android:name=".ActivityCrearCliente"
                 android:exported="false"/>
         <activity
-                android:name=".activity.proveedor.DetalleOfertaprov"
+                android:name=".activity.DialogoRecuperacionC"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".activity.ActivityRestablecerC"
                 android:exported="false"/>
         <activity
-                android:name=".activity.proveedor.OfertasActivas"
+                android:name=".activity.ActivityLogin"
                 android:exported="false"/>
         <activity
-                android:name=".activity.proveedor.RealizarOferta"
-                android:exported="false"/>
+                android:name=".activity.DialogoCorreoV"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
         <activity
-                android:name=".activity.proveedor.InicioProveedor"
-                android:exported="false"/>
+                android:name=".activity.DialogoCodigo"
+                android:exported="false"
+                tools:ignore="Instantiatable"/>
         <activity
-                android:name=".activity.ActivityPerson"
+                android:name=".activity.ActivityRecuperaC"
                 android:exported="false"/>
         <activity
                 android:name=".MainActivity"
