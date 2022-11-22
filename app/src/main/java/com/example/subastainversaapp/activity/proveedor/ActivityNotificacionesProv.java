@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.subastainversaapp.R;
 
-public class SubastaProv extends AppCompatActivity {
-
+public class ActivityNotificacionesProv extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_subasta_prov);
+        setContentView(R.layout.activity_notificaciones);
     }
 }

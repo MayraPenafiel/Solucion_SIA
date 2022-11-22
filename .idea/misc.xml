@@ -4,20 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ASUS/Desktop/Subasta-Inversa-App/Subasta-Inversa-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_crear_cliente.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_dialogo_aprovacion_r.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_dialogo_codigo.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_inicio_prov_item.xml" value="0.225" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_inicio_proveedor.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_notificaciones.xml" value="0.3337969401947149" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_ofertas_activas.xml" value="0.1" />
-        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_ofertas_realizadas.xml" value="0.34868421052631576" />
-        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_person.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_ofertas_realizadas.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_person.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_realizar_oferta.xml" value="0.4" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_realizar_oferta2.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_registrar_servicio.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/activity_subasta_prov.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/detalle_subasta_priv.xml" value="0.20778110303548525" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/detalle_subasta_prov.xml" value="0.4" />
-        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/inicio_prov_item.xml" value="0.4" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/inicio_prov_item.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/item_lista.xml" value="0.1005014625992478" />
-        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/item_notificacion.xml" value="0.4" />
+        <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/item_notificacion.xml" value="0.19759036144578312" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/item_ofertaprov.xml" value="0.4" />
         <entry key="..\:/Users/Usuario/OneDrive/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/layout/item_ofertas_realizadas.xml" value="0.4" />
         <entry key="..\:/Users/usuario/Documents/GitHub/Subasta-Inversa-App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.251" />

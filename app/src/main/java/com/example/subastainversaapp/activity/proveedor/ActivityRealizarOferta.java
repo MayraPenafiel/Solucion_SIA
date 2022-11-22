@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.subastainversaapp.R;
 
-public class DetalleOfertasRealizadas extends AppCompatActivity {
+public class ActivityRealizarOferta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_ofertas_realizadas);
+        setContentView(R.layout.activity_realizar_oferta);
     }
 }

@@ -1,13 +1,14 @@
 package com.example.subastainversaapp.activity.proveedor;
 
-import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
 import com.example.subastainversaapp.R;
-public class RealizarOferta extends AppCompatActivity {
+
+public class ActivityOfertasRealizadas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_realizar_oferta);
+        setContentView(R.layout.activity_ofertas_realizadas);
     }
 }

@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.entity.Auction;
 
 import java.util.List;
 
