@@ -1,22 +1,36 @@
 package com.example.subastainversaapp;
 
 import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import com.example.subastainversaapp.DiagoloAdvertenciaCli;
+import org.jetbrains.annotations.NotNull;
 
-public class ActivityConfigurarCli extends AppCompatActivity {
+public class ActivityConfigurarCli extends Fragment{
 
     Button btnGuardarConCli;
 
-    @Override
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configurar_cli);
         onClickListeners();
+    }*/
+
+    @Nullable
+    @org.jetbrains.annotations.Nullable
+    @Override
+    public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        View view =inflater.inflate(R.layout.activity_configurar_cli,container,false);
+        btnGuardarConCli= view.findViewById(R.id.btnGuardarConCli);
+        onClickListeners();
+        return view;
     }
 
     //AQUI AGREGAMOS EL CODIGO PARA GUARDAR
@@ -25,9 +39,8 @@ public class ActivityConfigurarCli extends AppCompatActivity {
         btnGuardarConCli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
                 DiagoloAdvertenciaCli dcd = new DiagoloAdvertenciaCli();
-                dcd.show(fm, "tagAlerta");
+                dcd.show(getFragmentManager(), "tagAlerta");
             }
         });
 

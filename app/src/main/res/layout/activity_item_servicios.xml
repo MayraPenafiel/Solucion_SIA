@@ -53,22 +53,24 @@
                     android:layout_height="wrap_content" android:id="@+id/txtnroiniprov"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="15dp"
-                    android:layout_toEndOf="@+id/null" android:layout_marginStart="3dp"
-                    android:layout_alignParentEnd="true" android:layout_marginEnd="95dp"/>
+                    android:layout_marginStart="141dp"
+                    android:layout_alignParentEnd="true" android:layout_marginEnd="95dp"
+                    android:layout_alignParentStart="true"/>
             <TextView
                     android:text="Electricidad"
                     android:layout_width="178dp"
                     android:layout_height="wrap_content" android:id="@+id/txtserviniprov"
                     android:layout_marginEnd="92dp" android:layout_marginTop="7dp"
-                    android:layout_toEndOf="@+id/null" android:layout_marginStart="31dp"
-                    android:layout_below="@+id/txtnroiniprov" android:layout_alignParentEnd="true"/>
+                    android:layout_marginStart="141dp"
+                    android:layout_below="@+id/txtnroiniprov" android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"/>
             <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true" android:layout_marginTop="36dp"
                     app:layout_constraintEnd_toEndOf="parent" android:id="@+id/imgiteminisub"
                     android:layout_alignParentEnd="true" android:layout_marginEnd="13dp"
-                    android:layout_toEndOf="@+id/null" android:layout_marginStart="224dp" tools:ignore="UnknownId"/>
+                    android:layout_marginStart="224dp" tools:ignore="UnknownId"/>
 
         </RelativeLayout>
     </LinearLayout>

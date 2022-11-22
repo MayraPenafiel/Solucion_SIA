@@ -7,7 +7,7 @@
         android:layout_height="match_parent">
 
     <TextView
-            android:text="@string/pantalla_inicial"
+            android:text="SERVICIOS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/txtsub_res"
@@ -27,8 +27,8 @@
             android:id="@+id/listaIniProv"
             android:layout_width="380dp"
             android:layout_height="461dp"
-            android:divider="@color/light_black"
-            android:listSelector="@color/light_black"
+            android:divider="@color/clearGrey"
+            android:listSelector="@color/clearGrey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="parent"

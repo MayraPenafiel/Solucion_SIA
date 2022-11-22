@@ -23,7 +23,7 @@ public class DiagoloAdvertenciaCli extends DialogFragment {
     private AlertDialog dialogoConfirmarDatos() {
         AlertDialog.Builder builder= new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getLayoutInflater();
-        View v = inflater.inflate(R.layout.activity_dialogo_confirmar_datos, null);
+        View v = inflater.inflate(R.layout.activity_diagolo_advertencia_cli, null);
         builder.setView(v);
         btnContinuar = v.findViewById(R.id.btnContinuar);
         btnACancelar = v.findViewById(R.id.btnACancelar);
