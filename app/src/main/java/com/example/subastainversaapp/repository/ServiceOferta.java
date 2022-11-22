@@ -12,7 +12,7 @@ public interface ServiceOferta {
     @GET("/oferta/listar/{id}")
     Call<Oferta> listOfertaId(@Path("id") Long id);
     @GET("/oferta/listar/{fecha}")
-    Call<Oferta> listOfertaFecha(@Path("fecha") Date fecha);
+    Call<Oferta> listOfertaFecha(@Path("fecha") String fecha);
     @GET("/oferta/listar/{estado}")
     Call<Oferta> listOfertaEstado(@Path("estado") Boolean estado);
     @POST("/oferta/crear")

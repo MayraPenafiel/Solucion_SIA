@@ -77,24 +77,5 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
             }
         });
     }
-    public void cargaServicios(){
-        ServiceServicio api = ConnectionRest.getConnetion().create(ServiceServicio.class);
 
-        Call<List<Servicio>> call = api.getServicios();
-        call.enqueue(new Callback<List<Servicio>>() {
-            @Override
-            public void onResponse(Call<List<Categoria>> call, Response<List<Categoria>> response) {
-                List<Categoria> lista = response.body();
-                for(Categoria x:lista){
-                    categoriaArrayList.add(x);
-                }
-                adapatador.notifyDataSetChanged();
-
-            }
-
-            @Override
-            public void onFailure(Call<List<Categoria>> call, Throwable t) {}
-        });
-
-    }
 }

@@ -75,13 +75,9 @@ public class ActivityCrearCliente extends AppCompatActivity {
 
                 Intent intent = new Intent (v.getContext(), ActivityLogin.class);
                 startActivityForResult(intent, 0);
-
             }
         });
-
     }
-
-
     //VALIDACIONES
     private boolean validarContrase() {
         if (txtContraC.getText().toString().length() < 4) {

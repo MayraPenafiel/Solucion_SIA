@@ -1,11 +1,15 @@
 package com.example.subastainversaapp;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
+import com.example.subastainversaapp.repository.DBHelper;
 
 public class ActivityCrearProveedor extends AppCompatActivity {
 
@@ -25,6 +29,14 @@ public class ActivityCrearProveedor extends AppCompatActivity {
         btnCrearProveedor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DBHelper dbHelper = new DBHelper(ActivityCrearProveedor.this);
+                SQLiteDatabase dbsql = dbHelper.getWritableDatabase();
+                if(dbsql!=null){
+                    Toast.makeText(ActivityCrearProveedor.this, "Error en la Base de Datos SQLITE", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(ActivityCrearProveedor.this, "Datos Guardado en la Base de Datos Local", Toast.LENGTH_SHORT).show();
+                };
+
                 startActivity(new Intent(ActivityCrearProveedor.this, ActivityRegistrarServicio.class));
             }
         });

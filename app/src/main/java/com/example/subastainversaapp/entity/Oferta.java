@@ -11,7 +11,7 @@ public class Oferta implements Serializable{
     @SerializedName("percioOferta")
     private Double percioOferta;
     @SerializedName("fecha")
-    private Date fecha;
+    private String fecha;
     @SerializedName("descripcion_oferta")
     private String descripcion_oferta;
     @SerializedName("estado")
@@ -25,7 +25,7 @@ public class Oferta implements Serializable{
     public Oferta() {
     }
 
-    public Oferta(Long idOferta, Double percioOferta, Date fecha, String descripcion_oferta, String estado, Proveedor proveedor, Subasta subasta) {
+    public Oferta(Long idOferta, Double percioOferta, String fecha, String descripcion_oferta, String estado, Proveedor proveedor, Subasta subasta) {
         this.idOferta = idOferta;
         this.percioOferta = percioOferta;
         this.fecha = fecha;
@@ -51,11 +51,11 @@ public class Oferta implements Serializable{
         this.percioOferta = percioOferta;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

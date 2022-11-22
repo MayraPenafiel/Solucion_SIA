@@ -11,7 +11,7 @@ public interface ServiceSubasta {
     @GET("/subasta/listar/{filtro}") //filtro de cualquier campo de subasta
     Call<Subasta> listSubastaFiltro(@Path("filtro") String filtro);
     @GET("/subasta/listar/{fechaInicio}/{fechaFin}")
-    Call<Subasta> listSubastaFiltroFechas(@Path("fechaInicio") Date fechaInicio, @Path("fechaFin") Date fechaFin);
+    Call<Subasta> listSubastaFiltroFechas(@Path("fechaInicio") String fechaInicio, @Path("fechaFin") String fechaFin);
     @POST("/subasta/crear")
     Call<Subasta> createSubasta(@Body Subasta subasta);
     @DELETE("/subasta/eliminar/{idSubasta}")
