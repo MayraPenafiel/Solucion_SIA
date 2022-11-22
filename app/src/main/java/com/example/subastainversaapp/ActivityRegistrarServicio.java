@@ -77,7 +77,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
             }
         });
     }
-    public void cargaServicios(){
+    /*public void cargaServicios(){
         ServiceServicio api = ConnectionRest.getConnetion().create(ServiceServicio.class);
 
         Call<List<Servicio>> call = api.getServicios();
@@ -96,5 +96,5 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
             public void onFailure(Call<List<Categoria>> call, Throwable t) {}
         });
 
-    }
+    }*/
 }
