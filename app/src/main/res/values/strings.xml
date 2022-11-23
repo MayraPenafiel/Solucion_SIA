@@ -1,46 +1,8 @@
 <resources>
     <string name="app_name">SubastaInversaApp</string>
-
-    //Pantallas Proveedor
-
-    //Pantallas
-    <string name="pantalla_inicial">Subastas Recientes</string>
-    <string name="pantalla_ofertar">Realizar Oferta</string>
-    <string name="pantalla_oferta_activa">Ofertas Activas</string>
-    <string name="pantalla_ofertas_realizadas">Ofertas Realizadas</string>
-    <string name="pantalla_notificaion">Notificaciones</string>
-
-    //Componentes
-
-    //Atributos:
-    <string name="numero_form">Nro#:</string>
-    <string name="servicio_form">Servicio:</string>
-    <string name="fecha_ini_form">Fecha Inicio:</string>
-    <string name="fecha_fin_form">Fecha Fin:</string>
-    <string name="precio_form">Precio:</string>
-    <string name="descripcion_form">Descripción:</string>
-    <string name="estado_form">Estado:</string>
-    <string name="valoracion_form">Valoración:</string>
-    <string name="fecha_form">Fecha:</string>
-
-    //titulos:
-    <string name="detalle_subasta">Detalle de la Subasta</string>
-    <string name="detalle_oferta">Detalle de la Oferta</string>
-    <string name="subasta_disponible">Subastas Disponibles</string>
-    <string name="pantalla_ofertas_rechazadas">Ofertas Rechazadas</string>
-    <string name="pantalla_ofertas_aceptadas">Ofertas Aceptadas</string>
-
-    //Botones
-    <string name="boton_buscar">Buscar</string>
-    <string name="boton_ofertar">Ofertar</string>
-    <string name="boton_cancelar">Cancelar</string>
-    <string name="boton_aceptadas">Aceptadas</string>
-    <string name="boton_recazadas">Rechazadas</string>
-
-    //Hints
-    <string name="buscar_hint">Busque una Subasta</string>
-    <string name="desc">desc</string>
-
-    <string name="correo">Usuario</string>
-    <string name="dialogo">Aceptar</string>
+    //Se manejan todas las constantes necesarios para no hacer consultas reiteradas a la base de datos
+    <string name="user_name">SubastaInversaApp</string>
+    <string name="user_secondName">SubastaInversaApp</string>
+    //
+    <string name="TextView">Selecciona un nombre</string>
 </resources>
