@@ -6,12 +6,15 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
+import com.example.subastainversaapp.activity.ActivityLogin;
+import com.example.subastainversaapp.entity.ResponsesClassUsuario;
 import com.example.subastainversaapp.entity.Servicio;
 import com.example.subastainversaapp.repository.ServiceServicio;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ActivityRegistrarServicio extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -20,7 +23,9 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
 
     Button btnAceptarServicio;
     //array de ejemplo
-    String[] categorias = {"Carpinteria","Electricidad","Mecanica",};
+    String[] categorias = {"Carpinteria","Electricidad","Mecanica"};
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,10 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         IbtnAgregar= (ImageButton) findViewById(R.id.IbtnAgregar);
         btnAceptarServicio= (Button) findViewById(R.id.btnAceptarServicio);
         //onClickListeners();
+
+        Servicio responseServicio = new Servicio();
+        ServiceServicio apiService = Apis.getInstance().create(ServiceServicio.class);
+
 
         //implementando el spinner
         Spinner spinn = (Spinner) findViewById(R.id.spinner);
