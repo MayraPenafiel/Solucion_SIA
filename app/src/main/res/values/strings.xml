@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">SubastaInversaApp</string>
+    <string name="app_name">SubastaInversaApp</string>>
+    <string name="correo">Correo</string>
+    <string name="usuario">Usuario</string>
+    <string name="dialogo">Aceptar</string>
     //Se manejan todas las constantes necesarios para no hacer consultas reiteradas a la base de datos
     <string name="user_name">SubastaInversaApp</string>
     <string name="user_secondName">SubastaInversaApp</string>
