@@ -1,4 +1,4 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
 import android.app.Dialog;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
+import com.example.subastainversaapp.R;
 
 public class DialogoAprovacionR extends DialogFragment {
 
