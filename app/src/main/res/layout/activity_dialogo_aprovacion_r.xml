@@ -23,7 +23,7 @@
                 android:textSize="28sp"
                 app:fontFamily="sans-serif-medium"/>
         <Button
-                android:text="@string/dialogo"
+                android:text="ACEPTAR"
                 android:layout_width="wrap_content"
                 android:layout_height="37dp"
                 android:id="@+id/btnAceptarDialogoCli"

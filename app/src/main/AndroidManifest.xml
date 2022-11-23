@@ -17,21 +17,21 @@
                 android:name=".activity.proveedor.ActivityRealizarOferta"
                 android:exported="false"/>
         <activity
-                android:name=".DialogoConfirmarDatos"
+                android:name=".activity.DialogoConfirmarDatos"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".ActivityCrearProveedor"
+                android:name=".activity.ActivityCrearProveedor"
                 android:exported="false"/>
         <activity
-                android:name=".DialogoAprovacionR"
+                android:name=".activity.DialogoAprovacionR"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".ActivityRegistrarServicio"
+                android:name=".activity.ActivityRegistrarServicio"
                 android:exported="false"/>
         <activity
-                android:name=".ActivityCrearCliente"
+                android:name=".activity.ActivityCrearCliente"
                 android:exported="false"/>
         <activity
                 android:name=".activity.DialogoRecuperacionC"

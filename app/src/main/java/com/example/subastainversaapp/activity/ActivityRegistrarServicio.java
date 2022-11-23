@@ -1,21 +1,14 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
-import android.content.Intent;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
-import com.example.subastainversaapp.activity.ActivityLogin;
-import com.example.subastainversaapp.entity.ResponsesClassUsuario;
+import com.example.subastainversaapp.Apis;
+import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Servicio;
 import com.example.subastainversaapp.repository.ServiceServicio;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ActivityRegistrarServicio extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
