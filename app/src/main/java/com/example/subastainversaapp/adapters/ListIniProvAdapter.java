@@ -60,7 +60,7 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
         }
 
         void bindData (final Subasta item){
-            des.setText();
+            des.setText("MELLOCO");
         }
     }
 }

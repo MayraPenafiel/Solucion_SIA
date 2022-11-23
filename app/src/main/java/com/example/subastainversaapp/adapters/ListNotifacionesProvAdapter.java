@@ -19,7 +19,7 @@ public class ListNotifacionesProvAdapter extends RecyclerView.Adapter<ListIniPro
 
     public ListNotifacionesProvAdapter(List<String> messageList, Context context){
         this.layoutInflater = LayoutInflater.from(context);
-        this.messageList = MainActivity.messageList;
+        //this.messageList = MainActivity.messageList;
         this.context = context;
     }
     @NonNull

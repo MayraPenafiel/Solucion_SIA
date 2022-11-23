@@ -24,6 +24,9 @@
                 android:name=".activity.ActivityCrearProveedor"
                 android:exported="false"/>
         <activity
+                android:name=".activity.Activity_Provider_Home"
+                android:exported="false"/>
+        <activity
                 android:name=".activity.DialogoAprovacionR"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>

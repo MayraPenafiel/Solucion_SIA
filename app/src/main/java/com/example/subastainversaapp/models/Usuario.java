@@ -1,7 +1,6 @@
 package com.example.subastainversaapp.models;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.Data;
 
 import java.io.Serializable;
 
@@ -22,6 +21,30 @@ public class Usuario implements Serializable {
     public Usuario(Long usuario_id, String nombreUsuario, String contraseniaUsuario) {
         this.usuario_id = usuario_id;
         this.nombreUsuario = nombreUsuario;
+        this.contraseniaUsuario = contraseniaUsuario;
+    }
+
+    public Long getUsuario_id() {
+        return usuario_id;
+    }
+
+    public void setUsuario_id(Long usuario_id) {
+        this.usuario_id = usuario_id;
+    }
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public String getContraseniaUsuario() {
+        return contraseniaUsuario;
+    }
+
+    public void setContraseniaUsuario(String contraseniaUsuario) {
         this.contraseniaUsuario = contraseniaUsuario;
     }
 }
