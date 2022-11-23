@@ -1,4 +1,4 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
+import com.example.subastainversaapp.R;
 
 public class DiagoloAdvertenciaCli extends DialogFragment {
 

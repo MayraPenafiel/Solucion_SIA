@@ -1,11 +1,11 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.subastainversaapp.R;
 
 public class ActivityConfigurarPro extends AppCompatActivity {
 
