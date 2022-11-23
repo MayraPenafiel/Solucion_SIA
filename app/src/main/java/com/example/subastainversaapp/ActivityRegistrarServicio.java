@@ -15,6 +15,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
     //array de ejemplo
     String[] categorias = {"Carpinteria","Electricidad","Mecanica",};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +56,8 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         calificacionEstr.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                Toast.makeText(ActivityRegistrarServicio.this,"melloco XD"+rating,Toast.LENGTH_LONG).show();
+                int valor = (int) Math.round(rating);
+                Toast.makeText(ActivityRegistrarServicio.this,"melloco XD: " + valor,Toast.LENGTH_LONG).show();
             }
         });
     }
