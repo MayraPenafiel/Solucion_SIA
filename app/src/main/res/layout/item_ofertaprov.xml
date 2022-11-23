@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/itemOfertasActivas"
+        android:layout_height="170dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true" >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+            <LinearLayout
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:orientation="horizontal" android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp">
+
+                <LinearLayout
+                        android:layout_width="104dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/numeroitemoferta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/numero_form"
+                            android:textSize="15sp"
+                            android:textStyle="bold"/>
+
+                    <TextView
+                            android:id="@+id/servicioitemoferta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/servicio_form"
+                            android:textSize="15sp"/>
+                    <TextView
+                            android:id="@+id/fechaitemoferta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/fecha_form"
+                            android:textSize="15sp"/>
+                    <TextView
+                            android:id="@+id/precioitemoferta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/precio_form"
+                            android:textSize="15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                    android:text="789456"
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtnrooferta"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="95dp"/>
+            <TextView
+                    android:text="Carpinteria"
+                    android:layout_width="178dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtservoferta"
+                    android:layout_marginEnd="92dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_below="@+id/txtnrooferta"
+                    android:layout_alignParentEnd="true"/>
+            <TextView
+                    android:text="08/10/2022"
+                    android:layout_width="178dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtfecoferta"
+                    android:layout_marginEnd="93dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_below="@+id/txtservoferta"
+                    android:layout_alignParentEnd="true"/>
+            <TextView
+                    android:text="$25"
+                    android:layout_width="182dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtpreciooferta"
+                    android:layout_marginEnd="91dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_below="@+id/txtfecoferta"
+                    android:layout_alignParentEnd="true"/>
+            <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="28dp"
+                    app:srcCompat="@color/design_default_color_secondary_variant"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="46dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/imgiteminisub"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="46dp"
+                    android:layout_marginStart="224dp" tools:ignore="UnknownId"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
