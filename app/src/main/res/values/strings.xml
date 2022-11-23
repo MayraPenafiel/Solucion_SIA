@@ -3,5 +3,7 @@
     //Se manejan todas las constantes necesarios para no hacer consultas reiteradas a la base de datos
     <string name="user_name">SubastaInversaApp</string>
     <string name="user_secondName">SubastaInversaApp</string>
+    <string name="open">open</string>
+    <string name="close">open</string>
 
 </resources>
