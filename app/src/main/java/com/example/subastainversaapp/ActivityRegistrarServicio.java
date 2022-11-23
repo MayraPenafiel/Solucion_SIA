@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentManager;
 public class ActivityRegistrarServicio extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     ImageButton IbtnAgregar;
-
+    RatingBar calificacionEstr;
     Button btnAceptarServicio;
     //array de ejemplo
     String[] categorias = {"Carpinteria","Electricidad","Mecanica",};
@@ -47,6 +47,15 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
                 DialogoAprovacionR dc = new DialogoAprovacionR();
                 dc.show(fm, "tagAlerta");
                 //finish();
+            }
+        });
+
+
+        calificacionEstr= (RatingBar) findViewById(R.id.calificacionEstr);
+        calificacionEstr.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                Toast.makeText(ActivityRegistrarServicio.this,"melloco XD"+rating,Toast.LENGTH_LONG).show();
             }
         });
     }
