@@ -1,7 +1,6 @@
 package com.example.subastainversaapp.models;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;

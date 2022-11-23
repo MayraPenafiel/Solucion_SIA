@@ -12,7 +12,7 @@ import com.example.subastainversaapp.repository.ServiceSubasta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivtyInicioProveedor extends AppCompatActivity {
+public class ActivityInicioProveedor extends AppCompatActivity {
 
     List<Subasta> auctions;
     ServiceSubasta subasta;
@@ -25,6 +25,7 @@ public class ActivtyInicioProveedor extends AppCompatActivity {
 
     public void init(){
         auctions= new ArrayList<Subasta>();
+
 
         auctions.add(new Subasta());
         auctions.add(new Subasta());

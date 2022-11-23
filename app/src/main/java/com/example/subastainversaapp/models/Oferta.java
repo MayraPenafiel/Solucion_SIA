@@ -3,7 +3,6 @@ package com.example.subastainversaapp.models;
 //import io.swagger.annotations.ApiModelProperty;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
