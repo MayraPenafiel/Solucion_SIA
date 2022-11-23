@@ -35,7 +35,7 @@ public class ActivityConfigurarCli extends Fragment{
 
     //AQUI AGREGAMOS EL CODIGO PARA GUARDAR
     private void onClickListeners() {
-        //MOSTRAR VENTANA DE APROVACION
+        //MOSTRAR VENTANA DE APROBACION
         btnGuardarConCli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
