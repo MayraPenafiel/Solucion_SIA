@@ -1,18 +1,21 @@
 package com.example.subastainversaapp;
 
-import android.content.Intent;
+
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
-import com.example.subastainversaapp.activity.ActivityLogin;
-import com.example.subastainversaapp.entity.ResponsesClassUsuario;
+
 import com.example.subastainversaapp.entity.Servicio;
+import android.widget.ArrayAdapter;
 import com.example.subastainversaapp.repository.ServiceServicio;
 import retrofit2.Call;
+import android.os.Bundle;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +26,9 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
 
     Button btnAceptarServicio;
     //array de ejemplo
-    String[] categorias = {"Carpinteria","Electricidad","Mecanica"};
 
 
+    ArrayList<String> nombresServicio = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +45,10 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         //implementando el spinner
         Spinner spinn = (Spinner) findViewById(R.id.spinner);
 
-        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item,categorias);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinn.setAdapter(aa);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,nombresServicio);
+        arrayAdapter.add();
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinn.setAdapter(arrayAdapter);
 
         //
         /*btnAceptarServi.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +74,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //se mostrara el menu en pantalla
-        Toast.makeText(getApplicationContext(), categorias[position], Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), nombresServicio.get(position), Toast.LENGTH_LONG).show();
     }
 
     //AQUI AGREMAMOS EL CODIGO PARA GUARDAR DATOS
@@ -83,6 +87,30 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
                 DialogoAprovacionR dc = new DialogoAprovacionR();
                 dc.show(fm, "tagAlerta");
                 //finish();
+            }
+        });
+    }
+    private void getPosts() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.0.104:9090")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        ServiceServicio postService = retrofit.create(ServiceServicio.class);
+        Call< List<Servicio> > call = postService.listServicios();
+
+        call.enqueue(new Callback<List<Servicio>>() {
+            @Override
+            public void onResponse(Call<List<Servicio>> call, Response<List<Servicio>> response) {
+                for(Servicio post : response.body()) {
+                    nombresServicio.add(post.getNombreServicio());
+                }
+
+                runOnUiThread();
+                arrayAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<List<Servicio>> call, Throwable t) {
             }
         });
     }
