@@ -8,7 +8,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 import com.example.subastainversaapp.*;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import android.content.Context;
 import com.example.subastainversaapp.entity.ResponsesClassUsuario;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceUsuario;
@@ -18,23 +22,31 @@ import retrofit2.Response;
 
 import java.util.ArrayList;
 
-public class ActivityLogin extends AppCompatActivity {
+public class ActivityLogin extends Fragment {
 
     TextView txtOlvidar_contrasena,txtCrear_cuenta,txtCear_provedor;
     Button btnIngresar;
     EditText txtUsuario,txtContra;
     private static final String URL1="";
     ArrayList<String> datos = new ArrayList<>();
+
+    private MainActivity mainnact;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        txtOlvidar_contrasena=findViewById(R.id.txtOlvidar_contrasena);
-        txtCrear_cuenta=findViewById(R.id.txtCrear_cuenta);
-        txtCear_provedor=findViewById(R.id.txtCear_provedor);
-        btnIngresar=findViewById(R.id.btn_ingresar);
-        txtUsuario=findViewById(R.id.edtTextUsuario);
-        txtContra=findViewById(R.id.editTextTextPassword);
+    public void onAttach(@NonNull Context context) {
+        mainnact = (MainActivity) context;
+        super.onAttach(context);
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        //setContentView(R.layout.activity_login);
+        txtOlvidar_contrasena=view.findViewById(R.id.txtOlvidar_contrasena);
+        txtCrear_cuenta=view.findViewById(R.id.txtCrear_cuenta);
+        txtCear_provedor=view.findViewById(R.id.txtCear_provedor);
+        btnIngresar=view.findViewById(R.id.btn_ingresar);
+        txtUsuario=view.findViewById(R.id.edtTextUsuario);
+        txtContra=view.findViewById(R.id.editTextTextPassword);
         txtOlvidar_contrasena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

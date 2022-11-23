@@ -29,15 +29,16 @@
                 android:name=".ActivityCrearProveedor"
                 android:exported="false"/>
         <activity
+                android:name=".ActivityCrearCliente"
+                android:exported="false" tools:ignore="Instantiatable"/>
+        <activity
                 android:name=".DialogoAprovacionR"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
         <activity
                 android:name=".ActivityRegistrarServicio"
                 android:exported="false"/>
-        <activity
-                android:name=".ActivityCrearCliente"
-                android:exported="false"/>
+
         <activity
                 android:name=".activity.DialogoRecuperacionC"
                 android:exported="false"

@@ -1,5 +1,6 @@
 package com.example.subastainversaapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
@@ -7,7 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import com.example.subastainversaapp.activity.ActivityLogin;
 import com.example.subastainversaapp.entity.Cliente;
@@ -20,14 +27,16 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ActivityCrearCliente extends AppCompatActivity {
+public class ActivityCrearCliente extends Fragment {
 
     EditText txtContraC, txtNombre, txtApellido, txtCorreo, txtTelefono
             ,txtDireccion, txtRepContra;
 
     Button btnCrear;
 
-    @Override
+    Activity activityCrearCliente = this.getActivity();
+
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_cliente);
@@ -40,7 +49,27 @@ public class ActivityCrearCliente extends AppCompatActivity {
         txtRepContra=findViewById(R.id.txtRepetirC);
         btnCrear= (Button) findViewById(R.id.btnCrear);
         onClickListeners();
+    }*/
+
+    @Nullable
+    @org.jetbrains.annotations.Nullable
+    @Override
+    public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        View view =inflater.inflate(R.layout.activity_crear_cliente,container,false);
+        txtNombre =view.findViewById(R.id.txtNombreC);
+        txtApellido= view.findViewById(R.id.txtApellidoC);
+        txtCorreo= view.findViewById(R.id.txtCorreoC);
+        txtTelefono= view.findViewById(R.id.txtTelefonoC);
+        txtDireccion=view.findViewById(R.id.txtDireccionC);
+        txtContraC= view.findViewById(R.id.txtContraC);
+        txtRepContra=view.findViewById(R.id.txtRepetirC);
+        btnCrear= (Button) view.findViewById(R.id.btnCrear);
+        btnCrear= (Button) view.findViewById(R.id.btnCrear);
+        onClickListeners();
+        return view;
     }
+
+
 
     //AQUI AGREGAMOS EL CODIGO PARA GUARDAR
     private void onClickListeners() {
@@ -48,10 +77,10 @@ public class ActivityCrearCliente extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
+
                 //DialogoAprovacionR dc = new DialogoAprovacionR();
                 DialogoConfirmarDatos dcd = new DialogoConfirmarDatos();
-                dcd.show(fm, "tagAlerta");
+                dcd.show(getChildFragmentManager(), "tagAlerta");
                 //dc.show(fm, "tagAlerta");
 
                 if (    txtNombre.getText().toString().isEmpty() ||
@@ -61,7 +90,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
                         txtDireccion.getText().toString().isEmpty() ||
                         txtContraC.getText().toString().isEmpty()
                 ) {
-                    Toast.makeText(ActivityCrearCliente.this, "Datos Erroneos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activityCrearCliente,"Datos Erroneos",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 Usuario us1= new Usuario();
@@ -104,7 +133,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
         call.enqueue(new Callback<Cliente>() {
             @Override
             public void onResponse(Call<Cliente> call, Response<Cliente> response) {
-                Toast.makeText(ActivityCrearCliente.this, "MainCategoria añadido con exito", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activityCrearCliente,"MainCategoria añadido con exito",Toast.LENGTH_SHORT).show();
                 txtNombre.setText("nombre");
                 txtApellido.setText("apellido");
                 txtCorreo.setText("email");
@@ -116,7 +145,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Cliente> call, Throwable t) {
-                Toast.makeText(ActivityCrearCliente.this, "ERROR de RED", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activityCrearCliente,"ERROR de RED",Toast.LENGTH_SHORT).show();
             }
 
         });

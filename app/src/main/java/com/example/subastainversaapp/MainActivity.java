@@ -22,12 +22,14 @@ public class MainActivity extends AppCompatActivity {
         //ImageView logo_galeria= findViewById(R.id.icono_inicio);
         //logo_galeria.setAnimation(animacion1);
 
-        new Handler().postDelayed(new Runnable() {
+        /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this, ActivityLogin.class);
                 startActivity(intent);
             }
-        }, 300);
+        }, 300);*/
+
+
     }
 }
