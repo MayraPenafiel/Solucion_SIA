@@ -47,7 +47,7 @@
                 android:name=".activity.ActivityRestablecerC"
                 android:exported="false"/>
         <activity
-                android:name=".activity.ActivityLogin"
+                android:name=".ActivityLogin"
                 android:exported="false"
                 android:theme="@style/Theme.NoActionBar"/>
         <activity

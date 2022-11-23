@@ -1,17 +1,17 @@
 package com.example.subastainversaapp;
 
-import android.content.Intent;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import com.example.subastainversaapp.activity.ActivityLogin;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    FragmentTransaction fragmentTransaction;
+    FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 300);*/
 
-
+        ActivityLogin aclogin = new ActivityLogin();
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.layout.activity_login, aclogin).commit();
     }
 }
