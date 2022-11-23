@@ -27,7 +27,6 @@ public class ActivityInicioProveedor extends AppCompatActivity {
         setContentView(R.layout.activity_inicio_proveedor);
         init();
     }
-    //// METODO RETROFIT********************************+
 
     private void init()  {
 
@@ -53,20 +52,23 @@ public class ActivityInicioProveedor extends AppCompatActivity {
                     ActionsList.add(sub);
                 }
                 System.out.println(ActionsList.size() + " iiiiiiiiiiiiiiiiiiiiiddddddd");
-                RecyclerView recyclerView = findViewById(R.id.listaIniProv);
 
-                RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-                recyclerView.setLayoutManager(layoutManager);
-                ListIniProvAdapter listAdapter = new ListIniProvAdapter(auctions, this);
-                recyclerView.setAdapter(listAdapter);
 
             }
+
 
             @Override
             public void onFailure(Call<Subasta> call, Throwable t) {
 
             }
         });
+
+        RecyclerView recyclerView = findViewById(R.id.listaIniProv);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        ListIniProvAdapter listAdapter = new ListIniProvAdapter(auctions, this);
+        recyclerView.setAdapter(listAdapter);
 
 
     }
