@@ -46,7 +46,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         Spinner spinn = (Spinner) findViewById(R.id.spinner);
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,nombresServicio);
-        arrayAdapter.add();
+       /* arrayAdapter.add();*/
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinn.setAdapter(arrayAdapter);
 
@@ -104,9 +104,11 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
                 for(Servicio post : response.body()) {
                     nombresServicio.add(post.getNombreServicio());
                 }
-
+/*
                 runOnUiThread();
                 arrayAdapter.notifyDataSetChanged();
+
+ */
             }
 
             @Override

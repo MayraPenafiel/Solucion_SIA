@@ -63,10 +63,19 @@ public class ActivityLogin extends AppCompatActivity {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Proveedores
+            //    startActivity(new Intent(ActivityLogin.this, Activity_MenuProveedor.class));
+//Clientes
+                startActivity(new Intent(ActivityLogin.this, ActivityMenuCliente.class));
+
+                /*
+                Validar USUARIO
+
                 Usuario responseRegisterClass = new Usuario(txtUsuario.getText().toString(), txtContra.getText().toString());
 
                 ServiceUsuario apiService = Apis.getInstance().create(ServiceUsuario.class);
                 apiService.createUsuario(responseRegisterClass).enqueue(new Callback<ResponsesClassUsuario>() {
+
                     @Override
                     public void onResponse(Call<ResponsesClassUsuario> call, Response<ResponsesClassUsuario> response) {
                         if (response.body() != null) {
@@ -81,7 +90,10 @@ public class ActivityLogin extends AppCompatActivity {
                     public void onFailure(Call<ResponsesClassUsuario> call, Throwable t) {
                         Toast.makeText(ActivityLogin.this, "Credenciales Invalidos", Toast.LENGTH_SHORT).show();
                     }
+
+
                 });
+                 */
             }
 
         });

@@ -14,7 +14,11 @@ import com.example.subastainversaapp.entity.Servicio;
 
 import java.util.ArrayList;
 
-public class ListAdapterServicios  extends ArrayAdapter<Servicio> {
+public class ListAdapterServicios   {
+    /*
+
+    extends ArrayAdapter<Servicio>
+
 
     private static Context Activity = ActivityRegistrarServicio;
 
@@ -40,4 +44,5 @@ public class ListAdapterServicios  extends ArrayAdapter<Servicio> {
         descripcioncat.setText(categoria.getDescripcion());
         return convertView;
     }
+*/
 }
