@@ -1,6 +1,7 @@
 package com.example.subastainversaapp;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -17,21 +18,22 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static List<String> messageList;
-    Button info;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        info = findViewById(R.id.carga);
-        info.setOnClickListener(new View.OnClickListener() {
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Animation animacion1= AnimationUtils.loadAnimation( this,R.anim.desplazamiento_arriba);
+        //ImageView logo_galeria= findViewById(R.id.icono_inicio);
+        //logo_galeria.setAnimation(animacion1);
+
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), ActivityLogin.class);
-                startActivityForResult(intent, 0);
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, ActivityLogin.class);
+                startActivity(intent);
             }
-
-        });
+        }, 300);
     }
-
 }
