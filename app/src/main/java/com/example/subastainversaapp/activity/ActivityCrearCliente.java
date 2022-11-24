@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import com.example.subastainversaapp.R;
 import org.jetbrains.annotations.NotNull;
 import android.view.LayoutInflater;
@@ -47,17 +48,16 @@ public class ActivityCrearCliente extends AppCompatActivity {
         onClickListeners();
     }
 
-
     //AQUI AGREGAMOS EL CODIGO PARA GUARDAR
     private void onClickListeners() {
         //MOSTRAR VENTANA DE APROBACION
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                FragmentManager fm = getSupportFragmentManager();
                 //DialogoAprovacionR dc = new DialogoAprovacionR();
                 DialogoConfirmarDatos dcd = new DialogoConfirmarDatos();
-                dcd.show(ActivityCrearCliente.this, "tagAlerta");
+                dcd.show(fm, "tagAlerta");
                 //dc.show(fm, "tagAlerta");
 
                 if (    txtNombre.getText().toString().isEmpty() ||
@@ -67,7 +67,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
                         txtDireccion.getText().toString().isEmpty() ||
                         txtContraC.getText().toString().isEmpty()
                 ) {
-                    Toast.makeText(activityCrearCliente,"Datos Erroneos",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityCrearCliente.this, "Datos Erroneos", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 Usuario us1= new Usuario();
@@ -110,7 +110,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
         call.enqueue(new Callback<Cliente>() {
             @Override
             public void onResponse(Call<Cliente> call, Response<Cliente> response) {
-                Toast.makeText(activityCrearCliente,"MainCategoria añadido con exito",Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivityCrearCliente.this, "Cliente añadido con exito", Toast.LENGTH_SHORT).show();
                 txtNombre.setText("nombre");
                 txtApellido.setText("apellido");
                 txtCorreo.setText("email");
@@ -122,7 +122,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Cliente> call, Throwable t) {
-                Toast.makeText(activityCrearCliente,"ERROR de RED",Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivityCrearCliente.this, "ERROR de RED", Toast.LENGTH_SHORT).show();
             }
 
         });

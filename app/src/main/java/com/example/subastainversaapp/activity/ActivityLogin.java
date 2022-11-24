@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.example.subastainversaapp.*;
 import androidx.annotation.NonNull;
@@ -14,31 +15,23 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
-public class ActivityLogin extends Fragment {
+public class ActivityLogin extends AppCompatActivity {
 
     TextView txtOlvidar_contrasena,txtCrear_cuenta,txtCear_provedor;
     Button btnIngresar;
     EditText txtUsuario,txtContra;
     private static final String URL1="";
     ArrayList<String> datos = new ArrayList<>();
-
-    private MainActivity mainnact;
-
     @Override
-    public void onAttach(@NonNull Context context) {
-        mainnact = (MainActivity) context;
-        super.onAttach(context);
-    }
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        //setContentView(R.layout.activity_login);
-        txtOlvidar_contrasena=view.findViewById(R.id.txtOlvidar_contrasena);
-        txtCrear_cuenta=view.findViewById(R.id.txtCrear_cuenta);
-        txtCear_provedor=view.findViewById(R.id.txtCear_provedor);
-        btnIngresar=view.findViewById(R.id.btn_ingresar);
-        txtUsuario=view.findViewById(R.id.edtTextUsuario);
-        txtContra=view.findViewById(R.id.editTextTextPassword);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        txtOlvidar_contrasena=findViewById(R.id.txtOlvidar_contrasena);
+        txtCrear_cuenta=findViewById(R.id.txtCrear_cuenta);
+        txtCear_provedor=findViewById(R.id.txtCear_provedor);
+        btnIngresar=findViewById(R.id.btn_ingresar);
+        txtUsuario=findViewById(R.id.edtTextUsuario);
+        txtContra=findViewById(R.id.editTextTextPassword);
         txtOlvidar_contrasena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +40,7 @@ public class ActivityLogin extends Fragment {
                 startActivity(recuperarC);
                 //finish();
                 //startActivity(new Intent(ActivityLogin.this, ActivityRecuperaC.class));
-           }
+            }
         });
 
         txtCrear_cuenta.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +61,7 @@ public class ActivityLogin extends Fragment {
             @Override
             public void onClick(View v) {
                 //Proveedores
-            //    startActivity(new Intent(ActivityLogin.this, Activity_MenuProveedor.class));
+                //    startActivity(new Intent(ActivityLogin.this, Activity_MenuProveedor.class));
 //Clientes
                 startActivity(new Intent(ActivityLogin.this, ActivityMenuCliente.class));
 
