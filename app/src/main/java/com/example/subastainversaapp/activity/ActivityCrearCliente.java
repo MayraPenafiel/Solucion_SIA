@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.subastainversaapp.R;
 import org.jetbrains.annotations.NotNull;
 import android.view.LayoutInflater;
@@ -24,16 +25,14 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ActivityCrearCliente extends Fragment {
+public class ActivityCrearCliente extends AppCompatActivity {
 
     EditText txtContraC, txtNombre, txtApellido, txtCorreo, txtTelefono
             ,txtDireccion, txtRepContra;
 
     Button btnCrear;
 
-    Activity activityCrearCliente = this.getActivity();
-
-    /*@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_cliente);
@@ -46,26 +45,7 @@ public class ActivityCrearCliente extends Fragment {
         txtRepContra=findViewById(R.id.txtRepetirC);
         btnCrear= (Button) findViewById(R.id.btnCrear);
         onClickListeners();
-    }*/
-
-    @Nullable
-    @org.jetbrains.annotations.Nullable
-    @Override
-    public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.activity_crear_cliente,container,false);
-        txtNombre =view.findViewById(R.id.txtNombreC);
-        txtApellido= view.findViewById(R.id.txtApellidoC);
-        txtCorreo= view.findViewById(R.id.txtCorreoC);
-        txtTelefono= view.findViewById(R.id.txtTelefonoC);
-        txtDireccion=view.findViewById(R.id.txtDireccionC);
-        txtContraC= view.findViewById(R.id.txtContraC);
-        txtRepContra=view.findViewById(R.id.txtRepetirC);
-        btnCrear= (Button) view.findViewById(R.id.btnCrear);
-        btnCrear= (Button) view.findViewById(R.id.btnCrear);
-        onClickListeners();
-        return view;
     }
-
 
 
     //AQUI AGREGAMOS EL CODIGO PARA GUARDAR
@@ -77,7 +57,7 @@ public class ActivityCrearCliente extends Fragment {
 
                 //DialogoAprovacionR dc = new DialogoAprovacionR();
                 DialogoConfirmarDatos dcd = new DialogoConfirmarDatos();
-                dcd.show(getChildFragmentManager(), "tagAlerta");
+                dcd.show(ActivityCrearCliente.this, "tagAlerta");
                 //dc.show(fm, "tagAlerta");
 
                 if (    txtNombre.getText().toString().isEmpty() ||
