@@ -14,7 +14,10 @@
             android:theme="@style/Theme.SubastaInversaApp"
             android:usesCleartextTraffic="true">
         <activity
-                android:name=".ActivitySubastaporCalificar"
+                android:name=".itemsSubasta"
+                android:exported="false"/>
+        <activity
+                android:name=".activity.ActivitySubastaporCalificar"
                 android:exported="false"/>
         <activity
                 android:name=".activity.Activity_MenuProveedor"
