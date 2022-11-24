@@ -49,14 +49,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="@string/fecha_form"
+                            android:text="@string/fecha_ini_form"
                             android:textSize="15sp"/>
                     <TextView
                             android:id="@+id/precioitemOR"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="@string/precio_form"
+                            android:text="@string/fecha_fin_form"
                             android:textSize="15sp"/>
                     <TextView
                             android:id="@+id/valoracionitemOR"
@@ -99,7 +99,7 @@
                     android:layout_below="@+id/txtservOR"
                     android:layout_alignParentEnd="true"/>
             <TextView
-                    android:text="$25"
+                    android:text="08/10/2022"
                     android:layout_width="182dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtfechafininiprov"
@@ -132,17 +132,6 @@
                     android:layout_marginStart="-121dp"
                     app:tint="@color/warnOrange"
                     app:tintMode="src_atop"/>
-            <TextView
-                    android:text="Sin Valorar"
-                    android:layout_width="187dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="161dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="148dp"
-                    android:id="@+id/txtvalOR"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="84dp"/>
 
         </RelativeLayout>
     </LinearLayout>
