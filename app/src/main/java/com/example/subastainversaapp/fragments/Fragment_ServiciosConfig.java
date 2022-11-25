@@ -19,6 +19,8 @@ import org.jetbrains.annotations.NotNull;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +47,11 @@ public class Fragment_ServiciosConfig extends Fragment {
     }
 
     public void mostrarDatos(){
-        Call<List<Servicio>> call = Apis.getInstance().create(ServiceServicio.class).listServicios();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090")
+                .addConverterFactory(GsonConverterFactory.create()).build();
+
+       // Call<List<Servicio>> call = api.listServicios();
+        Call<List<Servicio>> call = retrofit.create(ServiceServicio.class).listServicios();
         call.enqueue(new Callback<List<Servicio>>() {
             @Override
             public void onResponse(Call<List<Servicio>> call, Response<List<Servicio>> response) {
