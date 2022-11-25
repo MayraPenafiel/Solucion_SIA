@@ -1,20 +1,20 @@
 package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.os.Bundle;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+import android.os.Bundle;
 import com.example.subastainversaapp.*;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import android.content.Context;
-import com.example.subastainversaapp.repository.DBHelper;
+import com.example.subastainversaapp.entity.ResponsesClassUsuario;
+import com.example.subastainversaapp.entity.Usuario;
+import com.example.subastainversaapp.repository.ServiceUsuario;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import java.util.ArrayList;
 
@@ -43,7 +43,7 @@ public class ActivityLogin extends AppCompatActivity {
                 startActivity(recuperarC);
                 //finish();
                 //startActivity(new Intent(ActivityLogin.this, ActivityRecuperaC.class));
-            }
+           }
         });
 
         txtCrear_cuenta.setOnClickListener(new View.OnClickListener() {
@@ -63,18 +63,8 @@ public class ActivityLogin extends AppCompatActivity {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DBHelper dbHelper = new DBHelper(ActivityLogin.this);
-                SQLiteDatabase dbsql = dbHelper.getWritableDatabase();
-                if(dbsql!=null){
-                    Toast.makeText(ActivityLogin.this, "Error en la Base de Datos SQLITE", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(ActivityLogin.this, "Datos Guardado en la Base de Datos Local", Toast.LENGTH_SHORT).show();
-                };
-
-                startActivity(new Intent(ActivityLogin.this, ActivityRegistrarServicio.class));
-
                 //Proveedores
-                //    startActivity(new Intent(ActivityLogin.this, Activity_MenuProveedor.class));
+                startActivity(new Intent(ActivityLogin.this, Activity_MenuProveedor.class));
 //Clientes
                 //startActivity(new Intent(ActivityLogin.this, ActivityMenuCliente.class));
 
