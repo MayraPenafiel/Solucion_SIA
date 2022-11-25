@@ -8,7 +8,7 @@
         tools:context=".activity.ActivitySubastaporCalificar">
 
     <TextView
-            android:text="@string/pantalla_oferta_activa"
+            android:text="SUBASTAS POR CALIFICAR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:id="@+id/OfertasActivas"
@@ -24,7 +24,7 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="0.0"/>
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listaServicios"
+            android:id="@+id/listaSubastas"
             android:layout_width="375dp"
             android:layout_height="693dp"
             android:divider="@color/darkGrey"

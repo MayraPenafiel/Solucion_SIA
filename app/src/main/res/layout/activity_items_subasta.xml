@@ -30,36 +30,36 @@
                         android:orientation="vertical">
 
                     <TextView
-                            android:id="@+id/numeroitemOR"
+                            android:id="@+id/ProveedorSu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/numero_form"
+                            android:text="Proveedor:"
                             android:textSize="15sp"
                             android:textStyle="bold"/>
 
                     <TextView
-                            android:id="@+id/servicioitemOR"
+                            android:id="@+id/servicioitemSu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="@string/servicio_form"
                             android:textSize="15sp"/>
                     <TextView
-                            android:id="@+id/fechaitemOR"
+                            android:id="@+id/fechainicioSu"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/fecha_ini_form"
                             android:textSize="15sp"/>
                     <TextView
-                            android:id="@+id/precioitemOR"
+                            android:id="@+id/PrecioSu"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="@string/fecha_fin_form"
+                            android:text="Precio:"
                             android:textSize="15sp"/>
                     <TextView
-                            android:id="@+id/valoracionitemOR"
+                            android:id="@+id/valoracionSu"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="18dp"
@@ -69,7 +69,7 @@
             </LinearLayout>
 
             <TextView
-                    android:text="789456"
+                    android:text="Juan Perez"
                     android:layout_width="176dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtnroOR"
@@ -99,10 +99,10 @@
                     android:layout_below="@+id/txtservOR"
                     android:layout_alignParentEnd="true"/>
             <TextView
-                    android:text="08/10/2022"
+                    android:text="$332"
                     android:layout_width="182dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtfechafininiprov"
+                    android:id="@+id/txtPrecioSubasta"
                     android:layout_marginEnd="91dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="1dp"
