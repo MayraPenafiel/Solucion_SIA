@@ -64,9 +64,9 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Proveedores
-            //    startActivity(new Intent(ActivityLogin.this, Activity_MenuProveedor.class));
+                startActivity(new Intent(ActivityLogin.this, Activity_MenuProveedor.class));
 //Clientes
-                startActivity(new Intent(ActivityLogin.this, ActivityMenuCliente.class));
+                //startActivity(new Intent(ActivityLogin.this, ActivityMenuCliente.class));
 
                 /*
                 Validar USUARIO
