@@ -5,7 +5,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:paddingTop="60dp"
-             tools:context=".fragments.Fragment_ServiciosConfig">
+             tools:context=".activity.fragments.Fragment_ServiciosConfig">
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listaServicios"

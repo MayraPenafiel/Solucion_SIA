@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/itemNotificacion"
+        android:layout_height="125dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"  >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp">
+
+            <TextView
+                    android:text="Se ha abierto una nueva subasta para: Carpitenria. Eche un vistazo!"
+                    android:layout_width="390dp"
+                    android:layout_height="45dp" android:layout_alignParentStart="true"
+                    android:layout_marginStart="23dp" android:layout_alignParentTop="true"
+                    android:layout_marginTop="11dp" android:id="@+id/txtnotificacion"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="19dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

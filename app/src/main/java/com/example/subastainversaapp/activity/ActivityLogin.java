@@ -1,20 +1,16 @@
 package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import com.example.subastainversaapp.*;
-import com.example.subastainversaapp.entity.ResponsesClassUsuario;
-import com.example.subastainversaapp.entity.Usuario;
-import com.example.subastainversaapp.repository.ServiceUsuario;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import com.example.subastainversaapp.ActivityCrearCliente;
+import com.example.subastainversaapp.ActivityCrearProveedor;
+import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.activity.proveedor.ActivityInicioProveedor;
 
 import java.util.ArrayList;
 
@@ -64,7 +60,7 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Proveedores
-                startActivity(new Intent(ActivityLogin.this, Activity_MenuProveedor.class));
+                startActivity(new Intent(ActivityLogin.this, ActivityInicioProveedor.class));
 //Clientes
                 //startActivity(new Intent(ActivityLogin.this, ActivityMenuCliente.class));
 
