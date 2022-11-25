@@ -47,18 +47,18 @@ public class Fragment_ServiciosConfig extends Fragment {
     }
 
     public void mostrarDatos(){
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090") //Url del emulador predeterminado
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
        // Call<List<Servicio>> call = api.listServicios();
-        Call<List<Servicio>> call = retrofit.create(ServiceServicio.class).listServicios();
+        Call<List<Servicio>> call = retrofit.create(ServiceServicio.class).listServicios(); //Se llama el método predefinido en la Api para listar
         call.enqueue(new Callback<List<Servicio>>() {
             @Override
             public void onResponse(Call<List<Servicio>> call, Response<List<Servicio>> response) {
                 if(response.isSuccessful()){
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     servicios=response.body();
-                    adapterServicios= new ListAdapterServicios(servicios, getContext());
+                    adapterServicios= new ListAdapterServicios(servicios, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos
                     recyclerView.setAdapter(adapterServicios);
                 }
             }
