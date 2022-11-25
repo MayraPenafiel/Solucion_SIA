@@ -5,11 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Subasta;
 
@@ -27,40 +23,44 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
         this.context = context;
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.inicio_prov_item, null);
-        return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.bindData(auctionList.get(position));
-        holder.des.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //implement onClick
-                Toast.makeText(context, holder.des.getText(), Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-
     @Override
     public int getItemCount() {
         return auctionList.size();
     }
 
+    @Override
+    public ListIniProvAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+        View view = layoutInflater.inflate(R.layout.inicio_prov_item,null);
+        return new ListIniProvAdapter.ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(final ListIniProvAdapter.ViewHolder holder , final int position) {
+        holder.bindData(auctionList.get(position));
+    }
+
+    public void setItems(List<Subasta> items){
+        auctionList=items;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView des;
 
-        ViewHolder (View view){
-            super(view);
-            des= view.findViewById(R.id.txtserviniprov);
+        TextView numero, servicio, fcini, fcfin;
+
+        ViewHolder(View itemView) {
+            super(itemView);
+            numero = itemView.findViewById(R.id.txtnroiniprov);
+            servicio = itemView.findViewById(R.id.txtserviniprov);
+            fcini = itemView.findViewById(R.id.txtfeciniprov);
+            fcfin = itemView.findViewById(R.id.txtfechafininiprov);
         }
 
-        void bindData (final Subasta item){
-            des.setText("Hola");
+        void bindData(final Subasta item) {
+            numero.setText(item.getIdSubasta().toString());
+            servicio.setText(item.getServicio().toString());
+            fcini.setText(item.getFechaInicio().toString());
+            fcfin.setText(item.getFechaFin().toString());
         }
+
     }
 }

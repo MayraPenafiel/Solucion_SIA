@@ -10,7 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.fragments.Fragment_ServiciosConfig;
+import com.example.subastainversaapp.activity.fragments.Fragment_ServiciosConfig;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
 

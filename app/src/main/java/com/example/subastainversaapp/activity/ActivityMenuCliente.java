@@ -51,6 +51,7 @@ public class ActivityMenuCliente extends AppCompatActivity implements Navigation
 
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+
        /* if(item.getItemId() ==R.id.home){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();

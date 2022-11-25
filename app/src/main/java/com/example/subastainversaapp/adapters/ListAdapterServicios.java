@@ -1,16 +1,21 @@
 package com.example.subastainversaapp.adapters;
 
 import android.content.Context;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+
+import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Servicio;
 
 import java.util.List;
 
-public class ListAdapterServicios extends RecyclerView.Adapter<ListAdapterServicios.ViewHolder>  {
+public class ListAdapterServicios extends RecyclerView.Adapter<ListAdapterServicios.ViewHolder>{
+
     private List<Servicio> lDatos;
     private LayoutInflater nInflater;
     private Context context;
@@ -57,4 +62,5 @@ public class ListAdapterServicios extends RecyclerView.Adapter<ListAdapterServic
 
 
     }
+
 }

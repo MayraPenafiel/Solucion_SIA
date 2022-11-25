@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.fragments;
+package com.example.subastainversaapp.activity.fragments;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -11,8 +11,7 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.adaptadorList.ListAdapterServicios;
-import com.example.subastainversaapp.api.Apis;
+import com.example.subastainversaapp.adapters.ListAdapterServicios;
 import com.example.subastainversaapp.entity.Servicio;
 import com.example.subastainversaapp.repository.ServiceServicio;
 import org.jetbrains.annotations.NotNull;
