@@ -1,15 +1,16 @@
 package com.example.subastainversaapp.activity;
 
+import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.activity.fragments.FragmentInicioProveedor;
 import com.example.subastainversaapp.activity.fragments.Fragment_ServiciosConfig;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
@@ -52,13 +53,13 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
 
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-        /*if(item.getItemId() ==R.id.home){
+        if(item.getItemId() ==R.id.home){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new MainFragment());
+            fragmentTransaction.replace(R.id.container,new FragmentInicioProveedor());
             fragmentTransaction.commit();
         }
-        if(item.getItemId() ==R.id.ofertas_activas{
+        /*if(item.getItemId() ==R.id.ofertas_activas{
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new Menu_principal());

@@ -21,52 +21,6 @@
                 android:layout_height="176dp"
                 android:layout_marginTop="16dp">
 
-            <LinearLayout
-                    android:layout_width="121dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp"
-                    android:orientation="horizontal" android:layout_marginTop="10dp"
-                    android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-                    android:layout_marginStart="0dp">
-
-                <LinearLayout
-                        android:layout_width="104dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:orientation="vertical">
-
-                    <TextView
-                            android:id="@+id/numeroitemInisub"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/numero_form"
-                            android:textSize="15sp"
-                            android:textStyle="bold"/>
-
-                    <TextView
-                            android:id="@+id/servicioiteminisub"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/servicio_form"
-                            android:textSize="15sp"/>
-                    <TextView
-                            android:id="@+id/fechainiiteinisub"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/fecha_ini_form"
-                            android:textSize="15sp"/>
-                    <TextView
-                            android:id="@+id/fechafininisub"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/fecha_fin_form"
-                            android:textSize="15sp"/>
-                </LinearLayout>
-            </LinearLayout>
-
             <TextView
                     android:text="789456"
                     android:layout_width="118dp"
@@ -114,6 +68,42 @@
                     app:layout_constraintEnd_toEndOf="parent" android:id="@+id/imgiteminisub"
                     android:layout_alignParentEnd="true" android:layout_marginEnd="13dp"
                     android:layout_marginStart="300dp" android:layout_alignParentStart="true"/>
+            <LinearLayout
+                    android:layout_width="104dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/numeroitemInisub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/numero_form"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:id="@+id/servicioiteminisub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/servicio_form"
+                        android:textSize="15sp"/>
+                <TextView
+                        android:id="@+id/fechainiiteinisub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/fecha_ini_form"
+                        android:textSize="15sp"/>
+                <TextView
+                        android:id="@+id/fechafininisub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/fecha_fin_form"
+                        android:textSize="15sp"/>
+            </LinearLayout>
 
         </RelativeLayout>
     </LinearLayout>
