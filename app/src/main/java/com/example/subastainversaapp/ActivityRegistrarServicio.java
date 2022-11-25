@@ -1,17 +1,14 @@
 package com.example.subastainversaapp;
 
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
-
 import com.example.subastainversaapp.entity.Servicio;
-import android.widget.ArrayAdapter;
 import com.example.subastainversaapp.repository.ServiceServicio;
 import retrofit2.Call;
-import android.os.Bundle;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
@@ -39,7 +36,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         //onClickListeners();
 
         Servicio responseServicio = new Servicio();
-        ServiceServicio apiService = Apis.getInstance().create(ServiceServicio.class);
+        ServiceServicio apiService = com.example.subastainversaapp.api.Apis.getInstance().create(ServiceServicio.class);
 
 
         //implementando el spinner
