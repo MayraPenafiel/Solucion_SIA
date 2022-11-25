@@ -29,14 +29,6 @@ public class ActivityCrearProveedor extends AppCompatActivity {
         btnCrearProveedor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DBHelper dbHelper = new DBHelper(ActivityCrearProveedor.this);
-                SQLiteDatabase dbsql = dbHelper.getWritableDatabase();
-                if(dbsql!=null){
-                    Toast.makeText(ActivityCrearProveedor.this, "Error en la Base de Datos SQLITE", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(ActivityCrearProveedor.this, "Datos Guardado en la Base de Datos Local", Toast.LENGTH_SHORT).show();
-                };
-
                 startActivity(new Intent(ActivityCrearProveedor.this, ActivityRegistrarServicio.class));
             }
         });

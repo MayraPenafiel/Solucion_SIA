@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.entity;
+package com.example.subastainversaapp.response;
 
 import com.google.gson.annotations.SerializedName;
 

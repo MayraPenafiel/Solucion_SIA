@@ -1,22 +1,25 @@
 package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.subastainversaapp.*;
-import com.example.subastainversaapp.entity.ResponsesClassUsuario;
-import com.example.subastainversaapp.entity.Usuario;
-import com.example.subastainversaapp.repository.ServiceUsuario;
+import com.example.subastainversaapp.entity.Servicio;
+import com.example.subastainversaapp.repository.DBHelper;
+import com.example.subastainversaapp.repository.ServiceServicio;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ActivityLogin extends AppCompatActivity {
 
@@ -35,6 +38,7 @@ public class ActivityLogin extends AppCompatActivity {
         btnIngresar=findViewById(R.id.btn_ingresar);
         txtUsuario=findViewById(R.id.edtTextUsuario);
         txtContra=findViewById(R.id.editTextTextPassword);
+        createDB();
         txtOlvidar_contrasena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,6 +101,12 @@ public class ActivityLogin extends AppCompatActivity {
             }
 
         });
+    }
+    private void createDB() {
+
+        DBHelper dbHelper = new DBHelper(ActivityLogin.this);
+        SQLiteDatabase dbsql = dbHelper.getWritableDatabase();
+        startActivity(new Intent(ActivityLogin.this, ActivityRegistrarServicio.class));
     }
 
 }

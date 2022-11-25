@@ -1,15 +1,20 @@
 package com.example.subastainversaapp.entity;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
 public class Servicio implements Serializable {
+//@Expose(serialize=false) para ocultar los campos que no querramos mostrar
+//en el gson
 
     @SerializedName("id_servicio")
     private long idServicio;
+
     @SerializedName("nombreServicio")
     private String nombreServicio;
+
     @SerializedName("descripcion_servicio")
     private String descripcion_servicio;
 

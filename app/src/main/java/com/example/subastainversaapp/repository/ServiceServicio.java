@@ -1,6 +1,7 @@
 package com.example.subastainversaapp.repository;
 
 import com.example.subastainversaapp.entity.Servicio;
+import com.example.subastainversaapp.response.ResponseServicio;
 import retrofit2.Call;
 import retrofit2.http.*;
 
