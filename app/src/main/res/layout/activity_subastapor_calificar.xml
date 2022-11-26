@@ -32,7 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.515"
             app:layout_constraintStart_toStartOf="parent"
-            tools:listitem="@layout/item_ofertaprov"
+            tools:listitem="@layout/activity_items_subasta"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/divider4"
             app:layout_constraintVertical_bias="0.555"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
