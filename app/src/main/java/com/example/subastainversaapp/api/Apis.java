@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Apis {
-    public static String BASE_URL="http://192.168.10.73:9090";
+    public static String BASE_URL="http://192.168.1.116:9090";
     private static HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 
     public static Retrofit getInstance() {

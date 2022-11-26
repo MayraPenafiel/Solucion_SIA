@@ -121,9 +121,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:id="@+id/imgitemORestado"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="35dp"
-                    android:layout_marginStart="325dp"
-                    tools:ignore="UnknownId" android:layout_alignParentStart="true"/>
+                    android:layout_marginEnd="54dp"
+                    tools:ignore="UnknownId"/>
             <ImageView
                     android:layout_width="30dp"
                     android:layout_height="20dp"

@@ -37,8 +37,6 @@ public class FragmentInicioProveedor extends Fragment {
         View view =inflater.inflate(R.layout.fragment_inicio_proveedor,container,false);
         recyclerView= view.findViewById(R.id.listaIniProv);
         subastas= new ArrayList<>();
-
-        //  cargarLista();
         mostrarDatos();
         return view;
     }

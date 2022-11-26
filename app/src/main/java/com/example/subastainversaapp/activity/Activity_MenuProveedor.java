@@ -10,8 +10,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor;
 import com.example.subastainversaapp.activity.fragments.Fragment_ServiciosConfig;
+import com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor;
 import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasActivas;
 import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasRealizadas;
 import com.google.android.material.navigation.NavigationView;
@@ -67,13 +67,19 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
             fragmentTransaction.replace(R.id.container,new FragmentOfertasActivas());
             fragmentTransaction.commit();
         }
-        if(item.getItemId() ==R.id.ofertas_r){
+        if(item.getItemId() ==R.id.ofertas_aceptadas){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new FragmentOfertasRealizadas());
             fragmentTransaction.commit();
         }
-        /*if(item.getItemId() ==R.id.notificaciones){
+        /*if(item.getItemId() ==R.id.ofertas_r){
+            fragmentManager=getSupportFragmentManager();
+            fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.commit();
+        }
+        if(item.getItemId() ==R.id.notificaciones){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new Menu_principal());

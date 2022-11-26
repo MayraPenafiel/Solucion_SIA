@@ -60,7 +60,7 @@ public class FragmentOfertasActivas extends Fragment {
 
             @Override
             public void onFailure(Call<List<Oferta>> call, Throwable t) {
-                Toast.makeText(getContext(), "Error de extracci{on de ofertas", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Error de extraccion de ofertas", Toast.LENGTH_SHORT).show();
 
             }
         });
