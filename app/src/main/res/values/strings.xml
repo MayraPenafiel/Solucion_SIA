@@ -2,4 +2,6 @@
     <string name="app_name">SubastaInversaApp</string>
     <string name="correo">Usuario</string>
     <string name="dialogo">Aceptar</string>
+    <string name="open">open</string>
+    <string name="close">open</string>
 </resources>

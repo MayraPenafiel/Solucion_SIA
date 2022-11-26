@@ -1,10 +1,10 @@
-package com.example.subastainversaapp.entity;
+package com.example.subastainversaapp.response;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class ResponsesClass implements Serializable {
+public class ResponsesClassUsuario implements Serializable {
     @SerializedName("usuario_id")
     private int usuario_id;
 
@@ -41,7 +41,7 @@ public class ResponsesClass implements Serializable {
     @Override
     public String toString() {
         return
-                "ResponsesClass{" +
+                "ResponsesClassUsuario{" +
                         "usuario_id = '" + usuario_id + '\'' +
                         ",nombreUsuario = '" + nombreUsuario + '\'' +
                         ",contraseniaUsuario = '" + contraseniaUsuario + '\'' +
