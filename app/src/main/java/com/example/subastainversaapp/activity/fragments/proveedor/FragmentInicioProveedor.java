@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +30,8 @@ public class FragmentInicioProveedor extends Fragment {
     private List<Subasta> subastas;
     private RecyclerView recyclerView;
     private ListIniProvAdapter adapterSubastas;
+
+    Button
 
     @Nullable
     @org.jetbrains.annotations.Nullable

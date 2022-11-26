@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,6 +19,8 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
     private List<Subasta> auctionList;
     private LayoutInflater layoutInflater;
     private Context context;
+
+
 
     public ListIniProvAdapter(List<Subasta> auctionList, Context context){
         this.layoutInflater = LayoutInflater.from(context);
@@ -57,6 +60,7 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
 
         TextView numero, servicio, fcini, fcfin;
         ListView lista;
+        Button ofert;
 
         ViewHolder(View itemView) {
             super(itemView);

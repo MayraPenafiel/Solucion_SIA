@@ -8,8 +8,8 @@
         tools:context=".activity.fragments.proveedor.ActivityNotificacionesProv">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="387dp"
-            android:layout_height="685dp"
+            android:layout_width="383dp"
+            android:layout_height="766dp"
             android:id="@+id/listaNotificacion"
             android:divider="@color/darkGrey"
             android:listSelector="@color/clearBlue"

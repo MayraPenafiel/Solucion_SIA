@@ -11,8 +11,9 @@
             android:layout_width="123dp"
             android:layout_height="25dp" app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/ofertasAceptadas" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.501" app:layout_constraintVertical_bias="0.022"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_marginBottom="45dp" app:layout_constraintBottom_toTopOf="@+id/listaOferAceptadas"/>
     <View
             android:id="@+id/divider6"
             android:layout_width="430dp"
@@ -20,7 +21,8 @@
             android:background="?android:attr/listDivider"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ofertasAceptadas" android:layout_marginTop="12dp"
-            app:layout_constraintHorizontal_bias="0.216"/>
+            app:layout_constraintHorizontal_bias="0.216" android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/listaOferAceptadas"/>
 
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="373dp"
@@ -28,10 +30,9 @@
             android:id="@+id/listaOferAceptadas"
             android:divider="@color/darkGrey"
             android:listSelector="@color/clearBlue"
-            app:layout_constraintHorizontal_bias="0.47"
             tools:listitem="@layout/item_ofertas_aceptadas"
-            app:layout_constraintTop_toBottomOf="@+id/divider6" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="20dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.802"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
