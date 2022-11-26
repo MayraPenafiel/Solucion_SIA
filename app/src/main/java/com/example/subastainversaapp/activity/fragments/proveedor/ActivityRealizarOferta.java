@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.activity.proveedor;
+package com.example.subastainversaapp.activity.fragments.proveedor;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

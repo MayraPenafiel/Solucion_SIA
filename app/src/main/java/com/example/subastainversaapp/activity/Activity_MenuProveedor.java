@@ -10,8 +10,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.activity.fragments.FragmentInicioProveedor;
+import com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor;
 import com.example.subastainversaapp.activity.fragments.Fragment_ServiciosConfig;
+import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasActivas;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
 
@@ -59,13 +60,13 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
             fragmentTransaction.replace(R.id.container,new FragmentInicioProveedor());
             fragmentTransaction.commit();
         }
-        /*if(item.getItemId() ==R.id.ofertas_activas{
+        if(item.getItemId() ==R.id.ofertas_activas){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.replace(R.id.container,new FragmentOfertasActivas());
             fragmentTransaction.commit();
         }
-        if(item.getItemId() ==R.id.ofertas_aceptadas){
+        /*if(item.getItemId() ==R.id.ofertas_aceptadas){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new Menu_principal());

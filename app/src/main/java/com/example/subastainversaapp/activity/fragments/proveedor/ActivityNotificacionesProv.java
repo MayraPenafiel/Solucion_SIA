@@ -1,9 +1,8 @@
-package com.example.subastainversaapp.activity.proveedor;
+package com.example.subastainversaapp.activity.fragments.proveedor;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.entity.Subasta;
 
 import java.util.List;
 
