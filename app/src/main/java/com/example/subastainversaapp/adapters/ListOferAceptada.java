@@ -13,13 +13,13 @@ import com.example.subastainversaapp.entity.Oferta;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-public class ListOferRealizadaAdapter extends RecyclerView.Adapter<ListOferRealizadaAdapter.ViewHolder>{
+public class ListOferAceptada extends RecyclerView.Adapter<ListOferAceptada.ViewHolder>{
 
     private List<Oferta> ofertaList;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public ListOferRealizadaAdapter(List<Oferta> ofertaList, Context context){
+    public ListOferAceptada(List<Oferta> ofertaList, Context context){
         this.layoutInflater = LayoutInflater.from(context);
         this.ofertaList = ofertaList;
         this.context = context;
@@ -31,13 +31,13 @@ public class ListOferRealizadaAdapter extends RecyclerView.Adapter<ListOferReali
     }
 
     @Override
-    public ListOferRealizadaAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = layoutInflater.inflate(R.layout.item_ofertas_realizadas,null);
-        return new ListOferRealizadaAdapter.ViewHolder(view);
+    public ListOferAceptada.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+        View view = layoutInflater.inflate(R.layout.item_ofertas_aceptadas,null);
+        return new ListOferAceptada.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ListOferRealizadaAdapter.ViewHolder holder , final int position) {
+    public void onBindViewHolder(final ListOferAceptada.ViewHolder holder , final int position) {
         holder.bindData(ofertaList.get(position));
         /*holder.lista.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,21 +65,22 @@ public class ListOferRealizadaAdapter extends RecyclerView.Adapter<ListOferReali
             fc = itemView.findViewById(R.id.txtfecOR);
             precio = itemView.findViewById(R.id.txtprecioOR);
             val=itemView.findViewById(R.id.txtvalOR);
-            lista=itemView.findViewById(R.id.listaOferRealizadas);
+            lista=itemView.findViewById(R.id.listaOfertaActiva);
         }
 
         void bindData(final Oferta item) {
 
-            //if(item.getServicio().getIdServicio()==)
-            Long nro=item.getIdOferta();
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            String f_ini=formato.format(item.getFecha());
-            numero.setText(nro+"");
-            servicio.setText(item.getSubasta().getServicio().getNombreServicio());
-            fc.setText(f_ini);
-            double pre =item.getPercioOferta();
-            precio.setText(pre+"");
-            val.setText(item.getEstado());
+            if(item.getEstado()=="Aceptada" || item.getEstado()=="ACEPTADAS" || item.getEstado()=="A") {
+                Long nro = item.getIdOferta();
+                SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+                String f_ini = formato.format(item.getFecha());
+                numero.setText(nro + "");
+                servicio.setText(item.getSubasta().getServicio().getNombreServicio());
+                fc.setText(f_ini);
+                double pre = item.getPercioOferta();
+                precio.setText(pre + "");
+                val.setText(item.getEstado());
+            }
         }
 
     }
