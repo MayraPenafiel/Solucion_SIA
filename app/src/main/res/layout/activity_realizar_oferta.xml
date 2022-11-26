@@ -13,8 +13,8 @@
             android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/RealizarOferta" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintVertical_bias="0.022"/>
+            app:layout_constraintVertical_bias="1.0" android:layout_marginBottom="43dp"
+            app:layout_constraintBottom_toTopOf="@+id/detalleSubasta"/>
     <View
             android:id="@+id/divider"
             android:layout_width="430dp"
@@ -28,9 +28,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/detalleSubasta"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider" android:layout_marginTop="20dp"
-            app:layout_constraintHorizontal_bias="0.501" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.0"/>
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.076" app:layout_constraintTop_toTopOf="parent"/>
     <TextView
             android:text="@string/numero_form"
             android:layout_width="wrap_content"
