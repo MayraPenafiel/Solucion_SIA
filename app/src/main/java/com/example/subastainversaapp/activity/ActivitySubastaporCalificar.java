@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.adapters.ListAdapterSubasta;
+import com.example.subastainversaapp.adapters.ListAdapterSubastaCalificar;
 import com.example.subastainversaapp.entity.Subasta;
 import com.example.subastainversaapp.repository.ServiceSubasta;
 import org.jetbrains.annotations.NotNull;
@@ -32,22 +32,9 @@ public class ActivitySubastaporCalificar extends Fragment {
     private List<Subasta> subasta;
     private RecyclerView recyclerView;
 
-    private ListAdapterSubasta adapterSubasta;
+    private ListAdapterSubastaCalificar adapterSubasta;
 
-    /*@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_subastapor_calificar);
-        calificacionEstr= (RatingBar) findViewById(R.id.calificacionEstr);
-        calificacionEstr.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                int valor = (int) Math.round(rating);
-                Toast.makeText(ActivitySubastaporCalificar.this,"melloco XD: " + valor,Toast.LENGTH_LONG).show();
-            }
-        });
 
-    }*/
 
     @Nullable
     @org.jetbrains.annotations.Nullable
@@ -56,7 +43,14 @@ public class ActivitySubastaporCalificar extends Fragment {
         View view =inflater.inflate(R.layout.fragment__servicios_config,container,false);
         recyclerView= view.findViewById(R.id.listaSubastas);
         subasta= new ArrayList<>();
-
+        calificacionEstr.findViewById(R.id.calificacionEstr);
+        calificacionEstr.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                int valor = (int) Math.round(rating);
+                Toast.makeText(getContext(),"melloco XD: " + valor,Toast.LENGTH_LONG).show();
+            }
+        });
         //  cargarLista();
         mostrarDatos();
         return view;
@@ -75,7 +69,7 @@ public class ActivitySubastaporCalificar extends Fragment {
                 if(response.isSuccessful()){
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     subasta=response.body();
-                    adapterSubasta= new ListAdapterSubasta(subasta, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos
+                    adapterSubasta= new ListAdapterSubastaCalificar(subasta, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos
                     recyclerView.setAdapter(adapterSubasta);
                 }
             }

@@ -8,32 +8,35 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.entity.Proveedor;
+import com.example.subastainversaapp.entity.Servicio;
 import com.example.subastainversaapp.entity.Subasta;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Date;
 import java.util.List;
 
-public class ListAdapterSubasta extends RecyclerView.Adapter<ListAdapterSubasta.ViewHolder>{
+public class ListAdapterSubastaCalificar extends RecyclerView.Adapter<ListAdapterSubastaCalificar.ViewHolder>{
 
     private List<Subasta> SDatos;
     private LayoutInflater nInflater;
     private Context context;
 
-    public ListAdapterSubasta(List<Subasta> SDatos, Context context) {
+    public ListAdapterSubastaCalificar(List<Subasta> SDatos, Context context) {
         this.SDatos = SDatos;
-        this.nInflater = nInflater;
+        this.nInflater = LayoutInflater.from(context);
         this.context = context;
     }
 
     @Override
-    public ListAdapterSubasta.ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+    public ListAdapterSubastaCalificar.ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         View view = nInflater.inflate(R.layout.activity_items_subasta,null);
-        return new ListAdapterSubasta.ViewHolder(view);
+        return new ListAdapterSubastaCalificar.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @NotNull ListAdapterSubasta.ViewHolder holder, int position) {
-        //holder.bindData(SDatos.get(position));
+    public void onBindViewHolder(@NonNull @NotNull ListAdapterSubastaCalificar.ViewHolder holder, int position) {
+        holder.bindData(SDatos.get(position));
     }
 
     @Override
@@ -53,10 +56,14 @@ public class ListAdapterSubasta extends RecyclerView.Adapter<ListAdapterSubasta.
             valoracionSu=itemView.findViewById(R.id.valoracionSu);
         }
 
-        /*void bindData(final Subasta item){
-            ProveedorSu.setText(item.ge);
-            servicioitemSu.setText(item.get);
-        }*/
+        void bindData(final Subasta item){
+
+            ProveedorSu.setText(item.getOferta().getProveedor().getNombre()+" "+item.getOferta().getProveedor().getApellido());
+            servicioitemSu.setText(item.getServicio().getNombreServicio());
+            fechainicioSu.setText(item.getFechaInicio().toString());
+            PrecioSu.setText(item.getOferta().getPercioOferta().toString());
+            valoracionSu.setText(item.getCalificacion().toString());
+        }
 
 
     }

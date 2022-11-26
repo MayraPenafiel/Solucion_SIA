@@ -22,10 +22,14 @@ public class Subasta implements Serializable {
     Cliente cliente = new Cliente();
     @SerializedName("servicio")
     Servicio servicio = new Servicio();
+    @SerializedName("oferta")
+    Oferta oferta = new Oferta();
+
+    private Float calificacion;
     public Subasta() {
     }
 
-    public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String descripcionSubasta, String imgSubasta, Cliente cliente, Servicio servicio) {
+    public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String descripcionSubasta, String imgSubasta, Cliente cliente, Servicio servicio, Oferta oferta, Float calificacion) {
         this.idSubasta = idSubasta;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -34,14 +38,8 @@ public class Subasta implements Serializable {
         this.imgSubasta = imgSubasta;
         this.cliente = cliente;
         this.servicio = servicio;
-    }
-
-    public Servicio getServicio() {
-        return servicio;
-    }
-
-    public void setServicio(Servicio servicio) {
-        this.servicio = servicio;
+        this.oferta = oferta;
+        this.calificacion = calificacion;
     }
 
     public Long getIdSubasta() {
@@ -84,11 +82,11 @@ public class Subasta implements Serializable {
         this.descripcionSubasta = descripcionSubasta;
     }
 
-    public String getImg_subasta() {
+    public String getImgSubasta() {
         return imgSubasta;
     }
 
-    public void setImg_subasta(String img_subasta) {
+    public void setImgSubasta(String imgSubasta) {
         this.imgSubasta = imgSubasta;
     }
 
@@ -98,5 +96,29 @@ public class Subasta implements Serializable {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public Servicio getServicio() {
+        return servicio;
+    }
+
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
+    }
+
+    public Oferta getOferta() {
+        return oferta;
+    }
+
+    public void setOferta(Oferta oferta) {
+        this.oferta = oferta;
+    }
+
+    public Float getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(Float calificacion) {
+        this.calificacion = calificacion;
     }
 }
