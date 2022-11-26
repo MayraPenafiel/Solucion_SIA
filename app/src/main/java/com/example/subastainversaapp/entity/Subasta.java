@@ -25,6 +25,7 @@ public class Subasta implements Serializable {
     @SerializedName("oferta")
     Oferta oferta = new Oferta();
 
+    @SerializedName("calificacion")
     private Float calificacion;
     public Subasta() {
     }

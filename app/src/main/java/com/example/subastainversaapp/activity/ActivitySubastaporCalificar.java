@@ -40,7 +40,7 @@ public class ActivitySubastaporCalificar extends Fragment {
     @org.jetbrains.annotations.Nullable
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment__servicios_config,container,false);
+        View view =inflater.inflate(R.layout.activity_subastapor_calificar,container,false);
         recyclerView= view.findViewById(R.id.listaSubastas);
         subasta= new ArrayList<>();
         calificacionEstr.findViewById(R.id.calificacionEstr);
