@@ -9,17 +9,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.subastainversaapp.*;
-import com.example.subastainversaapp.entity.Servicio;
-import com.example.subastainversaapp.repository.DBHelper;
-import com.example.subastainversaapp.repository.ServiceServicio;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import com.example.subastainversaapp.sqlite.DBHelper;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ActivityLogin extends AppCompatActivity {
 
@@ -103,10 +95,8 @@ public class ActivityLogin extends AppCompatActivity {
         });
     }
     private void createDB() {
-
         DBHelper dbHelper = new DBHelper(ActivityLogin.this);
         SQLiteDatabase dbsql = dbHelper.getWritableDatabase();
-        startActivity(new Intent(ActivityLogin.this, ActivityRegistrarServicio.class));
     }
 
 }

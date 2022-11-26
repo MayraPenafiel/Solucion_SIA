@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.repository;
+package com.example.subastainversaapp.sqlite;
 
 import android.content.Context;
 import android.database.DatabaseErrorHandler;
@@ -15,6 +15,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String TABLA_OFERTA  ="t_oferta";
     private static final String TABLA_SUBASTA  ="t_subasta";
     private static final String TABLA_NOTIFICACIONES  ="t_notificaciones";
+
     public DBHelper(@Nullable Context context) {
         super(context, DATABASE_NOMBRE, null, DATABASE_VERSION);
     }
@@ -55,6 +56,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "id_ofe INTEGER PRIMARY KEY AUTOINCREMENT,"+
                 "idOferta INTEGER ,"+
                 "percioOferta REAL NOT NULL, "+
+                "calificacion INTEGER NOT NULL, "+
                 "fecha TEXT NOT NULL, "+
                 "descripcion_oferta TEXT NOT NULL, "+
                 "estado TEXT NOT NULL);");
@@ -77,4 +79,5 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE "+ TABLA_NOTIFICACIONES);
         onCreate(db);
     }
+
 }

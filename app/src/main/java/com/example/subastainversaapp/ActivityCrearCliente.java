@@ -13,7 +13,6 @@ import com.example.subastainversaapp.activity.ActivityLogin;
 import com.example.subastainversaapp.entity.Cliente;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceCliente;
-import com.example.subastainversaapp.activity.DialogoRecuperacionC;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,12 +30,12 @@ public class ActivityCrearCliente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_cliente);
-        txtNombre =findViewById(R.id.txtNombreC);
-        txtApellido= findViewById(R.id.txtApellidoC);
-        txtCorreo= findViewById(R.id.txtCorreoC);
-        txtTelefono= findViewById(R.id.txtTelefonoC);
-        txtDireccion=findViewById(R.id.txtDireccionC);
-        txtContraC= findViewById(R.id.txtContraC);
+        txtNombre =findViewById(R.id.txtNombreP);
+        txtApellido= findViewById(R.id.txtApellidoP);
+        txtCorreo= findViewById(R.id.txtCorreoP);
+        txtTelefono= findViewById(R.id.txtTelefonoP);
+        txtDireccion=findViewById(R.id.txtDireccionP);
+        txtContraC= findViewById(R.id.txtContraP);
         txtRepContra=findViewById(R.id.txtRepetirC);
         btnCrear= (Button) findViewById(R.id.btnCrear);
         onClickListeners();
