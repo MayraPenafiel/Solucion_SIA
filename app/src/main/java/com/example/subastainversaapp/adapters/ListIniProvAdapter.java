@@ -63,7 +63,7 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
             numero = itemView.findViewById(R.id.txtnroiniprov);
             servicio = itemView.findViewById(R.id.txtserviniprov);
             fcini = itemView.findViewById(R.id.txtfeciniprov);
-            fcfin = itemView.findViewById(R.id.txtfechafininiprov);
+            fcfin = itemView.findViewById(R.id.txtprecioOR);
             lista=itemView.findViewById(R.id.listaIniProv);
         }
 

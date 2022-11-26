@@ -32,7 +32,7 @@ public class ListOfeActivaAdapter extends RecyclerView.Adapter<ListOfeActivaAdap
 
     @Override
     public ListOfeActivaAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = layoutInflater.inflate(R.layout.inicio_prov_item,null);
+        View view = layoutInflater.inflate(R.layout.item_ofertas_realizadas,null);
         return new ListOfeActivaAdapter.ViewHolder(view);
     }
 
