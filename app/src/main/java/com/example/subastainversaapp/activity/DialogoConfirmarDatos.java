@@ -1,4 +1,4 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
+import com.example.subastainversaapp.R;
 
 public class DialogoConfirmarDatos extends DialogFragment {
 

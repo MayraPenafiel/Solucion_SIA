@@ -4,14 +4,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Subasta;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.ViewHolder> {
@@ -19,8 +16,6 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
     private List<Subasta> auctionList;
     private LayoutInflater layoutInflater;
     private Context context;
-
-
 
     public ListIniProvAdapter(List<Subasta> auctionList, Context context){
         this.layoutInflater = LayoutInflater.from(context);
@@ -42,14 +37,6 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
     @Override
     public void onBindViewHolder(final ListIniProvAdapter.ViewHolder holder , final int position) {
         holder.bindData(auctionList.get(position));
-        /*holder.lista.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //implement onClick
-
-                Toast.makeText(context, holder.servicio.getText(), Toast.LENGTH_LONG).show();
-            }
-        });*/
     }
 
     public void setItems(List<Subasta> items){
@@ -59,29 +46,20 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView numero, servicio, fcini, fcfin;
-        ListView lista;
-        Button ofert;
 
         ViewHolder(View itemView) {
             super(itemView);
             numero = itemView.findViewById(R.id.txtnroiniprov);
             servicio = itemView.findViewById(R.id.txtserviniprov);
             fcini = itemView.findViewById(R.id.txtfeciniprov);
-            fcfin = itemView.findViewById(R.id.txtprecioOR);
-            lista=itemView.findViewById(R.id.listaIniProv);
+            fcfin = itemView.findViewById(R.id.txtPrecioSubasta);
         }
 
         void bindData(final Subasta item) {
-
-            //if(item.getServicio().getIdServicio()==)
-            Long nro=item.getIdSubasta();
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            String f_ini=formato.format(item.getFechaInicio());
-            String f_fin=formato.format(item.getFechaFin());
-            numero.setText(nro+"");
-            servicio.setText(item.getServicio().getNombreServicio());
-            fcini.setText(f_ini);
-            fcfin.setText(f_fin);
+            numero.setText(item.getIdSubasta().toString());
+            servicio.setText(item.getServicio().toString());
+            fcini.setText(item.getFechaInicio().toString());
+            fcfin.setText(item.getFechaFin().toString());
         }
 
     }

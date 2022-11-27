@@ -1,4 +1,4 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
 
 import android.util.Log;
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.api.Apis;
 import com.example.subastainversaapp.entity.Servicio;
 import android.widget.ArrayAdapter;
