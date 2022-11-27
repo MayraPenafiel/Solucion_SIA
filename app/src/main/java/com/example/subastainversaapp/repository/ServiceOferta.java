@@ -10,11 +10,11 @@ public interface ServiceOferta {
     @GET("/oferta/listar")
     Call<List<Oferta>> listOferta();
     @GET("/oferta/listar/{id}")
-    Call<Oferta> listOfertaId(@Path("id") Long id);
+    Call<List<Oferta>> listOfertaId(@Path("id") Long id);
     @GET("/oferta/listar/{fecha}")
     Call<Oferta> listOfertaFecha(@Path("fecha") String fecha);
     @GET("/oferta/listar/{estado}")
-    Call<Oferta> listOfertaEstado(@Path("estado") Boolean estado);
+    Call<List<Oferta>> listOfertaEstado(@Path("estado") Boolean estado);
     @POST("/oferta/crear")
     Call<Oferta> createOferta(@Body Oferta oferta);
     @DELETE("/oferta/eliminar/{idOferta}")
