@@ -38,6 +38,16 @@ public class Proveedor implements Serializable {
         this.servicios = servicios;
     }
 
+    public Proveedor(Long id_persona, String nombre, String apellido, String email, String telefono, String direccion, Usuario usuario) {
+        this.id_persona = id_persona;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.usuario = usuario;
+    }
+
     public Long getId_persona() {
         return id_persona;
     }

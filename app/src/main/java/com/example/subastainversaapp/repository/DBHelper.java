@@ -1,16 +1,15 @@
 package com.example.subastainversaapp.repository;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION =1;
     private static final String DATABASE_NOMBRE= "SUBASTA_APP";
-    private static final String TABLA_REGISTRO_PROVEEDOR ="t_registro_proveedor";
+    private static final String TABLA_REGISTRO_CLIENTE ="t_registro_cliente";
     private static final String TABLA_USUARIO  ="t_usuario";
     private static final String TABLA_OFERTA  ="t_oferta";
     private static final String TABLA_SUBASTA  ="t_subasta";
@@ -22,7 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE "+ TABLA_REGISTRO_PROVEEDOR+" ("+
+        db.execSQL("CREATE TABLE "+ TABLA_REGISTRO_CLIENTE+" ("+
                 "id_persona INTEGER PRIMARY KEY AUTOINCREMENT,"+
                 "nombre TEXT NOT NULL, "+
                 "apellido TEXT NOT NULL, "+
@@ -70,7 +69,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE "+ TABLA_REGISTRO_PROVEEDOR);
+        db.execSQL("DROP TABLE "+ TABLA_REGISTRO_CLIENTE);
         db.execSQL("DROP TABLE "+ TABLA_USUARIO);
         db.execSQL("DROP TABLE "+ TABLA_OFERTA);
         db.execSQL("DROP TABLE "+ TABLA_SUBASTA);
