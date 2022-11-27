@@ -1,15 +1,22 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
-import com.example.subastainversaapp.activity.ActivityLogin;
+import com.example.subastainversaapp.R;
+import org.jetbrains.annotations.NotNull;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 import com.example.subastainversaapp.entity.Cliente;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceCliente;
@@ -103,7 +110,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
         call.enqueue(new Callback<Cliente>() {
             @Override
             public void onResponse(Call<Cliente> call, Response<Cliente> response) {
-                Toast.makeText(ActivityCrearCliente.this, "MainCategoria añadido con exito", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivityCrearCliente.this, "Cliente añadido con exito", Toast.LENGTH_SHORT).show();
                 txtNombre.setText("nombre");
                 txtApellido.setText("apellido");
                 txtCorreo.setText("email");

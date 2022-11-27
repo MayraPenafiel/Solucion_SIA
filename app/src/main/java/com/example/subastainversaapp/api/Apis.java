@@ -1,4 +1,4 @@
-package com.example.subastainversaapp;
+package com.example.subastainversaapp.api;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -17,3 +17,4 @@ public class Apis {
 
     }
 }
+
