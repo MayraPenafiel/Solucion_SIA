@@ -17,11 +17,11 @@ public class Proveedor implements Serializable {
     private String telefono;
     @SerializedName("direccion")
     private String direccion;
-    @SerializedName("anios_exp")
+    @SerializedName("anios_experiencia")
     private String anios_experiencia;
-    @SerializedName("id_usuario")
+    @SerializedName("usuario")
     Usuario usuario = new Usuario();
-    @SerializedName("id_servicio")
+    @SerializedName("servicios")
     Servicio servicios = new Servicio();
 
     public Proveedor() {

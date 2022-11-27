@@ -11,7 +11,7 @@ public class Usuario implements Serializable {
     @SerializedName("nombreUsuario")
     private String nombreUsuario;
 
-    @SerializedName("contrasenia_usuario")
+    @SerializedName("contraseniaUsuario")
     private String contraseniaUsuario;
 
     public Usuario() {

@@ -6,21 +6,21 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Subasta implements Serializable {
-    @SerializedName("id_subasta")
+    @SerializedName("idSubasta")
     private Long idSubasta;
-    @SerializedName("fecha_inicio_subasta")
+    @SerializedName("fechaInicio")
     private Date fechaInicio;
-    @SerializedName("fecha_fin_subasta")
+    @SerializedName("fechaFin")
     private Date fechaFin;
-    @SerializedName("estado_subasta")
+    @SerializedName("estadoSubasta")
     private String estadoSubasta;
-    @SerializedName("desc_subasta")
+    @SerializedName("descripcionSubasta")
     private String descripcionSubasta;
-    @SerializedName("img_subasta")
+    @SerializedName("imgSubasta")
     private String imgSubasta;
-    @SerializedName("id_cliente")
+    @SerializedName("cliente")
     Cliente cliente = new Cliente();
-    @SerializedName("id_servicio")
+    @SerializedName("servicio")
     Servicio servicio = new Servicio();
 
     public Subasta() {
