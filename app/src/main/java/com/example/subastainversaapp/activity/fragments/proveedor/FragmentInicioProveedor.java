@@ -1,18 +1,22 @@
 package com.example.subastainversaapp.activity.fragments.proveedor;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.adapters.ListIniProvAdapter;
+import com.example.subastainversaapp.api.Apis;
 import com.example.subastainversaapp.entity.Subasta;
 import com.example.subastainversaapp.repository.ServiceSubasta;
 import org.jetbrains.annotations.NotNull;
@@ -41,14 +45,16 @@ public class FragmentInicioProveedor extends Fragment {
         recyclerView= view.findViewById(R.id.listaIniProv);
         subastas= new ArrayList<>();
         mostrarDatos();
-        ofertar= (Button) view.findViewById(R.id.btfertariniprov);
-        /*ofertar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i= new Intent(FragmentInicioProveedor.this.getActivity().getBaseContext(),ActivityRealizarOferta.class);
-                startActivity(i);
-            }
-        });*/
+        ofertar= view.findViewById(R.id.btfertariniprov);
+      ofertar.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+              FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+              fragmentTransaction.replace(R.id.container,new ActivityRealizarOferta());
+              fragmentTransaction.commit();
+          }
+      });
         return view;
     }
 
@@ -57,7 +63,7 @@ public class FragmentInicioProveedor extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         // Call<List<Servicio>> call = api.listServicios();
-        Call <List<Subasta>> call = retrofit.create(ServiceSubasta.class).listSubasta(); //Se llama el método predefinido en la Api para listar
+        Call <List<Subasta>> call = Apis.getInstance().create(ServiceSubasta.class).listSubasta(); //Se llama el método predefinido en la Api para listar
         call.enqueue(new Callback<List<Subasta>>() {
             @Override
             public void onResponse(Call<List<Subasta>> call, Response<List<Subasta>> response) {

@@ -48,10 +48,10 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
         actionBarDrawerToggle.syncState();
 
         //Cargar fragment main (que se cargará después de iniciar sesión)
-        /*fragmentManager=getSupportFragmentManager();
+        fragmentManager=getSupportFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container,new MainFragment());
-        fragmentTransaction.commit();*/
+        fragmentTransaction.add(R.id.container,new FragmentInicioProveedor());
+        fragmentTransaction.commit();
     }
 
     @Override
