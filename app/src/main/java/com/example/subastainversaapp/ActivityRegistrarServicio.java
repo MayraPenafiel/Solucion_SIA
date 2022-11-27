@@ -64,7 +64,9 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
                 DialogoAprovacionR dc = new DialogoAprovacionR();
-                SearchDBHelper sd = new SearchDBHelper(txtServicio);
+                SearchDBHelper sd = new SearchDBHelper(ActivityRegistrarServicio.this);
+                sd.consultarProveedor(txtServicio.getText().toString());
+                //Log.println(1,sd);
                 dc.show(fm, "tagAlerta");
                 //finish();
             }
