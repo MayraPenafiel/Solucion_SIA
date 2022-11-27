@@ -1,6 +1,7 @@
 package com.example.subastainversaapp.activity.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.adapters.ListAdapterServicios;
-import com.example.subastainversaapp.api.Apis;
 import com.example.subastainversaapp.entity.Servicio;
 import com.example.subastainversaapp.repository.ServiceServicio;
 import org.jetbrains.annotations.NotNull;
@@ -47,13 +47,17 @@ public class Fragment_ServiciosConfig extends Fragment {
     }
 
     public void mostrarDatos(){
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090") //Url del emulador predeterminado
+                .addConverterFactory(GsonConverterFactory.create()).build();
 
        // Call<List<Servicio>> call = api.listServicios();
-        Call<List<Servicio>> call = Apis.getInstance().create(ServiceServicio.class).listServicios(); //Se llama el método predefinido en la Api para listar
+        ServiceServicio api = retrofit.create(ServiceServicio.class);
+        Call<List<Servicio>> call = api.listServicios(); //Se llama el método predefinido en la Api para listar
         call.enqueue(new Callback<List<Servicio>>() {
             @Override
             public void onResponse(Call<List<Servicio>> call, Response<List<Servicio>> response) {
                 if(response.isSuccessful()){
+                    Log.e(" SUbasta Contexto",getContext().toString());
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     servicios=response.body();
                     adapterServicios= new ListAdapterServicios(servicios, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos

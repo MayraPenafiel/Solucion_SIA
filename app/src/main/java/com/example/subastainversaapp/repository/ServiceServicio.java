@@ -9,12 +9,14 @@ import java.util.List;
 
 public interface ServiceServicio {
 
-    @GET("/auth/servicio/listar")
+    @GET("/servicio/listar")
     Call<List<Servicio>> listServicios();
-    @PUT ("/auth/servicio/editar/{idServicio}")
+    @GET("/servicio/listar{/idServicio}")
+    Call<List<Servicio>> listServiciosFiltro(@Path("idServicio") Long id);
+    @PUT ("/servicio/editar/{idServicio}")
     Call<Servicio> editServicios(@Path("idServicio") Long id);
-    @POST("/auth/servicio/crear")
+    @POST("/servicio/crear")
     Call<Servicio> createServicios(@Body Servicio servicio);
-    @DELETE("/auth/servicio/eliminar/{idServicio}")
+    @DELETE("/servicio/eliminar/{idServicio}")
     Call<Servicio> deleteService(@Path("idServicio") Long id);
 }

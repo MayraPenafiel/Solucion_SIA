@@ -1,6 +1,7 @@
 package com.example.subastainversaapp.activity.fragments.proveedor;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,7 @@ public class FragmentInicioProveedor extends Fragment {
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_inicio_proveedor,container,false);
-        recyclerView= view.findViewById(R.id.listaSubastas);
+        recyclerView= view.findViewById(R.id.listaIniProv);
         subastas= new ArrayList<>();
 
         //  cargarLista();
@@ -49,16 +50,18 @@ public class FragmentInicioProveedor extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         // Call<List<Servicio>> call = api.listServicios();
-        Call <List<Subasta>> call = retrofit.create(ServiceSubasta.class).listSubasta(); //Se llama el método predefinido en la Api para listar
+        ServiceSubasta api = retrofit.create(ServiceSubasta.class);
+        Call <List<Subasta>> call = api.listSubasta(); //Se llama el método predefinido en la Api para listar
         call.enqueue(new Callback<List<Subasta>>() {
             @Override
             public void onResponse(Call<List<Subasta>> call, Response<List<Subasta>> response) {
-                if(response.isSuccessful()){
+                Log.e(" Oferta","entra");
+                Log.e(" SUbasta Contexto",getContext().toString());
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     subastas=response.body();
                     adapterSubastas= new ListIniProvAdapter(subastas, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos
                     recyclerView.setAdapter(adapterSubastas);
-                }
+
             }
 
             @Override

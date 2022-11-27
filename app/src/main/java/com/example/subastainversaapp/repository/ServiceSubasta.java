@@ -7,16 +7,16 @@ import retrofit2.http.*;
 import java.util.List;
 
 public interface ServiceSubasta {
-    @GET("/auth/subasta/listar")
-    Call<Subasta> listSubasta();
-    @GET("/auth/subasta/listar/{filtro}") //filtro de cualquier campo de subasta
+    @GET("/subasta/listar")
+    Call<List<Subasta>> listSubasta();
+    @GET("/subasta/listar/{filtro}") //filtro de cualquier campo de subasta
     Call<Subasta> listSubastaFiltro(@Path("filtro") String filtro);
-    @GET("/auth/subasta/listar/{fechaInicio}/{fechaFin}")
+    @GET("/subasta/listar/{fechaInicio}/{fechaFin}")
     Call<Subasta> listSubastaFiltroFechas(@Path("fechaInicio") String fechaInicio, @Path("fechaFin") String fechaFin);
-    @POST("/auth/subasta/crear")
+    @POST("/subasta/crear")
     Call<Subasta> createSubasta(@Body Subasta subasta);
-    @DELETE("/auth/subasta/eliminar/{idSubasta}")
+    @DELETE("/subasta/eliminar/{idSubasta}")
     Call<Subasta> deleteSubasta(@Path("idSubasta") String idSubasta);
-    @PUT("/auth/subasta/editar/{idSubasta}")
+    @PUT("/subasta/editar/{idSubasta}")
     Call<Subasta> editSubasta(@Path("idSubasta") Long id,@Body Subasta subasta);
 }

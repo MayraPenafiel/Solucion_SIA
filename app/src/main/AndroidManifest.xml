@@ -13,9 +13,7 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.SubastaInversaApp"
             android:usesCleartextTraffic="true">
-        <activity
-                android:name=".itemsSubasta"
-                android:exported="false"/>
+
 
         <activity
                 android:name=".activity.Activity_MenuProveedor"

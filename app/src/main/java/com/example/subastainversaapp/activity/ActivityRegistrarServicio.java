@@ -33,7 +33,6 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_servicio);
-        IbtnAgregar= (ImageButton) findViewById(R.id.IbtnAgregar);
         btnAceptarServicio= (Button) findViewById(R.id.btnAceptarServicio);
         getPosts();
 
@@ -93,6 +92,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         call.enqueue(new Callback<List<Servicio>>() {
             @Override
             public void onResponse(Call<List<Servicio>> call, Response<List<Servicio>> response) {
+                Log.e(" Servicio",response.body().toString());
                 if( response.isSuccessful()){
                     List<Servicio> listaServicios = response.body();
                     for(int i =0; i<listaServicios.size();i++) {
