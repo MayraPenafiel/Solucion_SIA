@@ -1,6 +1,7 @@
 package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.subastainversaapp.ActivityCrearCliente;
 import com.example.subastainversaapp.ActivityCrearProveedor;
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.repository.DBHelper;
 
 import java.util.ArrayList;
 
@@ -30,6 +32,7 @@ public class ActivityLogin extends AppCompatActivity {
         btnIngresar=findViewById(R.id.btn_ingresar);
         txtUsuario=findViewById(R.id.edtTextUsuario);
         txtContra=findViewById(R.id.editTextTextPassword);
+        createDB();
         txtOlvidar_contrasena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +41,7 @@ public class ActivityLogin extends AppCompatActivity {
                 startActivity(recuperarC);
                 //finish();
                 //startActivity(new Intent(ActivityLogin.this, ActivityRecuperaC.class));
-           }
+            }
         });
 
         txtCrear_cuenta.setOnClickListener(new View.OnClickListener() {
@@ -93,5 +96,10 @@ public class ActivityLogin extends AppCompatActivity {
 
         });
     }
+    private void createDB() {
+        DBHelper dbHelper = new DBHelper(ActivityLogin.this);
+        SQLiteDatabase dbsql = dbHelper.getWritableDatabase();
+    }
+
 
 }
