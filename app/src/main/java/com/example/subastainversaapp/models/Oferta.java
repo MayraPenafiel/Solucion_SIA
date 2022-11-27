@@ -8,9 +8,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Oferta implements Serializable {
-    @SerializedName("idOferta")
+    @SerializedName("id_oferta")
     private Long idOferta;
-    @SerializedName("precioOferta")
+    @SerializedName("percio_oferta")
     private Double percioOferta;
     @SerializedName("fecha_oferta")
     private Date fecha;
