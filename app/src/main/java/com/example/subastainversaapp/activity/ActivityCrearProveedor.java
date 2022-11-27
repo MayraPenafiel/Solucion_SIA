@@ -11,7 +11,6 @@ import android.os.Bundle;
 import com.example.subastainversaapp.sqlite.DBHelper;
 import com.example.subastainversaapp.sqlite.InsertsDBHelper;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.repository.DBHelper;
 
 public class ActivityCrearProveedor extends AppCompatActivity {
 

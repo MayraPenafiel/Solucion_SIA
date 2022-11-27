@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.activity.proveedor;
+package com.example.subastainversaapp.activity.fragments.proveedor;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,7 +24,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityInicioProveedor extends Fragment {
+public class FragmentInicioProveedor extends Fragment {
 
     private List<Subasta> subastas;
     private RecyclerView recyclerView;
@@ -35,7 +35,7 @@ public class ActivityInicioProveedor extends Fragment {
     @org.jetbrains.annotations.Nullable
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment__servicios_config,container,false);
+        View view =inflater.inflate(R.layout.fragment_inicio_proveedor,container,false);
         recyclerView= view.findViewById(R.id.listaSubastas);
         subastas= new ArrayList<>();
 

@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.activity.fragments.Fragment_ServiciosConfig;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor;
 import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasActivas;
 import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasAceptadas;
 import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasRechazadas;
@@ -50,7 +49,7 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
         //Cargar fragment main (que se cargará después de iniciar sesión)
         fragmentManager=getSupportFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container,new FragmentInicioProveedor());
+        fragmentTransaction.add(R.id.container,new com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor());
         fragmentTransaction.commit();
     }
 
@@ -59,7 +58,7 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
         if(item.getItemId() ==R.id.home){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new FragmentInicioProveedor());
+            fragmentTransaction.replace(R.id.container,new com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor());
             fragmentTransaction.commit();
         }
         if(item.getItemId() ==R.id.ofertas_activas){
