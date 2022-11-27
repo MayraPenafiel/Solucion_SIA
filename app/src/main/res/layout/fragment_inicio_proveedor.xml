@@ -40,7 +40,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.946" tools:ignore="TextContrastCheck"
-                android:layout_marginBottom="10dp" app:layout_constraintBottom_toTopOf="@+id/listaIniProv"
+                android:layout_marginBottom="10dp"
                 app:layout_constraintVertical_bias="0.0" app:layout_constraintStart_toStartOf="parent"
                 android:layout_alignParentEnd="true" android:layout_marginEnd="7dp"
                 android:layout_alignParentStart="true" android:layout_marginStart="275dp" android:layout_marginTop="1dp"

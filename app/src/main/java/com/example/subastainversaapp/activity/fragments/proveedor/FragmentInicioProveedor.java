@@ -1,6 +1,5 @@
 package com.example.subastainversaapp.activity.fragments.proveedor;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,13 +42,13 @@ public class FragmentInicioProveedor extends Fragment {
         subastas= new ArrayList<>();
         mostrarDatos();
         ofertar= (Button) view.findViewById(R.id.btfertariniprov);
-        ofertar.setOnClickListener(new View.OnClickListener() {
+        /*ofertar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i= new Intent(FragmentInicioProveedor.this.getActivity().getBaseContext(),ActivityRealizarOferta.class);
                 startActivity(i);
             }
-        });
+        });*/
         return view;
     }
 
