@@ -22,15 +22,11 @@ public class Subasta implements Serializable {
     Cliente cliente = new Cliente();
     @SerializedName("servicio")
     Servicio servicio = new Servicio();
-    @SerializedName("oferta")
-    Oferta oferta = new Oferta();
 
-    @SerializedName("calificacion")
-    private Float calificacion;
     public Subasta() {
     }
 
-    public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String descripcionSubasta, String imgSubasta, Cliente cliente, Servicio servicio, Oferta oferta, Float calificacion) {
+    public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String descripcionSubasta, String imgSubasta, Cliente cliente, Servicio servicio) {
         this.idSubasta = idSubasta;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -39,8 +35,6 @@ public class Subasta implements Serializable {
         this.imgSubasta = imgSubasta;
         this.cliente = cliente;
         this.servicio = servicio;
-        this.oferta = oferta;
-        this.calificacion = calificacion;
     }
 
     public Long getIdSubasta() {
@@ -105,21 +99,5 @@ public class Subasta implements Serializable {
 
     public void setServicio(Servicio servicio) {
         this.servicio = servicio;
-    }
-
-    public Oferta getOferta() {
-        return oferta;
-    }
-
-    public void setOferta(Oferta oferta) {
-        this.oferta = oferta;
-    }
-
-    public Float getCalificacion() {
-        return calificacion;
-    }
-
-    public void setCalificacion(Float calificacion) {
-        this.calificacion = calificacion;
     }
 }

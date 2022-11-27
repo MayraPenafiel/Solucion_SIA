@@ -63,7 +63,7 @@ public class ListOferAceptada extends RecyclerView.Adapter<ListOferAceptada.View
             numero = itemView.findViewById(R.id.txtnroOR);
             servicio = itemView.findViewById(R.id.txtservOR);
             fc = itemView.findViewById(R.id.txtfecOR);
-            precio = itemView.findViewById(R.id.txtPrecioSubasta);
+            precio = itemView.findViewById(R.id.txtprecioOR);
             val=itemView.findViewById(R.id.txtvalOR);
             lista=itemView.findViewById(R.id.listaOfertaActiva);
         }

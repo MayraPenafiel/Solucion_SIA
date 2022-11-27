@@ -2,14 +2,16 @@ package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import com.example.subastainversaapp.*;
-import com.example.subastainversaapp.sqlite.DBHelper;
+import com.example.subastainversaapp.ActivityCrearCliente;
+import com.example.subastainversaapp.ActivityCrearProveedor;
+import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.repository.DBHelper;
 
 import java.util.ArrayList;
 
@@ -39,7 +41,7 @@ public class ActivityLogin extends AppCompatActivity {
                 startActivity(recuperarC);
                 //finish();
                 //startActivity(new Intent(ActivityLogin.this, ActivityRecuperaC.class));
-           }
+            }
         });
 
         txtCrear_cuenta.setOnClickListener(new View.OnClickListener() {
@@ -98,5 +100,6 @@ public class ActivityLogin extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(ActivityLogin.this);
         SQLiteDatabase dbsql = dbHelper.getWritableDatabase();
     }
+
 
 }

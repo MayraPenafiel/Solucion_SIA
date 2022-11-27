@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.activity;
+package com.example.subastainversaapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.activity.ActivityLogin;
 import com.example.subastainversaapp.entity.Cliente;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceCliente;

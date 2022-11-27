@@ -6,19 +6,18 @@ import retrofit2.Call;
 import retrofit2.http.*;
 
 import java.util.Date;
-import java.util.List;
 
 public interface ServiceProveedor {
-    @GET("/auth/proveedor/listar")
+    @GET("/proveedor/listar")
     Call<Proveedor> listProveedor();
-    @GET("/auth/proveedor/listar/{filtro}")//filtro de cualquier campo de proveedor
-    Call<List<Proveedor>> listProveedorFiltro(@Path("filtro") String filtro);
-    @GET("/auth/proveedor/listar/servicio/{servicio}") //servicio = nombre del servicio
+    @GET("/proveedor/listar/{filtro}")//filtro de cualquier campo de proveedor
+    Call<Proveedor> listProveedorFiltro(@Path("filtro") String filtro);
+    @GET("/proveedor/listar/servicio/{servicio}") //servicio = nombre del servicio
     Call<Proveedor> listSubastaFiltroFechas(@Path("servicio") String servicio);
-    @POST("/auth/proveedor/crear")
+    @POST("/proveedor/crear")
     Call<Proveedor> createSubasta(@Body Proveedor proveedor);
-    @DELETE("/auth/proveedor/eliminar/{idProveedor}")
+    @DELETE("/proveedor/eliminar/{idProveedor}")
     Call<Proveedor> deleteSubasta(@Path("idProveedor") Long idProveedor);
-    @PUT("/auth/proveedor/editar/{idProveedor}")
+    @PUT("/proveedor/editar/{idProveedor}")
     Call<Proveedor> editSubasta(@Path("idProveedor") Long idProveedor,@Body Proveedor proveedor);
 }

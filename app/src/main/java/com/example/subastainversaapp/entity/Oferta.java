@@ -3,33 +3,33 @@ package com.example.subastainversaapp.entity;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Oferta implements Serializable{
-    @SerializedName("idOferta")
+    @SerializedName("id_oferta")
     private Long idOferta;
-    @SerializedName("percioOferta")
+    @SerializedName("percio_ferta")
     private Double percioOferta;
-    @SerializedName("fecha")
+    @SerializedName("fecha_oferta")
     private String fecha;
     @SerializedName("descripcion_oferta")
-    private String descripcion_oferta;
-    @SerializedName("estado")
+    private String descripcionOferta;
+    @SerializedName("estado_oferta")
     private String estado;
 
-    @SerializedName("proveedor")
+    @SerializedName("id_proveedor")
     Proveedor proveedor = new Proveedor();
-    @SerializedName("subasta")
+    @SerializedName("id_subasta")
     Subasta subasta = new Subasta();
 
     public Oferta() {
     }
 
-    public Oferta(Long idOferta, Double percioOferta, String fecha, String descripcion_oferta, String estado, Proveedor proveedor, Subasta subasta) {
+    public Oferta(Long idOferta, Double percioOferta, String fecha, String descripcionOferta, String estado, Proveedor proveedor, Subasta subasta) {
+
         this.idOferta = idOferta;
         this.percioOferta = percioOferta;
         this.fecha = fecha;
-        this.descripcion_oferta = descripcion_oferta;
+        this.descripcionOferta = descripcionOferta;
         this.estado = estado;
         this.proveedor = proveedor;
         this.subasta = subasta;
@@ -59,12 +59,12 @@ public class Oferta implements Serializable{
         this.fecha = fecha;
     }
 
-    public String getDescripcion_oferta() {
-        return descripcion_oferta;
+    public String getDescripcionOferta() {
+        return descripcionOferta;
     }
 
-    public void setDescripcion_oferta(String descripcion_oferta) {
-        this.descripcion_oferta = descripcion_oferta;
+    public void setDescripcionOferta(String descripcionOferta) {
+        this.descripcionOferta = descripcionOferta;
     }
 
     public String getEstado() {

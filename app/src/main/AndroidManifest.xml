@@ -14,9 +14,8 @@
             android:theme="@style/Theme.SubastaInversaApp"
             android:usesCleartextTraffic="true">
         <activity
-                android:name=".itemsSubasta"
+                android:name=".Fragment"
                 android:exported="false"/>
-
         <activity
                 android:name=".activity.Activity_MenuProveedor"
                 android:exported="false"
@@ -26,22 +25,21 @@
                 android:exported="false"
                 android:theme="@style/Theme.NoActionBar"/>
         <activity
-                android:name=".activity.DialogoConfirmarDatos"
+                android:name=".DialogoConfirmarDatos"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".activity.ActivityCrearProveedor"
+                android:name=".ActivityCrearProveedor"
                 android:exported="false"/>
         <activity
-                android:name=".activity.ActivityCrearCliente"
+                android:name=".DialogoAprovacionR"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".activity.DialogoAprovacionR"
-                android:exported="false"
-                tools:ignore="Instantiatable"/>
+                android:name=".ActivityRegistrarServicio"
+                android:exported="false"/>
         <activity
-                android:name=".activity.ActivityRegistrarServicio"
+                android:name=".ActivityCrearCliente"
                 android:exported="false"/>
         <activity
                 android:name=".activity.DialogoRecuperacionC"

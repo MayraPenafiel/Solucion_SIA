@@ -1,16 +1,16 @@
 package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+
+import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.sqlite.DBHelper;
 import com.example.subastainversaapp.sqlite.InsertsDBHelper;
-import com.example.subastainversaapp.R;
 
 public class ActivityCrearProveedor extends AppCompatActivity {
 
@@ -25,12 +25,12 @@ public class ActivityCrearProveedor extends AppCompatActivity {
         setContentView(R.layout.activity_crear_proveedor);
         btnCrearProveedor= (Button) findViewById(R.id.btnCrearProveedor);
 
-        txt_NombreProv =  findViewById(R.id.txtNombreP);
-        txt_ApellidoProv =  findViewById(R.id.txtApellidoP);
-        txt_CorreoP =  findViewById(R.id.txtCorreoP);
-        txt_TelefonoProv =  findViewById(R.id.txtTelefonoP);
-        txt_DireccionProv =  findViewById(R.id.txtDireccionP);
-        txtContraseniaProv = findViewById(R.id.txtContraP);
+        txt_NombreProv =  findViewById(R.id.txtNombreC);
+        txt_ApellidoProv =  findViewById(R.id.txtApellidoC);
+        txt_CorreoP =  findViewById(R.id.txtCorreoC);
+        txt_TelefonoProv =  findViewById(R.id.txtTelefonoC);
+        txt_DireccionProv =  findViewById(R.id.txtDireccionC);
+        txtContraseniaProv = findViewById(R.id.txtContraC);
         txtRepContraseniaProv =  findViewById(R.id.txtRepetirC);
 
         onClickListeners();
