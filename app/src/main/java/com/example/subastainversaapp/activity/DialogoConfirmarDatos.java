@@ -1,18 +1,11 @@
 package com.example.subastainversaapp.activity;
 
 import android.app.Dialog;
-import android.content.Intent;
-import android.view.LayoutInflater;
-import android.view.View;
+import android.os.Bundle;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentManager;
-import com.example.subastainversaapp.R;
 
 public class DialogoConfirmarDatos extends DialogFragment {
 
@@ -21,10 +14,10 @@ public class DialogoConfirmarDatos extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        return  dialogoConfirmarDatos();
+        return  null;
     }
 
-    private AlertDialog dialogoConfirmarDatos() {
+    /*private AlertDialog dialogoConfirmarDatos() {
         AlertDialog.Builder builder= new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.activity_dialogo_confirmar_datos, null);
@@ -44,5 +37,5 @@ public class DialogoConfirmarDatos extends DialogFragment {
             }
         });
         return builder.create();
-    }
+    }*/
 }

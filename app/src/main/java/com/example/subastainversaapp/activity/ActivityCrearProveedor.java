@@ -11,11 +11,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.subastainversaapp.ActivityRegistrarServicio;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.entity.Cliente;
 import com.example.subastainversaapp.entity.Proveedor;
 import com.example.subastainversaapp.entity.Usuario;
-import com.example.subastainversaapp.repository.ServiceCliente;
 import com.example.subastainversaapp.repository.ServiceProveedor;
 import com.example.subastainversaapp.sqlite.DBHelper;
 import com.example.subastainversaapp.sqlite.InsertsDBHelper;
@@ -67,14 +66,15 @@ public class ActivityCrearProveedor extends AppCompatActivity {
                     Toast.makeText(ActivityCrearProveedor.this, "Datos Erroneos", Toast.LENGTH_SHORT).show();
                     return;
                 } else if(txtContraseniaProv.getText()==txtRepContraseniaProv.getText()){
-                    DialogoConfirmarDatos dcd = new DialogoConfirmarDatos();
-                    dcd.show(fm, "tagAlerta");
+                    //DialogoConfirmarDatos dcd = new DialogoConfirmarDatos();
+                    //dcd.show(fm, "tagAlerta");
+                }else {
                     Toast.makeText(ActivityCrearProveedor.this, "Las Contraseñas no coinciden", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 Usuario u = new Usuario();
-                u.setNombreUsuario(txt_NombreProv.getText().toString());
-                u.setContraseniaUsuario(txtContraseniaProv.getText().toString());
+                //u.setNombreUsuario(txt_NombreProv.getText().toString());
+                //u.setContraseniaUsuario(txtContraseniaProv.getText().toString());
 
                 createPost(0L, txt_NombreProv.getText().toString(),
                         txt_ApellidoProv.getText().toString(),
@@ -103,22 +103,22 @@ public class ActivityCrearProveedor extends AppCompatActivity {
         Proveedor c = new Proveedor(id_persona, nombre, apellido, email, telefono, direccion, usuario1);
         Call<Proveedor> call = provservice.createProveedor(c);
 
-        call.enqueue(new Callback<Cliente>() {
+        call.enqueue(new Callback<Proveedor>() {
             @Override
-            public void onResponse(Call<Cliente> call, Response<Cliente> response) {
-                Toast.makeText(ActivityCrearCliente.this, "Cliente añadido con exito", Toast.LENGTH_SHORT).show();
-                txtNombre.setText("nombre");
-                txtApellido.setText("apellido");
-                txtCorreo.setText("email");
-                txtTelefono.setText("telefono");
-                txtDireccion.setText("direccion");
+            public void onResponse(Call<Proveedor> call, Response<Proveedor> response) {
+                Toast.makeText(ActivityCrearProveedor.this, "Proveedor añadido con exito", Toast.LENGTH_SHORT).show();
+                txt_NombreProv.setText("nombre");
+                txt_ApellidoProv.setText("apellido");
+                txt_CorreoP.setText("email");
+                txt_TelefonoProv.setText("telefono");
+                txt_DireccionProv.setText("direccion");
                 usuario1.setContraseniaUsuario("contraseniaUsuario");
                 usuario1.setNombreUsuario("nombreUsuario");
             }
 
             @Override
-            public void onFailure(Call<Cliente> call, Throwable t) {
-                Toast.makeText(ActivityCrearCliente.this, "ERROR de RED", Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<Proveedor> call, Throwable t) {
+                Toast.makeText(ActivityCrearProveedor.this, "ERROR de RED", Toast.LENGTH_SHORT).show();
             }
 
         });
@@ -126,18 +126,16 @@ public class ActivityCrearProveedor extends AppCompatActivity {
 
     //VALIDACIONES
     private boolean validarContrase() {
-        if (txtContraC.getText().toString().length() < 4) {
-            txtContraC.setError("la contraseña debe tener mas de 4 caracteres");
-            txtContraC.requestFocus();
+        if (txtContraseniaProv.getText().toString().length() < 4) {
+            txtContraseniaProv.setError("la contraseña debe tener mas de 4 caracteres");
+            txtRepContraseniaProv.requestFocus();
             return false;
-        } else if (TextUtils.isEmpty(txtContraC.getText().toString())) {
-            txtContraC.setError("contraseña no permititda");
-            txtContraC.requestFocus();
+        } else if (TextUtils.isEmpty(txtContraseniaProv.getText().toString())) {
+            txtContraseniaProv.setError("contraseña no permititda");
+            txtContraseniaProv.requestFocus();
             return false;
         }
         return true;
     }
-
-
 
 }
