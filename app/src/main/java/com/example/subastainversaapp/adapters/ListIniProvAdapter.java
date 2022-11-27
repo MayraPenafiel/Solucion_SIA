@@ -76,12 +76,12 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
             //if(item.getServicio().getIdServicio()==)
             Long nro=item.getIdSubasta();
             SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            String f_ini=formato.format(item.getFechaInicio());
-            String f_fin=formato.format(item.getFechaFin());
+            //String f_ini=formato.format(item.getFechaInicio());
+            //String f_fin=formato.format(item.getFechaFin());
             numero.setText(nro+"");
             servicio.setText(item.getServicio().getNombreServicio());
-            fcini.setText(f_ini);
-            fcfin.setText(f_fin);
+            //fcini.setText(f_ini);
+            //fcfin.setText(f_fin);
         }
 
     }
