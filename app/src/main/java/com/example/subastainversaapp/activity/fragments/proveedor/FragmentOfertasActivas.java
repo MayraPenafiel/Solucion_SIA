@@ -5,28 +5,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.adapters.ListOfeActivaAdapter;
 import com.example.subastainversaapp.entity.Oferta;
 import com.example.subastainversaapp.repository.ServiceOferta;
-
 import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FragmentOfertasActivas extends Fragment {
 
@@ -59,9 +55,6 @@ public class FragmentOfertasActivas extends Fragment {
                     offers=response.body();
                     adapterofertas= new ListOfeActivaAdapter(offers, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos
                     recyclerView.setAdapter(adapterofertas);
-
-                }else {
-                    System.out.println("no if");
                 }
             }
 
