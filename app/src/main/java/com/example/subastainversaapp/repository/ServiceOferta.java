@@ -4,11 +4,11 @@ import com.example.subastainversaapp.entity.Oferta;
 import retrofit2.Call;
 import retrofit2.http.*;
 
-import java.util.Date;
+import java.util.List;
 
 public interface ServiceOferta {
     @GET("/oferta/listar")
-    Call<Oferta> listOferta();
+    Call<List<Oferta>> listOferta();
     @GET("/oferta/listar/{id}")
     Call<Oferta> listOfertaId(@Path("id") Long id);
     @GET("/oferta/listar/{fecha}")

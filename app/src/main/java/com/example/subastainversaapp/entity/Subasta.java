@@ -22,6 +22,7 @@ public class Subasta implements Serializable {
     Cliente cliente = new Cliente();
     @SerializedName("servicio")
     Servicio servicio = new Servicio();
+
     public Subasta() {
     }
 
@@ -33,14 +34,6 @@ public class Subasta implements Serializable {
         this.descripcionSubasta = descripcionSubasta;
         this.imgSubasta = imgSubasta;
         this.cliente = cliente;
-        this.servicio = servicio;
-    }
-
-    public Servicio getServicio() {
-        return servicio;
-    }
-
-    public void setServicio(Servicio servicio) {
         this.servicio = servicio;
     }
 
@@ -84,11 +77,11 @@ public class Subasta implements Serializable {
         this.descripcionSubasta = descripcionSubasta;
     }
 
-    public String getImg_subasta() {
+    public String getImgSubasta() {
         return imgSubasta;
     }
 
-    public void setImg_subasta(String img_subasta) {
+    public void setImgSubasta(String imgSubasta) {
         this.imgSubasta = imgSubasta;
     }
 
@@ -98,5 +91,13 @@ public class Subasta implements Serializable {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public Servicio getServicio() {
+        return servicio;
+    }
+
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
     }
 }

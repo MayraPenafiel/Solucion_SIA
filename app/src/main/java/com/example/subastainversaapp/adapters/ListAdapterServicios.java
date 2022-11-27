@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.adaptadorList;
+package com.example.subastainversaapp.adapters;
 
 import android.content.Context;
 
