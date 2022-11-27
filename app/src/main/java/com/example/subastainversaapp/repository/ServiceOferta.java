@@ -7,18 +7,18 @@ import retrofit2.http.*;
 import java.util.List;
 
 public interface ServiceOferta {
-    @GET("/oferta/listar")
-    Call<List<Oferta>> listOferta();
-    @GET("/oferta/listar/{id}")
-    Call<List<Oferta>> listOfertaId(@Path("id") Long id);
-    @GET("/oferta/listar/{fecha}")
+    @GET("/auth/oferta/listar")
+    Call<Oferta> listOferta();
+    @GET("/auth/oferta/listar/{id}")
+    Call<Oferta> listOfertaId(@Path("id") Long id);
+    @GET("/auth/oferta/listar/{fecha}")
     Call<Oferta> listOfertaFecha(@Path("fecha") String fecha);
-    @GET("/oferta/listar/{estado}")
-    Call<List<Oferta>> listOfertaEstado(@Path("estado") Boolean estado);
-    @POST("/oferta/crear")
+    @GET("/auth/oferta/listar/{estado}")
+    Call<Oferta> listOfertaEstado(@Path("estado") Boolean estado);
+    @POST("/auth/oferta/crear")
     Call<Oferta> createOferta(@Body Oferta oferta);
-    @DELETE("/oferta/eliminar/{idOferta}")
+    @DELETE("/auth/oferta/eliminar/{idOferta}")
     Call<Oferta> deleteSubasta(@Path("idOferta") String idOferta);
-    @PUT("/oferta/editar/{idOferta}")
+    @PUT("/auth/oferta/editar/{idOferta}")
     Call<Oferta> editSubasta(@Path("idOferta") Long id,@Body Oferta oferta);
 }
