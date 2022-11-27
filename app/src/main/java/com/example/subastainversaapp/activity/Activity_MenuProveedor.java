@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.fragments.FragmentConfigProveedor;
 import com.example.subastainversaapp.fragments.Fragment_ServiciosConfig;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
@@ -85,7 +86,7 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
         if(item.getItemId() ==R.id.configuracion){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Fragment_ServiciosConfig());
+            fragmentTransaction.replace(R.id.container,new FragmentConfigProveedor());
             fragmentTransaction.commit();
         }
         /*if(item.getItemId() ==R.id.log_out){

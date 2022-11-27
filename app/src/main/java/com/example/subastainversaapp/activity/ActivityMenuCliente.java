@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.fragments.FragmentConfigCliente;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
 
@@ -80,19 +81,19 @@ public class ActivityMenuCliente extends AppCompatActivity implements Navigation
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new Menu_principal());
             fragmentTransaction.commit();
-        }
+        }*/
         if(item.getItemId() ==R.id.configuracion){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.replace(R.id.container,new FragmentConfigCliente());
             fragmentTransaction.commit();
         }
-        if(item.getItemId() ==R.id.log_out){
-            fragmentManager=getSupportFragmentManager();
-            fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
-            fragmentTransaction.commit();
-        }*/
+//        if(item.getItemId() ==R.id.log_out){
+//            fragmentManager=getSupportFragmentManager();
+//            fragmentTransaction=fragmentManager.beginTransaction();
+//            fragmentTransaction.replace(R.id.container,new Menu_principal());
+//            fragmentTransaction.commit();
+//        }
         return false;
     }
 }
