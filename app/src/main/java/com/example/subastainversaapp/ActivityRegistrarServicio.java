@@ -11,7 +11,8 @@ import androidx.fragment.app.FragmentManager;
 import com.example.subastainversaapp.entity.Servicio;
 import android.widget.ArrayAdapter;
 import com.example.subastainversaapp.repository.ServiceServicio;
-import com.example.subastainversaapp.response.ResponseServicio;
+import com.example.subastainversaapp.sqlite.SearchDBHelper;
+import com.example.subastainversaapp.sqlite.SearchDBHelper;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -25,6 +26,10 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
 
     ImageButton IbtnAgregar;
     Button btnAceptarServicio;
+
+    EditText txtServicio;
+
+
     //array de ejemplo
     List<String> lista= new ArrayList<String>();
     @Override
@@ -33,6 +38,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
         setContentView(R.layout.activity_registrar_servicio);
         IbtnAgregar= (ImageButton) findViewById(R.id.IbtnAgregar);
         btnAceptarServicio= (Button) findViewById(R.id.btnAceptarServicio);
+        txtServicio = (EditText) findViewById(R.id.txtServicio);
         getPosts();
 
         //implementando el spinner
@@ -58,6 +64,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
                 DialogoAprovacionR dc = new DialogoAprovacionR();
+                SearchDBHelper sd = new SearchDBHelper(txtServicio);
                 dc.show(fm, "tagAlerta");
                 //finish();
             }

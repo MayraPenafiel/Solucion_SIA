@@ -15,6 +15,8 @@ public class SearchDBHelper extends DBHelper{
         this.context=context;
     }
 
+
+
     public Cursor consultar (String nombre){
         DBHelper dbHelper = new DBHelper(context);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
