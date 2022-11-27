@@ -47,11 +47,9 @@ public class Fragment_ServiciosConfig extends Fragment {
     }
 
     public void mostrarDatos(){
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090") //Url del emulador predeterminado
-                .addConverterFactory(GsonConverterFactory.create()).build();
 
        // Call<List<Servicio>> call = api.listServicios();
-        Call<List<Servicio>> call = retrofit.create(ServiceServicio.class).listServicios(); //Se llama el método predefinido en la Api para listar
+        Call<List<Servicio>> call = Apis.getInstance().create(ServiceServicio.class).listServicios(); //Se llama el método predefinido en la Api para listar
         call.enqueue(new Callback<List<Servicio>>() {
             @Override
             public void onResponse(Call<List<Servicio>> call, Response<List<Servicio>> response) {
