@@ -16,8 +16,8 @@ import java.util.List;
 public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.ViewHolder> {
 
     private List<Subasta> auctionList;
-    private LayoutInflater layoutInflater;
-    private Context context;
+    private final LayoutInflater layoutInflater;
+    private final Context context;
 
 
 
@@ -78,7 +78,7 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
             //SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
             //String f_ini=formato.format(item.getFechaInicio());
             //String f_fin=formato.format(item.getFechaFin());
-            numero.setText(nro+"");
+            //numero.setText(nro+"");
             servicio.setText(item.getServicio().getNombreServicio());
             //fcini.setText(f_ini);
             //fcfin.setText(f_fin);

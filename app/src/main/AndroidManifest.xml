@@ -30,9 +30,6 @@
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".ActivityRegistrarServicio"
-                android:exported="false"/>
-        <activity
                 android:name=".ActivityCrearCliente"
                 android:exported="false"/>
         <activity
