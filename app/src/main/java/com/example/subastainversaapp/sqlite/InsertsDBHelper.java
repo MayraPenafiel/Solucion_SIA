@@ -12,9 +12,10 @@ public class InsertsDBHelper extends DBHelper{
         this.context=context;
     }
 
-    public long insertRProveedor(String nombre,String apellido,String email,String telefono,String direccion,String contrasenia) {
+    public long insertRC(String nombre,String apellido,String email,String telefono,String direccion,String contrasenia,String nombre_user,String contra) {
 
         long id=0;
+        long usuario=0;
         try {
             DBHelper dbHelper = new DBHelper(context);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -26,14 +27,17 @@ public class InsertsDBHelper extends DBHelper{
             values.put("telefono",telefono);
             values.put("direccion",direccion);
             values.put("contrasenia",contrasenia);
-            id = db.insert("t_registro_proveedor",null,values);
+            values.put("nombre_usuario",nombre_user);
+            values.put("contrasenia_usuario",contra);
+            usuario = db.insert("t_usuario",null,values);
+            id = db.insert("t_registro_cliente",null,values);
 
         }catch (Exception e ){
             e.toString();
         }
         return id;
     }
-    public long insertUsuario(String id_persona,String nombre,String apellido,String email,String telefono,String direccion,String imagen,String contrasenia) {
+    public long insertUsuario(String email,String contrasenia) {
 
         long id=0;
         try {
@@ -41,14 +45,8 @@ public class InsertsDBHelper extends DBHelper{
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
             ContentValues values = new ContentValues();
-            values.put("id_persona",id_persona);
-            values.put("nombre",nombre);
-            values.put("apellido",apellido);
-            values.put("email",email);
-            values.put("telefono",telefono);
-            values.put("direccion",direccion);
-            values.put("imagen",imagen);
-            values.put("contrasenia",contrasenia);
+            values.put("nombre_usuario",email);
+            values.put("contrasenia_usuario",contrasenia);
             id = db.insert("t_usuario",null,values);
 
         }catch (Exception e ){

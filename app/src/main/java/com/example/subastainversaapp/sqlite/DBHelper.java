@@ -1,16 +1,14 @@
 package com.example.subastainversaapp.sqlite;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION =1;
     private static final String DATABASE_NOMBRE= "SUBASTA_APP";
-    private static final String TABLA_REGISTRO_PROVEEDOR ="t_registro_proveedor";
+    private static final String TABLA_REGISTRO_PROVEEDOR ="t_registro_cliente";
     private static final String TABLA_USUARIO  ="t_usuario";
     private static final String TABLA_OFERTA  ="t_oferta";
     private static final String TABLA_SUBASTA  ="t_subasta";
@@ -30,18 +28,13 @@ public class DBHelper extends SQLiteOpenHelper {
                 "email TEXT NOT NULL, "+
                 "telefono TEXT NOT NULL, "+
                 "direccion TEXT NOT NULL, "+
-                "contrasenia TEXT NOT NULL);");
+                "contrasenia TEXT NOT NULL," +
+                "id_usuario TEXT NOT NULL);");
 
         db.execSQL("CREATE TABLE "+ TABLA_USUARIO+" ("+
                 "id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,"+
-                "id_persona TEXT NOT NULL, "+ //Viene de la API usaremos en ls filtros
-                "nombre TEXT NOT NULL, "+
-                "apellido TEXT NOT NULL, "+
-                "email TEXT NOT NULL, "+
-                "telefono TEXT NOT NULL, "+
-                "direccion TEXT NOT NULL, "+
-                "imagen TEXT NOT NULL, "+
-                "contrasenia TEXT NOT NULL);");
+                "nombre_usuario TEXT NOT NULL, "+ //Viene de la API usaremos en ls filtros
+                "contrasenia_usuario TEXT NOT NULL);");
 
         db.execSQL("CREATE TABLE "+ TABLA_SUBASTA+" ("+
                 "id_sub INTEGER PRIMARY KEY AUTOINCREMENT,"+

@@ -12,6 +12,7 @@ import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Cliente;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceCliente;
+import com.example.subastainversaapp.sqlite.InsertsDBHelper;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -90,6 +91,9 @@ public class ActivityCrearCliente extends AppCompatActivity {
 
                     Intent intent = new Intent(v.getContext(), ActivityLogin.class);
                     startActivityForResult(intent, 0);
+                    InsertsDBHelper save = new InsertsDBHelper(ActivityCrearCliente.this);
+                    save.insertRC(txtNombre.getText().toString(), txtApellido.getText().toString(), txtCorreo.getText().toString(), txtTelefono.getText().toString(), txtDireccion.getText().toString(), txtContraC.getText().toString());
+                    save.insertUsuario(txtCorreo.getText().toString(),txtContraC.getText().toString());
                 }
             }
         });

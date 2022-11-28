@@ -87,7 +87,7 @@ public class ActivityCrearProveedor extends AppCompatActivity {
 
                 //GUARDAMOS INFORMACIÓN EN LA BASE DE DATOS PARA QUE AL MOMENTO DE AGREGAR SERVIO BUSQUE LA DATA Y CREE
                 InsertsDBHelper save = new InsertsDBHelper(ActivityCrearProveedor.this);
-                save.insertRProveedor(txt_NombreProv.getText().toString(), txt_ApellidoProv.getText().toString(), txt_CorreoP.getText().toString(), txt_TelefonoProv.getText().toString(), txt_DireccionProv.getText().toString(), txtContraseniaProv.getText().toString());
+                //save.insertRProveedor(txt_NombreProv.getText().toString(), txt_ApellidoProv.getText().toString(), txt_CorreoP.getText().toString(), txt_TelefonoProv.getText().toString(), txt_DireccionProv.getText().toString(), txtContraseniaProv.getText().toString());
                 //startActivity(new Intent(ActivityCrearProveedor.this, ActivityRegistrarServicio.class));
             }
         });
