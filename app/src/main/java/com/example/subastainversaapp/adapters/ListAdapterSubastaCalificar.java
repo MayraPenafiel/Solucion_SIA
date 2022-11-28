@@ -5,15 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.entity.Oferta;
+import com.example.subastainversaapp.entity.Proveedor;
+import com.example.subastainversaapp.entity.Servicio;
 import com.example.subastainversaapp.entity.Subasta;
-
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Date;
 import java.util.List;
 
 public class ListAdapterSubastaCalificar extends RecyclerView.Adapter<ListAdapterSubastaCalificar.ViewHolder>{
@@ -57,12 +58,12 @@ public class ListAdapterSubastaCalificar extends RecyclerView.Adapter<ListAdapte
         }
 
         void bindData(final Subasta item){
-
-            //ProveedorSu.setText(item.getOferta().getProveedor().getNombre()+" "+item.getOferta().getProveedor().getApellido());
+            Oferta of = new Oferta();
+            ProveedorSu.setText(item.getCliente().getNombre()+" "+item.getCliente().getApellido());
             servicioitemSu.setText(item.getServicio().getNombreServicio());
             fechainicioSu.setText(item.getFechaInicio().toString());
-            //PrecioSu.setText(item.getOferta().getPercioOferta().toString());
-            //valoracionSu.setText(item.getCalificacion().toString());
+            PrecioSu.setText(of.getPercioOferta().toString());
+            //valoracionSu.setText(of.getCalificacion().toString());
         }
 
 
