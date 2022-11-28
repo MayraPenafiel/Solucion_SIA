@@ -8,12 +8,12 @@ import java.util.List;
 
 public interface ServiceSubasta {
 
-    @GET("/subasta/listar")
+    @GET("/subasta/listar/todo")
     Call<List<Subasta>> listSubasta();
     @GET("/subasta/listar_filtro/{filtro}") //filtro de cualquier campo de subasta
-    Call<Subasta> listSubastaFiltro(@Path("filtro") String filtro);
+    Call<List<Subasta>> listSubastaFiltro(@Path("filtro") String filtro);
     @GET("/subasta/listar_fecha/{fechaInicio}/{fechaFin}")
-    Call<Subasta> listSubastaFiltroFechas(@Path("fechaInicio") String fechaInicio, @Path("fechaFin") String fechaFin);
+    Call<List<Subasta>> listSubastaFiltroFechas(@Path("fechaInicio") String fechaInicio, @Path("fechaFin") String fechaFin);
     @POST("/subasta/crear")
     Call<Subasta> createSubasta(@Body Subasta subasta);
     @DELETE("/subasta/eliminar/{idSubasta}")
