@@ -14,9 +14,6 @@
             android:theme="@style/Theme.SubastaInversaApp"
             android:usesCleartextTraffic="true">
         <activity
-                android:name=".Fragment"
-                android:exported="false"/>
-        <activity
                 android:name=".activity.Activity_MenuProveedor"
                 android:exported="false"
                 android:theme="@style/Theme.NoActionBar"/>
