@@ -27,7 +27,7 @@ import java.util.List;
 
 public class ActivitySubastaporCalificar extends Fragment {
 
-    RatingBar calificacionEstr;
+//    RatingBar calificacionEstr;
 
     private List<Subasta> subasta;
     private RecyclerView recyclerView;
@@ -41,16 +41,17 @@ public class ActivitySubastaporCalificar extends Fragment {
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.activity_subastapor_calificar,container,false);
+        //RatingBar calificacionEstr = view.findViewById(R.id.calificacionEstr);
         recyclerView= view.findViewById(R.id.listaSubastas);
         subasta= new ArrayList<>();
-        calificacionEstr.findViewById(R.id.calificacionEstr);
-        calificacionEstr.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                int valor = (int) Math.round(rating);
-                Toast.makeText(getContext(),"melloco XD: " + valor,Toast.LENGTH_LONG).show();
-            }
-        });
+
+//        calificacionEstr.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+//            @Override
+//            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+//                int valor = (int) Math.round(rating);
+//                Toast.makeText(getContext(),"melloco XD: " + valor,Toast.LENGTH_LONG).show();
+//            }
+//        });
         //  cargarLista();
         mostrarDatos();
         return view;
@@ -61,12 +62,14 @@ public class ActivitySubastaporCalificar extends Fragment {
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090") //Url del emulador predeterminado
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
-        // Call<List<Servicio>> call = api.listServicios();
         Call<List<Subasta>> call = retrofit.create(ServiceSubasta.class).listSubasta(); //Se llama el método predefinido en la Api para listar
         call.enqueue(new Callback<List<Subasta>>() {
             @Override
             public void onResponse(Call<List<Subasta>> call, Response<List<Subasta>> response) {
+                System.out.println("A");
+                System.out.println("B");
                 if(response.isSuccessful()){
+                    System.out.println("Si devuelve datos de la api");
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     subasta=response.body();
                     adapterSubasta= new ListAdapterSubastaCalificar(subasta, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos

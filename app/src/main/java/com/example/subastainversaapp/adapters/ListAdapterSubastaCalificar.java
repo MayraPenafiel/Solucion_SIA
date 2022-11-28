@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,23 +47,24 @@ public class ListAdapterSubastaCalificar extends RecyclerView.Adapter<ListAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView ProveedorSu,servicioitemSu,fechainicioSu,PrecioSu,valoracionSu;
+        TextView ProveedorSu,servicioitemSu,fechainicioSu,PrecioSu;
+        RatingBar valoracionSu;
         ViewHolder(View itemView){
             super(itemView);
             ProveedorSu=itemView.findViewById(R.id.ProveedorSu);
             servicioitemSu=itemView.findViewById(R.id.servicioitemSu);
             fechainicioSu=itemView.findViewById(R.id.fechainicioSu);
             PrecioSu=itemView.findViewById(R.id.PrecioSu);
-            valoracionSu=itemView.findViewById(R.id.valoracionSu);
+          //  valoracionSu=itemView.findViewById(R.id.valoracionSu);
         }
 
         void bindData(final Subasta item){
 
-            ProveedorSu.setText(item.getOferta().getProveedor().getNombre()+" "+item.getOferta().getProveedor().getApellido());
+            ProveedorSu.setText(item.getCliente().getNombre());
             servicioitemSu.setText(item.getServicio().getNombreServicio());
             fechainicioSu.setText(item.getFechaInicio().toString());
             PrecioSu.setText(item.getOferta().getPercioOferta().toString());
-            valoracionSu.setText(item.getCalificacion().toString());
+            //valoracionSu.setRating(item.getCalificacion());
         }
 
 

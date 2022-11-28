@@ -69,31 +69,31 @@ public class ActivityMenuCliente extends AppCompatActivity implements Navigation
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new Menu_principal());
             fragmentTransaction.commit();
-        }
+        }*/
         if(item.getItemId() ==R.id.subastas_calificar){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.replace(R.id.container,new ActivitySubastaporCalificar());
             fragmentTransaction.commit();
         }
-        if(item.getItemId() ==R.id.notificaciones){
-            fragmentManager=getSupportFragmentManager();
-            fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
-            fragmentTransaction.commit();
-        }
-        if(item.getItemId() ==R.id.configuracion){
-            fragmentManager=getSupportFragmentManager();
-            fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
-            fragmentTransaction.commit();
-        }
-        if(item.getItemId() ==R.id.log_out){
-            fragmentManager=getSupportFragmentManager();
-            fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
-            fragmentTransaction.commit();
-        }*/
+//        if(item.getItemId() ==R.id.notificaciones){
+//            fragmentManager=getSupportFragmentManager();
+//            fragmentTransaction=fragmentManager.beginTransaction();
+//            fragmentTransaction.replace(R.id.container,new Menu_principal());
+//            fragmentTransaction.commit();
+//        }
+//        if(item.getItemId() ==R.id.configuracion){
+//            fragmentManager=getSupportFragmentManager();
+//            fragmentTransaction=fragmentManager.beginTransaction();
+//            fragmentTransaction.replace(R.id.container,new Menu_principal());
+//            fragmentTransaction.commit();
+//        }
+//        if(item.getItemId() ==R.id.log_out){
+//            fragmentManager=getSupportFragmentManager();
+//            fragmentTransaction=fragmentManager.beginTransaction();
+//            fragmentTransaction.replace(R.id.container,new Menu_principal());
+//            fragmentTransaction.commit();
+//        }
         return false;
     }
 }

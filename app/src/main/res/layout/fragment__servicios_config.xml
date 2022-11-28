@@ -8,7 +8,7 @@
              tools:context=".activity.fragments.Fragment_ServiciosConfig">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listaSubastas"
+            android:id="@+id/listaServiciosConfig"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"

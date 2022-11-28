@@ -7,8 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.subastainversaapp.ActivityCrearCliente;
-import com.example.subastainversaapp.ActivityCrearProveedor;
+//import com.example.subastainversaapp.ActivityCrearCliente;
+//import com.example.subastainversaapp.ActivityCrearProveedor;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.activity.proveedor.ActivityInicioProveedor;
 
@@ -60,7 +60,7 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Proveedores
-                startActivity(new Intent(ActivityLogin.this, ActivityInicioProveedor.class));
+                startActivity(new Intent(ActivityLogin.this, ActivityMenuCliente.class));
 //Clientes
                 //startActivity(new Intent(ActivityLogin.this, ActivityMenuCliente.class));
 
