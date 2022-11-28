@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.subastainversaapp.ActivityCrearCliente;
-import com.example.subastainversaapp.ActivityCrearProveedor;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.api.Apis;
 import com.example.subastainversaapp.entity.Usuario;
@@ -87,18 +86,11 @@ public class ActivityLogin extends AppCompatActivity {
                     call.enqueue(new Callback<Usuario>() {
                        @Override
                         public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                            boolean tr = false;
                             System.out.println("Pasa las validaciones");
-                            //if (response.body() != null && tr) {
-                                //List<Usuario> us= (List<Usuario>) response.body();
-                                //System.out.println(response.body().getNombreUsuario() + "ppppppp");
-                                Toast.makeText(ActivityLogin.this, "Iniciando sesión", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(ActivityLogin.this, Activity_MenuProveedor.class);
-                                Usuario p = new Usuario();
-                                startActivity(intent);
-                                tr = true;
-
-                           // }
+                            Toast.makeText(ActivityLogin.this, "Iniciando sesión", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(ActivityLogin.this, Activity_MenuProveedor.class);
+                            Usuario p = new Usuario();
+                            startActivity(intent);
                         }
 
                         @Override
