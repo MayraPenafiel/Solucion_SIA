@@ -18,7 +18,6 @@ public class Usuario implements Serializable {
     }
 
     public Usuario( String nombreUsuario, String contraseniaUsuario) {
-
         this.nombreUsuario = nombreUsuario;
         this.contraseniaUsuario = contraseniaUsuario;
     }

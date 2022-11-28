@@ -10,9 +10,9 @@ public interface ServiceSubasta {
 
     @GET("/subasta/listar")
     Call<List<Subasta>> listSubasta();
-    @GET("/subasta/listar/{filtro}") //filtro de cualquier campo de subasta
+    @GET("/subasta/listar_filtro/{filtro}") //filtro de cualquier campo de subasta
     Call<Subasta> listSubastaFiltro(@Path("filtro") String filtro);
-    @GET("/subasta/listar/{fechaInicio}/{fechaFin}")
+    @GET("/subasta/listar_fecha/{fechaInicio}/{fechaFin}")
     Call<Subasta> listSubastaFiltroFechas(@Path("fechaInicio") String fechaInicio, @Path("fechaFin") String fechaFin);
     @POST("/subasta/crear")
     Call<Subasta> createSubasta(@Body Subasta subasta);
