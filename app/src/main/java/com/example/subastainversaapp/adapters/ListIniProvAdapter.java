@@ -74,12 +74,12 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
             //System.out.println(item.getIdSubasta().toString()+"WWWWWWWWWWWWWWWWWWWWWWW");
 
             //if(item.getServicio().getIdServicio()==)
-            Long nro=item.getIdSubasta();
+            //Long nro=item.getIdSubasta();
             //SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
             //String f_ini=formato.format(item.getFechaInicio());
             //String f_fin=formato.format(item.getFechaFin());
-            numero.setText(nro+"");
-            servicio.setText(item.getServicio().getNombreServicio());
+            //numero.setText(nro+"");
+            //servicio.setText(item.getServicio().getNombreServicio());
             //fcini.setText(f_ini);
             //fcfin.setText(f_fin);
         }
