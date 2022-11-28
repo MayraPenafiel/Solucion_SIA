@@ -92,8 +92,8 @@ public class ActivityCrearCliente extends AppCompatActivity {
                     Intent intent = new Intent(v.getContext(), ActivityLogin.class);
                     startActivityForResult(intent, 0);
                     InsertsDBHelper save = new InsertsDBHelper(ActivityCrearCliente.this);
-                    save.insertRC(txtNombre.getText().toString(), txtApellido.getText().toString(), txtCorreo.getText().toString(), txtTelefono.getText().toString(), txtDireccion.getText().toString(), txtContraC.getText().toString());
-                    save.insertUsuario(txtCorreo.getText().toString(),txtContraC.getText().toString());
+                    save.insertRC(txtNombre.getText().toString(), txtApellido.getText().toString(), txtCorreo.getText().toString(), txtTelefono.getText().toString(), txtDireccion.getText().toString(), txtContraC.getText().toString(),txtCorreo.getText().toString(),txtContraC.getText().toString());
+                    save.insertUsuario(us1.getNombreUsuario(),us1.getContraseniaUsuario());
                 }
             }
         });
@@ -130,8 +130,8 @@ public class ActivityCrearCliente extends AppCompatActivity {
                 txtCorreo.setText("email");
                 txtTelefono.setText("telefono");
                 txtDireccion.setText("direccion");
-                usuario1.setContraseniaUsuario("contraseniaUsuario");
-                usuario1.setNombreUsuario("nombreUsuario");
+                usuario1.setContraseniaUsuario("contrasenia_usuario");
+                usuario1.setNombreUsuario("nombre_usuario");
             }
 
             @Override
