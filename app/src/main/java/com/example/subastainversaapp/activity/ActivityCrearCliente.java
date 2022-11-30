@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.api.Apis;
 import com.example.subastainversaapp.entity.Cliente;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceCliente;
@@ -113,10 +114,9 @@ public class ActivityCrearCliente extends AppCompatActivity {
     }
 
     private void createPost(Long id_persona, String nombre, String apellido, String email, String telefono, String direccion, Usuario usuario) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090")
-                .addConverterFactory(GsonConverterFactory.create()).build();
 
-        ServiceCliente clienteservice = retrofit.create(ServiceCliente.class);
+        Retrofit r = Apis.getInstance();
+        ServiceCliente clienteservice = r.create(ServiceCliente.class);
         Usuario usuario1= new Usuario(txtCorreo.getText().toString(),txtContraC.getText().toString());
         Cliente c = new Cliente(id_persona,nombre,apellido, email,telefono,direccion,usuario1);
         Call<Cliente> call=clienteservice.createCliente(c);
