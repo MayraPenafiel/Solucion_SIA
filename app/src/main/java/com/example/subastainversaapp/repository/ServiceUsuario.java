@@ -19,8 +19,10 @@ public interface ServiceUsuario {
     Call<Cliente> deleteUsuario(@Path("idUsuario") Long id);
     @PUT("/usuario/editar/{idUsuario}")
     Call<Cliente> editUsuario(@Path("idUsuario") Long id,@Body Usuario usuario);
-    @POST("getUser")
-    Call<Usuario> getUser(@Body Usuario usuario);
+//    @POST("getUser")
+//    Call<Usuario> getUser(@Body Usuario usuario);
+@POST("getUser")
+Call<Usuario> getUser(@Body Usuario usuario);
 
 
 }

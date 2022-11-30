@@ -14,8 +14,16 @@ import java.util.List;
 public class Apis {
     private static HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 
+//    public static Retrofit getInstance() {
+//        Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://192.168.1.116:9090") //revisar y cambiar al ip de tu localhost
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .client(new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build());
+//        return builder.build();
+//
+//    }
+
     public static Retrofit getInstance() {
-        Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://"+getIPAddress()+":9090") //revisar y cambiar al ip de tu localhost
+        Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://192.168.18.56:9090") //revisar y cambiar al ip de tu localhost
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build());
         return builder.build();
@@ -39,4 +47,5 @@ public class Apis {
         } catch (Exception ignored) { } // for now eat exceptions
         return "";
     }
+
 }

@@ -86,10 +86,11 @@ public class ActivityLogin extends AppCompatActivity {
                        @Override
                         public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                             System.out.println("Pasa las validaciones");
-                            Toast.makeText(ActivityLogin.this, "Iniciando sesión", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(ActivityLogin.this, Activity_MenuProveedor.class);
-                            Usuario p = new Usuario();
-                            startActivity(intent);
+                                Toast.makeText(ActivityLogin.this, "Iniciando sesión", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(ActivityLogin.this, Activity_MenuProveedor.class);
+                                Usuario p = new Usuario();
+                                startActivity(intent);
+
                         }
 
                         @Override
