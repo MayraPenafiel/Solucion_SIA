@@ -22,21 +22,15 @@
                 android:exported="false"
                 android:theme="@style/Theme.NoActionBar"/>
         <activity
-                android:name=".activity.DialogoConfirmarDatos"
+                android:name=".DialogoConfirmarDatos"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".activity.ActivityCrearProveedor"
-                android:exported="false"/>
-        <activity
-                android:name=".activity.DialogoAprovacionR"
+                android:name=".DialogoAprovacionR"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".activity.ActivityRegistrarServicio"
-                android:exported="false"/>
-        <activity
-                android:name=".activity.ActivityCrearCliente"
+                android:name=".ActivityCrearCliente"
                 android:exported="false"/>
         <activity
                 android:name=".activity.DialogoRecuperacionC"

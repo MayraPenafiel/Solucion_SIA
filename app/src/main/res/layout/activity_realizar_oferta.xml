@@ -13,8 +13,8 @@
             android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/RealizarOferta" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintVertical_bias="0.022"/>
+            app:layout_constraintVertical_bias="1.0" android:layout_marginBottom="43dp"
+            app:layout_constraintBottom_toTopOf="@+id/detalleSubasta"/>
     <View
             android:id="@+id/divider"
             android:layout_width="430dp"
@@ -28,9 +28,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/detalleSubasta"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider" android:layout_marginTop="20dp"
-            app:layout_constraintHorizontal_bias="0.501" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.0"/>
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.076" app:layout_constraintTop_toTopOf="parent"/>
     <TextView
             android:text="@string/numero_form"
             android:layout_width="wrap_content"
@@ -152,13 +152,14 @@
             app:layout_constraintVertical_bias="0.006"/>
     <EditText
             android:layout_width="220dp"
-            android:layout_height="27dp"
+            android:layout_height="48dp"
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/txtprecioROofer"
             app:layout_constraintStart_toEndOf="@+id/textView15" app:layout_constraintTop_toBottomOf="@+id/txtnumROofer"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.405" app:layout_constraintVertical_bias="0.102"/>
+            app:layout_constraintHorizontal_bias="0.405" app:layout_constraintVertical_bias="0.102"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"/>
     <EditText
             android:layout_width="226dp"
             android:layout_height="95dp"
@@ -170,11 +171,12 @@
             android:layout_marginTop="20dp" app:layout_constraintStart_toEndOf="@+id/textView16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.26"
-            app:layout_constraintVertical_bias="0.016"/>
+            app:layout_constraintVertical_bias="0.016"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"/>
     <Button
             android:text="@string/boton_cancelar"
             android:layout_width="121dp"
-            android:layout_height="41dp" android:id="@+id/btcancelarRO"
+            android:layout_height="48dp" android:id="@+id/btcancelarRO"
             app:layout_constraintTop_toBottomOf="@+id/txtdescROofer"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.794"
@@ -182,7 +184,7 @@
     <Button
             android:text="@string/boton_ofertar"
             android:layout_width="107dp"
-            android:layout_height="41dp" android:id="@+id/btOfertarRO"
+            android:layout_height="48dp" android:id="@+id/btOfertarRO"
             app:layout_constraintTop_toBottomOf="@+id/txtdescROofer"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.2"

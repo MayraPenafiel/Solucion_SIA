@@ -1,15 +1,20 @@
 package com.example.subastainversaapp.activity;
 
+import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import com.example.subastainversaapp.ActivityConfigurarCli;
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor;
+import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasAceptadas;
+import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasActivas;
+import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasRechazadas;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
 
@@ -43,51 +48,51 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
         actionBarDrawerToggle.syncState();
 
         //Cargar fragment main (que se cargará después de iniciar sesión)
-        /*fragmentManager=getSupportFragmentManager();
+        fragmentManager=getSupportFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container,new MainFragment());
-        fragmentTransaction.commit();*/
+        fragmentTransaction.add(R.id.container,new FragmentInicioProveedor());
+        fragmentTransaction.commit();
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-        /*if(item.getItemId() ==R.id.home){
+        if(item.getItemId() ==R.id.home){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new MainFragment());
+            fragmentTransaction.replace(R.id.container,new FragmentInicioProveedor());
             fragmentTransaction.commit();
         }
-        if(item.getItemId() ==R.id.ofertas_activas{
+        if(item.getItemId() ==R.id.ofertas_activas){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.replace(R.id.container,new FragmentOfertasActivas());
             fragmentTransaction.commit();
         }
         if(item.getItemId() ==R.id.ofertas_aceptadas){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.replace(R.id.container,new FragmentOfertasAceptadas());
             fragmentTransaction.commit();
         }
         if(item.getItemId() ==R.id.ofertas_r){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.replace(R.id.container,new FragmentOfertasRechazadas());
             fragmentTransaction.commit();
         }
-        if(item.getItemId() ==R.id.notificaciones){
+        /*if(item.getItemId() ==R.id.notificaciones){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new Menu_principal());
             fragmentTransaction.commit();
-        }
+        }*/
         if(item.getItemId() ==R.id.configuracion){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.replace(R.id.container,new ActivityConfigurarCli());
             fragmentTransaction.commit();
         }
-        if(item.getItemId() ==R.id.log_out){
+        /*if(item.getItemId() ==R.id.log_out){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new Menu_principal());

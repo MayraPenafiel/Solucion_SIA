@@ -1,18 +1,18 @@
 package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import androidx.fragment.app.FragmentManager;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Cliente;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceCliente;
+import com.example.subastainversaapp.sqlite.InsertsDBHelper;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -47,33 +47,54 @@ public class ActivityCrearCliente extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
+                //FragmentManager fm = getSupportFragmentManager();
                 //DialogoAprovacionR dc = new DialogoAprovacionR();
-                DialogoConfirmarDatos dcd = new DialogoConfirmarDatos();
-                dcd.show(fm, "tagAlerta");
+
                 //dc.show(fm, "tagAlerta");
 
-                if (    txtNombre.getText().toString().isEmpty() ||
+                if (txtNombre.getText().toString().isEmpty() ||
                         txtApellido.getText().toString().isEmpty() ||
                         txtCorreo.getText().toString().isEmpty() ||
                         txtTelefono.getText().toString().isEmpty() ||
                         txtDireccion.getText().toString().isEmpty() ||
-                        txtContraC.getText().toString().isEmpty()
+                        txtContraC.getText().toString().isEmpty() ||
+                        txtNombre.getText().toString() == "" ||
+                        txtApellido.getText().toString() == "" ||
+                        txtCorreo.getText().toString() == "" ||
+                        txtTelefono.getText().toString() == "" ||
+                        txtDireccion.getText().toString() == "" ||
+                        txtContraC.getText().toString() == ""
                 ) {
-                    Toast.makeText(ActivityCrearCliente.this, "Datos Erroneos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityCrearCliente.this, "Datos Erroneos", Toast.LENGTH_LONG).show();
+                    System.out.println("Los campos estan vacios");
                     return;
+                } else {
+                    if (txtContraC.getText().toString() == "" || txtContraC.getText().toString().isEmpty() ||
+                            txtRepContra.getText().toString() == "" || txtRepContra.getText().toString().isEmpty()) {
+                        Toast.makeText(ActivityCrearCliente.this, "Las Contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                        return;
+                    } else {
+                        if (txtContraC.getText().toString() == txtRepContra.getText().toString()) {
+                            //DialogoConfirmarDatos dcd = new DialogoConfirmarDatos();
+                            //dcd.show(fm, "tagAlerta");
+                            System.out.println("COntraseñas no vacias");
+                        }
+                    }
+                    Usuario us1 = new Usuario();
+
+                    createPost(0L, txtNombre.getText().toString(),
+                            txtApellido.getText().toString(),
+                            txtCorreo.getText().toString(),
+                            txtTelefono.getText().toString(),
+                            txtDireccion.getText().toString(),
+                            us1);
+
+                    Intent intent = new Intent(v.getContext(), ActivityLogin.class);
+                    startActivityForResult(intent, 0);
+                    InsertsDBHelper save = new InsertsDBHelper(ActivityCrearCliente.this);
+                    save.insertRC(txtNombre.getText().toString(), txtApellido.getText().toString(), txtCorreo.getText().toString(), txtTelefono.getText().toString(), txtDireccion.getText().toString(), txtContraC.getText().toString(),txtCorreo.getText().toString(),txtContraC.getText().toString());
+                    save.insertUsuario(us1.getNombreUsuario(),us1.getContraseniaUsuario());
                 }
-                Usuario us1= new Usuario();
-
-                createPost(0L, txtNombre.getText().toString(),
-                        txtApellido.getText().toString(),
-                        txtCorreo.getText().toString(),
-                        txtTelefono.getText().toString(),
-                        txtDireccion.getText().toString(),
-                        us1);
-
-                Intent intent = new Intent (v.getContext(), ActivityLogin.class);
-                startActivityForResult(intent, 0);
             }
         });
     }
@@ -109,8 +130,8 @@ public class ActivityCrearCliente extends AppCompatActivity {
                 txtCorreo.setText("email");
                 txtTelefono.setText("telefono");
                 txtDireccion.setText("direccion");
-                usuario1.setContraseniaUsuario("contraseniaUsuario");
-                usuario1.setNombreUsuario("nombreUsuario");
+                usuario1.setContraseniaUsuario("contrasenia_usuario");
+                usuario1.setNombreUsuario("nombre_usuario");
             }
 
             @Override
