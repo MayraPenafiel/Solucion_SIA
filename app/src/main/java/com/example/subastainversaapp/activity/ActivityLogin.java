@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.subastainversaapp.ActivityCrearCliente;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.api.Apis;
 import com.example.subastainversaapp.entity.Usuario;

@@ -8,7 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.repository.DBHelper;
+import com.example.subastainversaapp.sqlite.DBHelper;
 
 public class ActivityCrearProveedor extends AppCompatActivity {
 

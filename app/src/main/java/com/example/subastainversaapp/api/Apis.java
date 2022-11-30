@@ -10,7 +10,7 @@ public class Apis {
     private static HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 
     public static Retrofit getInstance() {
-        Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://192.168.1.116:9090") //revisar y cambiar al ip de tu localhost
+        Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://192.168.100.26:9090") //revisar y cambiar al ip de tu localhost
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build());
         return builder.build();
