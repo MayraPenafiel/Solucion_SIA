@@ -35,6 +35,9 @@
                 android:name=".activity.ActivityCrearCliente"
                 android:exported="false"/>
         <activity
+                android:name=".activity.ActivityRegistrarServicio"
+                android:exported="false"/>
+        <activity
                 android:name=".activity.DialogoRecuperacionC"
                 android:exported="false"
                 tools:ignore="Instantiatable"/>
