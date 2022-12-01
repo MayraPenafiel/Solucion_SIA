@@ -4,6 +4,7 @@ import com.example.subastainversaapp.entity.Subasta;
 import retrofit2.Call;
 import retrofit2.http.*;
 
+import java.util.Date;
 import java.util.List;
 
 public interface ServiceSubasta {
@@ -12,8 +13,8 @@ public interface ServiceSubasta {
     Call<List<Subasta>> listSubasta();
     @GET("/subasta/listar_filtro/{filtro}") //filtro de cualquier campo de subasta
     Call<List<Subasta>> listSubastaFiltro(@Path("filtro") String filtro);
-    @GET("/subasta/listar_fecha/{fechaInicio}/{fechaFin}")
-    Call<List<Subasta>> listSubastaFiltroFechas(@Path("fechaInicio") String fechaInicio, @Path("fechaFin") String fechaFin);
+    @GET("/subasta/listar_fechas/{fechaInicio}/{fechaFin}")
+    Call<List<Subasta>> listSubastaFiltroFechas(@Path("fechaInicio") Date fechaInicio, @Path("fechaFin") Date fechaFin);
     @POST("/subasta/crear")
     Call<Subasta> createSubasta(@Body Subasta subasta);
     @DELETE("/subasta/eliminar/{idSubasta}")

@@ -1,11 +1,11 @@
-package com.example.subastainversaapp.activity.fragments.proveedor;
+package com.example.subastainversaapp.activity.fragments;
 
 import android.os.Bundle;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.subastainversaapp.R;
 
-public class ActivityRealizarOferta extends AppCompatActivity {
+public class FragmentRealizarOferta extends AppCompatActivity {
 
     EditText txtContraC, txtNombre, txtApellido, txtCorreo, txtTelefono
             ,txtDireccion, txtRepContra;

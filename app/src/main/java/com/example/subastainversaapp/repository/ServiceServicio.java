@@ -10,6 +10,8 @@ public interface ServiceServicio {
 
     @GET("/servicio/listar")
     Call<List<Servicio>> listServicios();
+    @GET("/servicio/listar_filtro/{filtro}")
+    Call<List<Servicio>> listServiciosFiltro(@Path("filtro")String filtro);
     @PUT ("/servicio/editar/{idServicio}")
     Call<Servicio> editServicios(@Path("idServicio") Long id);
     @POST("/servicio/crear")

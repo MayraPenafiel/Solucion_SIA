@@ -9,6 +9,6 @@ import retrofit2.http.POST;
 public interface ServicePersona {
     @GET("/persona/listar")
     Call<Persona> listSubasta();
-    @POST("/persona")
+    @POST("/persona/crear")
     Call<Persona> createSubasta(@Body Persona persona);
 }

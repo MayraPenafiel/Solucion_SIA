@@ -11,10 +11,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.ActivityConfigurarCli;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasAceptadas;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasActivas;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasRechazadas;
+import com.example.subastainversaapp.activity.fragments.FragmentInicioProveedor;
+import com.example.subastainversaapp.activity.fragments.FragmentOfertasAceptadas;
+import com.example.subastainversaapp.activity.fragments.FragmentOfertasActivas;
+import com.example.subastainversaapp.activity.fragments.FragmentOfertasRechazadas;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
 
