@@ -17,8 +17,6 @@ import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceUsuario;
 import com.example.subastainversaapp.sqlite.DBHelper;
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 import java.util.ArrayList;
 
@@ -47,7 +45,7 @@ public class ActivityLogin extends AppCompatActivity {
         txtUsuario = findViewById(R.id.edtTextUsuario);
         txtContra = findViewById(R.id.editTextTextPassword);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-       txtUsuario.setText("Ingrese su Correo");
+       txtUsuario.setHint("Ingrese su Correo");
        //txtContra.setText("1234");
 
         txtOlvidar_contrasena.setOnClickListener(new View.OnClickListener() {
@@ -78,12 +76,14 @@ public class ActivityLogin extends AppCompatActivity {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validateUsername() && validatePassword()) {
+               // if (validateUsername() && validatePassword()) {
                     System.out.println("pasa validacion de campos");
                     Usuario s = new Usuario(txtUsuario.getText().toString(), txtContra.getText().toString());
                     Call<Usuario> call = Apis.getInstance().create(ServiceUsuario.class).getUser(s);
-
-                    call.enqueue(new Callback<Usuario>() {
+                    Intent intent = new Intent(ActivityLogin.this, Activity_MenuProveedor.class);
+                    Usuario p = new Usuario();
+                    startActivity(intent);
+                    /*call.enqueue(new Callback<Usuario>() {
                        @Override
                         public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                             System.out.println("Pasa las validaciones");
@@ -97,9 +97,9 @@ public class ActivityLogin extends AppCompatActivity {
                         public void onFailure(Call<Usuario> call, Throwable t) {
                             Toast.makeText(ActivityLogin.this, "fallo", Toast.LENGTH_SHORT).show();
                        }
-                    });
+                    });*/
 
-                }
+                //}
 
             }
         });

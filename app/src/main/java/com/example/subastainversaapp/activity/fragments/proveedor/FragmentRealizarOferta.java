@@ -5,22 +5,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.example.subastainversaapp.R;
 import org.jetbrains.annotations.NotNull;
 
-public class ActivityRealizarOferta extends Fragment {
+public class FragmentRealizarOferta extends Fragment {
 
-    EditText txtContraC, txtNombre, txtApellido, txtCorreo, txtTelefono
+    EditText txtprecio, txtDescripcion;
+    TextView txtApellido, txtCorreo, txtTelefono
             ,txtDireccion, txtRepContra;
+
+    //TextView
     @Nullable
     @org.jetbrains.annotations.Nullable
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_realizar_oferta, container, false);
-
+        txtprecio=view.findViewById(R.id.txtprecioROofer);
+        txtDescripcion=view.findViewById(R.id.txtdescROofer);
+        //= new ArrayList<>();
+        //mostrarDatos();
         /*btnGuardar= view.findViewById(R.id.btnConfiServicios);
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override

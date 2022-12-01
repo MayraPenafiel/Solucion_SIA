@@ -11,8 +11,9 @@ public class Oferta implements Serializable{
     private Double percioOferta;
     @SerializedName("fecha_oferta")
     private String fecha;
-    @SerializedName("descripcion_oferta")
-    private String descripcion_oferta;
+
+    @SerializedName("comentario_calificacion_oferta")
+    private String comentario_calificacion_oferta;
     @SerializedName("estado_oferta")
     private String estado;
 
@@ -24,11 +25,11 @@ public class Oferta implements Serializable{
     public Oferta() {
     }
 
-    public Oferta(Long idOferta, Double percioOferta, String fecha, String descripcion_oferta, String estado, Proveedor proveedor, Subasta subasta) {
+    public Oferta(Long idOferta, Double percioOferta, String fecha, String comentario_calificacion_oferta, String estado, Proveedor proveedor, Subasta subasta) {
         this.idOferta = idOferta;
         this.percioOferta = percioOferta;
         this.fecha = fecha;
-        this.descripcion_oferta = descripcion_oferta;
+        this.comentario_calificacion_oferta = comentario_calificacion_oferta;
         this.estado = estado;
         this.proveedor = proveedor;
         this.subasta = subasta;
@@ -58,12 +59,12 @@ public class Oferta implements Serializable{
         this.fecha = fecha;
     }
 
-    public String getDescripcion_oferta() {
-        return descripcion_oferta;
+    public String getComentario_calificacion_oferta() {
+        return comentario_calificacion_oferta;
     }
 
-    public void setDescripcion_oferta(String descripcion_oferta) {
-        this.descripcion_oferta = descripcion_oferta;
+    public void setComentario_calificacion_oferta(String comentario_calificacion_oferta) {
+        this.comentario_calificacion_oferta = comentario_calificacion_oferta;
     }
 
     public String getEstado() {

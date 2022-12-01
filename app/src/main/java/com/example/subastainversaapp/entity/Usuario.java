@@ -3,6 +3,8 @@ package com.example.subastainversaapp.entity;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Usuario implements Serializable {
     @SerializedName("usuario_id")
@@ -13,6 +15,9 @@ public class Usuario implements Serializable {
 
     @SerializedName("contrasenia_usuario")
     private String contraseniaUsuario;
+
+    @SerializedName("rol_id")
+    private Set<Rol> roles = new HashSet<>();
 
     public Usuario() {
     }

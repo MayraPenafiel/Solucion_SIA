@@ -8,7 +8,7 @@ public class Servicio implements Serializable {
 
     @SerializedName("id_servicio")
     private long idServicio;
-    @SerializedName("nombreServicio")
+    @SerializedName("nombre_servicio")
     private String nombreServicio;
     @SerializedName("descripcion_servicio")
     private String descripcion_servicio;

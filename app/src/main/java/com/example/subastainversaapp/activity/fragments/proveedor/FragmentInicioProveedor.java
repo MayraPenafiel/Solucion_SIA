@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
@@ -43,13 +45,15 @@ public class FragmentInicioProveedor extends Fragment {
         subastas= new ArrayList<>();
         mostrarDatos();
         ofertar= (Button) view.findViewById(R.id.btfertariniprov);
-        /*ofertar.setOnClickListener(new View.OnClickListener() {
+        ofertar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(FragmentInicioProveedor.this.getActivity().getBaseContext(),ActivityRealizarOferta.class);
-                startActivity(i);
+                FragmentManager fm =getActivity().getSupportFragmentManager();
+                FragmentTransaction ft=fm.beginTransaction();
+                ft.replace(R.id.container,new FragmentRealizarOferta(),null);
+                ft.commit();
             }
-        });*/
+        });
         return view;
     }
 
