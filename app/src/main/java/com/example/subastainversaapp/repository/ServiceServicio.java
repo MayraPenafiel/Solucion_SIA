@@ -8,12 +8,14 @@ import java.util.List;
 
 public interface ServiceServicio {
 
-    @GET("/servicio/listar")
+    @GET("/auth/servicio/listar")
     Call<List<Servicio>> listServicios();
-    @PUT ("/servicio/editar/{idServicio}")
-    Call<Servicio> editServicios(@Path("idServicio") Long id);
-    @POST("/servicio/crear")
+    @GET("/auth/servicio/listar_filtro/{filtro")
+    Call<List<Servicio>> listServiciosFiltro(@Path("filtro") String filtro);
+    @PUT ("/auth/servicio/editar/{idServicio}")
+    Call<Servicio> editServicios(@Path("idServicio") Long id, @Body Servicio servicio);
+    @POST("/auth/servicio/crear")
     Call<Servicio> createServicios(@Body Servicio servicio);
-    @DELETE("/servicio/eliminar/{idServicio}")
+    @DELETE("/auth/servicio/eliminar/{idServicio}")
     Call<Servicio> deleteService(@Path("idServicio") Long id);
 }

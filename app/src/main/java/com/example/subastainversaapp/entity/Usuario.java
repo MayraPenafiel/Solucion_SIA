@@ -27,6 +27,13 @@ public class Usuario implements Serializable {
         this.contraseniaUsuario = contraseniaUsuario;
     }
 
+    public Usuario(Long usuario_id, String nombreUsuario, String contraseniaUsuario, Set<Rol> roles) {
+        this.usuario_id = usuario_id;
+        this.nombreUsuario = nombreUsuario;
+        this.contraseniaUsuario = contraseniaUsuario;
+        this.roles = roles;
+    }
+
     public Long getUsuario_id() {
         return usuario_id;
     }
@@ -49,5 +56,13 @@ public class Usuario implements Serializable {
 
     public void setContraseniaUsuario(String contraseniaUsuario) {
         this.contraseniaUsuario = contraseniaUsuario;
+    }
+
+    public Set<Rol> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Rol> roles) {
+        this.roles = roles;
     }
 }

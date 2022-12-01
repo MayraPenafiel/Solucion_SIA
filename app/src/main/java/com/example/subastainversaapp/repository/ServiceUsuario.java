@@ -2,7 +2,6 @@ package com.example.subastainversaapp.repository;
 
 import com.example.subastainversaapp.entity.Cliente;
 import com.example.subastainversaapp.entity.Usuario;
-import com.example.subastainversaapp.response.ResponsesClassUsuario;
 import retrofit2.Call;
 import retrofit2.http.*;
 
@@ -14,7 +13,7 @@ public interface ServiceUsuario {
     Call<List<Usuario>> listUsuario();
 
     @POST("/usuario/crear")
-    Call<ResponsesClassUsuario> createUsuario(@Body Usuario responseRegisterClass);
+    Call<Usuario> createUsuario(@Body Usuario usuario);
     @DELETE("/usuario/eliminar/{idUsuario}")
     Call<Cliente> deleteUsuario(@Path("idUsuario") Long id);
     @PUT("/usuario/editar/{idUsuario}")
