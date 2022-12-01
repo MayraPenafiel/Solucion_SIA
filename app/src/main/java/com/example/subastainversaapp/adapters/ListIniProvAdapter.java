@@ -11,13 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Subasta;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
-public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.ViewHolder> {
+public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.ViewHolder> implements View.OnClickListener{
 
     private List<Subasta> auctionList;
     private final LayoutInflater layoutInflater;
     private final Context context;
+
+    private View.OnClickListener listener;
 
 
 
@@ -35,6 +38,7 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
     @Override
     public ListIniProvAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view = layoutInflater.inflate(R.layout.inicio_prov_item,null);
+        view.setOnClickListener(this);
         return new ListIniProvAdapter.ViewHolder(view);
     }
 
@@ -55,6 +59,18 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
         auctionList=items;
     }
 
+
+    public void setOnClickListener(View.OnClickListener listener) {
+
+        this.listener=listener;
+    }
+    @Override
+    public void onClick(View view){
+        if(listener!=null){
+            listener.onClick(view);
+        }
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView numero, servicio, fcini, fcfin;
@@ -67,7 +83,7 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
             servicio = itemView.findViewById(R.id.txtserviniprov);
             fcini = itemView.findViewById(R.id.txtfeciniprov);
             fcfin = itemView.findViewById(R.id.txtprecioOR);
-            lista=itemView.findViewById(R.id.listaIniProv);
+//            lista=itemView.findViewById(R.id.listaIniProv);
         }
 
         void bindData(final Subasta item) {
@@ -75,13 +91,13 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
 
             //if(item.getServicio().getIdServicio()==)
             Long nro=item.getIdSubasta();
-            //SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            //String f_ini=formato.format(item.getFechaInicio());
-            //String f_fin=formato.format(item.getFechaFin());
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+//            String f_ini=formato.format(item.getFechaInicio());
+//            String f_fin=formato.format(item.getFechaFin());
             numero.setText(nro+"");
-            servicio.setText(item.getServicio().getNombreServicio());
-            //fcini.setText(f_ini);
-            //fcfin.setText(f_fin);
+            servicio.setText(item.getNombreServicio());
+//            fcini.setText(f_ini);
+//            fcfin.setText(f_fin);
         }
 
     }

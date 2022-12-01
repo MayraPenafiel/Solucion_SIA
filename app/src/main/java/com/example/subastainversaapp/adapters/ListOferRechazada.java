@@ -74,7 +74,7 @@ public class ListOferRechazada extends RecyclerView.Adapter<ListOferRechazada.Vi
                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
                 String f_ini = formato.format(item.getFecha());
                 numero.setText(nro + "");
-                servicio.setText(item.getSubasta().getServicio().getNombreServicio());
+                servicio.setText(item.getSubasta().getNombreServicio());
                 fc.setText(f_ini);
                 double pre = item.getPercioOferta();
                 precio.setText(pre + "");

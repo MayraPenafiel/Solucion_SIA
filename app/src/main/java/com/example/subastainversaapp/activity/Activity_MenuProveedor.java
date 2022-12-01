@@ -6,19 +6,20 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.ActivityConfigurarCli;
+import com.example.subastainversaapp.ActivityConfigurarPro;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasAceptadas;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasActivas;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasRechazadas;
+import com.example.subastainversaapp.activity.fragments.FragmentConfigProveedor;
+import com.example.subastainversaapp.activity.fragments.proveedor.*;
+import com.example.subastainversaapp.entity.Subasta;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
 
-public class Activity_MenuProveedor extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class Activity_MenuProveedor extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,IComunicaProvOfert{
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -28,6 +29,8 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
     //Variables fragment main
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    //Variable para pasar el detalle de la subasta
+    FragmentRealizarOferta fragmentRealizarOferta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,7 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
 
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+        drawerLayout.closeDrawer(GravityCompat.START);
         if(item.getItemId() ==R.id.home){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
@@ -89,15 +93,32 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
         if(item.getItemId() ==R.id.configuracion){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new ActivityConfigurarCli());
+            fragmentTransaction.replace(R.id.container,new FragmentConfigProveedor());
             fragmentTransaction.commit();
         }
         /*if(item.getItemId() ==R.id.log_out){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Menu_principal());
+            fragmentTransaction.replace(R.id.container,new ActivityLogin());
             fragmentTransaction.commit();
         }*/
         return false;
+    }
+
+    @Override
+    public void enviarDetSubasta(Subasta subasta) {
+
+        fragmentRealizarOferta = new FragmentRealizarOferta();
+        //Objeto bundle para pasar la información
+        Bundle bundleEnvio = new Bundle();
+        //Enviar objeto
+        bundleEnvio.putSerializable("objeto",subasta);
+        fragmentRealizarOferta.setArguments(bundleEnvio);
+        //Se abre fragment
+        fragmentManager=getSupportFragmentManager();
+        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container,new FragmentRealizarOferta());
+        fragmentTransaction.commit();
+
     }
 }
