@@ -23,7 +23,7 @@ public class Apis {
 //    }
 
     public static Retrofit getInstance() {
-        Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://"+getIPAddress()+":9090") //revisar y cambiar al ip de tu localhost
+        Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://192.168.18.56:9090") //revisar y cambiar al ip de tu localhost
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build());
         return builder.build();

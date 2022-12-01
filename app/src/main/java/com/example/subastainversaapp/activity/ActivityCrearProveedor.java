@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.api.Apis;
 import com.example.subastainversaapp.entity.Proveedor;
 import com.example.subastainversaapp.entity.Usuario;
 import com.example.subastainversaapp.repository.ServiceProveedor;
@@ -94,10 +95,10 @@ public class ActivityCrearProveedor extends AppCompatActivity {
     }
 
     private void createPost(Long id_persona, String nombre, String apellido, String email, String telefono, String direccion, Usuario usuario) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090")
-                .addConverterFactory(GsonConverterFactory.create()).build();
+//        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:9090")
+//                .addConverterFactory(GsonConverterFactory.create()).build();
 
-        ServiceProveedor provservice = retrofit.create(ServiceProveedor.class);
+        ServiceProveedor provservice = Apis.getInstance().create(ServiceProveedor.class);
         Usuario usuario1 = new Usuario(txt_CorreoP.getText().toString(), txtContraseniaProv.getText().toString());
         Proveedor c = new Proveedor(id_persona, nombre, apellido, email, telefono, direccion, usuario1);
         Call<Proveedor> call = provservice.createProveedor(c);
