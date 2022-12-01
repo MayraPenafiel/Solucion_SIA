@@ -89,9 +89,10 @@ public class ActivityCrearCliente extends AppCompatActivity {
                             txtTelefono.getText().toString(),
                             txtDireccion.getText().toString(),
                             us1);
+
                     InsertsDBHelper save = new InsertsDBHelper(ActivityCrearCliente.this);
                     save.insertRC(txtNombre.getText().toString(), txtApellido.getText().toString(), txtCorreo.getText().toString(), txtTelefono.getText().toString(), txtDireccion.getText().toString(), txtContraC.getText().toString(),txtCorreo.getText().toString(),txtContraC.getText().toString());
-                    save.insertUsuario(us1.getNombreUsuario(),us1.getContraseniaUsuario());
+
                     Intent intent = new Intent(v.getContext(), ActivityLogin.class);
                     startActivityForResult(intent, 0);
 
