@@ -72,6 +72,7 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
         }
 
         void bindData(final Subasta item) {
+            setItems(auctionList);
             //System.out.println(item.getIdSubasta().toString()+"WWWWWWWWWWWWWWWWWWWWWWW");
 
             //if(item.getServicio().getIdServicio()==)
@@ -80,8 +81,8 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
             String f_ini=formato.format(item.getFechaInicio());
             //String f_fin=formato.format(item.getFechaFin());
             numero.setText(nro+"");
-            servicio.setText(item.getServicio().toString());
-            fcini.setText(f_ini);
+            //servicio.setText(item.getServicio().toString());
+//            fcini.setText(f_ini);
             //fcini.setText(f_ini);
             //fcfin.setText(f_fin);
         }
