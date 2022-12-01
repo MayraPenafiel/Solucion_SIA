@@ -1,5 +1,6 @@
 package com.example.subastainversaapp.activity.fragments.proveedor;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
@@ -39,17 +42,20 @@ public class FragmentInicioProveedor extends Fragment {
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_inicio_proveedor,container,false);
+        View view1 =inflater.inflate(R.layout.inicio_prov_item,container,false);
         recyclerView= view.findViewById(R.id.listaIniProv);
         subastas= new ArrayList<>();
         mostrarDatos();
-        ofertar= (Button) view.findViewById(R.id.btfertariniprov);
-        /*ofertar.setOnClickListener(new View.OnClickListener() {
+        ofertar= view1.findViewById(R.id.btfertariniprov);
+        ofertar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(FragmentInicioProveedor.this.getActivity().getBaseContext(),ActivityRealizarOferta.class);
-                startActivity(i);
+                FragmentManager fm =getActivity().getSupportFragmentManager();
+                FragmentTransaction ft=fm.beginTransaction();
+                ft.replace(R.id.container,new FragmentRealizarOferta(),null);
+                ft.commit();
             }
-        });*/
+        });
         return view;
     }
 
