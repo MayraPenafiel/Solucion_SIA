@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.activity.fragments.proveedor;
+package com.example.subastainversaapp.activity.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.example.subastainversaapp.activity.fragments.proveedor;
+package com.example.subastainversaapp.activity.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.adapters.ListOfeActivaAdapter;
+import com.example.subastainversaapp.adapters.ListOferRechazada;
 import com.example.subastainversaapp.entity.Oferta;
 import com.example.subastainversaapp.repository.ServiceOferta;
 import org.jetbrains.annotations.NotNull;
@@ -24,18 +24,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragmentOfertasAceptadas extends Fragment {
+public class FragmentOfertasRechazadas extends Fragment {
 
     private List<Oferta> offers;
     private RecyclerView recyclerView;
-    private ListOfeActivaAdapter adapteroferes;
+    private ListOferRechazada adapterofertas;
 
     @Nullable
     @org.jetbrains.annotations.Nullable
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment_ofertas_aceptadas,container,false);
-        recyclerView= view.findViewById(R.id.listaOferAceptadas);
+        View view =inflater.inflate(R.layout.fragment_ofertas_rechazadas,container,false);
+        recyclerView= view.findViewById(R.id.listaOferRechazada);
         offers= new ArrayList<>();
         mostrarDatos();
         return view;
@@ -53,17 +53,16 @@ public class FragmentOfertasAceptadas extends Fragment {
                 if(response.isSuccessful()){
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     offers=response.body();
-                    adapteroferes= new ListOfeActivaAdapter(offers, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos
-                    recyclerView.setAdapter(adapteroferes);
+                    adapterofertas= new ListOferRechazada(offers, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos
+                    recyclerView.setAdapter(adapterofertas);
                 }
             }
 
             @Override
             public void onFailure(Call<List<Oferta>> call, Throwable t) {
-                Toast.makeText(getContext(), "Error de extracción de ofertas", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Error de extraccion de ofertas", Toast.LENGTH_SHORT).show();
 
             }
         });
     }
-
 }

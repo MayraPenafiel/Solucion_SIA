@@ -21,5 +21,4 @@ public interface ServiceUsuario {
     @POST("getUser")
     Call<Usuario> getUser(@Body Usuario usuario);
 
-
 }
