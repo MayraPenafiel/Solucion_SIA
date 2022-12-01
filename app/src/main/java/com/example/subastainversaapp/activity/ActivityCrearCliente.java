@@ -126,7 +126,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
         call.enqueue(new Callback<Cliente>() {
             @Override
             public void onResponse(Call<Cliente> call, Response<Cliente> response) {
-                Toast.makeText(ActivityCrearCliente.this, "Cliente añadido con exito", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivityCrearCliente.this, "Proveedor añadido con exito", Toast.LENGTH_SHORT).show();
                 txtNombre.setText("nombre");
                 txtApellido.setText("apellido");
                 txtCorreo.setText("email");

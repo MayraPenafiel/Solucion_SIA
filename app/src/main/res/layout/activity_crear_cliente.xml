@@ -20,7 +20,7 @@
             app:layout_constraintBottom_toTopOf="@+id/textView11" tools:ignore="SpeakableTextPresentCheck"
             android:importantForAutofill="no"/>
     <TextView
-            android:text="REGISTRO CLIENTE"
+            android:text="REGISTRO PROVEEDOR"
             android:textAlignment="center"
             android:textSize="24sp"
             android:layout_width="wrap_content"
