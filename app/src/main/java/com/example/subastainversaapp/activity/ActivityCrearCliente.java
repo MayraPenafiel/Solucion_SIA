@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.api.Apis;
 import com.example.subastainversaapp.entity.Cliente;
@@ -48,10 +49,7 @@ public class ActivityCrearCliente extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //FragmentManager fm = getSupportFragmentManager();
-                //DialogoAprovacionR dc = new DialogoAprovacionR();
 
-                //dc.show(fm, "tagAlerta");
 
                 if (txtNombre.getText().toString().isEmpty() ||
                         txtApellido.getText().toString().isEmpty() ||
@@ -96,6 +94,10 @@ public class ActivityCrearCliente extends AppCompatActivity {
                     save.insertRC(txtNombre.getText().toString(), txtApellido.getText().toString(), txtCorreo.getText().toString(), txtTelefono.getText().toString(), txtDireccion.getText().toString(), txtContraC.getText().toString(),txtCorreo.getText().toString(),txtContraC.getText().toString());
                     save.insertUsuario(us1.getNombreUsuario(),us1.getContraseniaUsuario());
                 }
+                FragmentManager fm = getSupportFragmentManager();
+                DialogoAprovacionR dc = new DialogoAprovacionR();
+
+                dc.show(fm, "tagAlerta");
             }
         });
     }
