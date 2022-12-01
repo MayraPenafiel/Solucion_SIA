@@ -29,7 +29,8 @@ public class DBHelper extends SQLiteOpenHelper {
                 "telefono TEXT NOT NULL, "+
                 "direccion TEXT NOT NULL, "+
                 "contrasenia TEXT NOT NULL," +
-                "id_usuario TEXT NOT NULL);");
+                "id_usuario_fk INTEGER NOT NULL," +
+                "FOREIGN KEY(id_usuario_fk) REFERENCES "+TABLA_USUARIO+"(id_usuario));");
 
         db.execSQL("CREATE TABLE "+ TABLA_USUARIO+" ("+
                 "id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,"+
