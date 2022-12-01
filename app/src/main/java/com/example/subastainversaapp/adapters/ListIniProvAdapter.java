@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Subasta;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.ViewHolder> {
@@ -75,11 +76,12 @@ public class ListIniProvAdapter extends RecyclerView.Adapter<ListIniProvAdapter.
 
             //if(item.getServicio().getIdServicio()==)
             Long nro=item.getIdSubasta();
-            //SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            //String f_ini=formato.format(item.getFechaInicio());
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+            String f_ini=formato.format(item.getFechaInicio());
             //String f_fin=formato.format(item.getFechaFin());
             numero.setText(nro+"");
-            servicio.setText(item.getServicio().getNombreServicio());
+            servicio.setText(item.getServicio().toString());
+            fcini.setText(f_ini);
             //fcini.setText(f_ini);
             //fcfin.setText(f_fin);
         }

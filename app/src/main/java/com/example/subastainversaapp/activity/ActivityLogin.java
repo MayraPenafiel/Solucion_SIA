@@ -47,7 +47,7 @@ public class ActivityLogin extends AppCompatActivity {
         txtUsuario = findViewById(R.id.edtTextUsuario);
         txtContra = findViewById(R.id.editTextTextPassword);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-       txtUsuario.setText("Ingrese su Correo");
+       txtUsuario.setHint("Ingrese su Correo");
        //txtContra.setText("1234");
 
         txtOlvidar_contrasena.setOnClickListener(new View.OnClickListener() {
