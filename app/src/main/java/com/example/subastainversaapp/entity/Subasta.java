@@ -24,23 +24,26 @@ public class Subasta implements Serializable {
     private String descripcionSubasta;
     @SerializedName("img_subasta")
     private String imgSubasta;
-    @SerializedName("id_cliente")
-    Cliente cliente = new Cliente();
-    @SerializedName("id_servicio")
-    Servicio servicio = new Servicio();
+//    @SerializedName("id_cliente")
+//    Cliente cliente = new Cliente();
+//    @SerializedName("id_servicio")
+//    Servicio servicio = new Servicio();
+
+    private String nombreServicio;
+    private String nombreCliente;
 
     public Subasta() {
     }
 
-    public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String descripcionSubasta, String imgSubasta, Cliente cliente, Servicio servicio) {
+    public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String descripcionSubasta, String imgSubasta, String nombreServicio, String nombreCliente) {
         this.idSubasta = idSubasta;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.estadoSubasta = estadoSubasta;
         this.descripcionSubasta = descripcionSubasta;
         this.imgSubasta = imgSubasta;
-        this.cliente = cliente;
-        this.servicio = servicio;
+        this.nombreServicio = nombreServicio;
+        this.nombreCliente = nombreCliente;
     }
 
     public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String tituloSubasta, String horaCierreSubasta, String descripcionSubasta, String imgSubasta, Cliente cliente, Servicio servicio) {
@@ -120,19 +123,20 @@ public class Subasta implements Serializable {
         this.imgSubasta = imgSubasta;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+
+    public String getNombreServicio() {
+        return nombreServicio;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setNombreServicio(String nombreServicio) {
+        this.nombreServicio = nombreServicio;
     }
 
-    public Servicio getServicio() {
-        return servicio;
+    public String getNombreCliente() {
+        return nombreCliente;
     }
 
-    public void setServicio(Servicio servicio) {
-        this.servicio = servicio;
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
     }
 }

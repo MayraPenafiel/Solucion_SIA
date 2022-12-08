@@ -47,21 +47,23 @@ public class ListAdapterSubastaCalificar extends RecyclerView.Adapter<ListAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView ProveedorSu,servicioitemSu,fechainicioSu,PrecioSu,valoracionSu;
+        TextView ProveedorSu,servicioitemSu,fechainicioSu,PrecioSu,valoracionSu, fechafin;
         ViewHolder(View itemView){
             super(itemView);
             ProveedorSu=itemView.findViewById(R.id.ProveedorSu);
             servicioitemSu=itemView.findViewById(R.id.servicioitemSu);
             fechainicioSu=itemView.findViewById(R.id.fechainicioSu);
+            fechafin = itemView.findViewById(R.id.fechafininisub);
             PrecioSu=itemView.findViewById(R.id.PrecioSu);
             valoracionSu=itemView.findViewById(R.id.valoracionSu);
         }
 
         void bindData(final Subasta item){
             Oferta of = new Oferta();
-            ProveedorSu.setText(item.getCliente().getNombre()+" "+item.getCliente().getApellido());
-            servicioitemSu.setText(item.getServicio().getNombreServicio());
+            ProveedorSu.setText(item.getNombreCliente());
+            servicioitemSu.setText(item.getNombreServicio());
             fechainicioSu.setText(item.getFechaInicio().toString());
+            fechafin.setText(item.getFechaFin().toString());
             PrecioSu.setText(of.getPercioOferta().toString());
             //valoracionSu.setText(of.getCalificacion().toString());
         }

@@ -15,7 +15,7 @@ public class InsertsDBHelper extends DBHelper{
     public long insertRC(String nombre,String apellido,String email,String telefono,String direccion,String contrasenia,String nombre_user,String contra) {
 
         long id=0;
-        long usuario=0;
+
         try {
             DBHelper dbHelper = new DBHelper(context);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -29,7 +29,6 @@ public class InsertsDBHelper extends DBHelper{
             values.put("contrasenia",contrasenia);
             values.put("nombre_usuario",nombre_user);
             values.put("contrasenia_usuario",contra);
-            usuario = db.insert("t_usuario",null,values);
             id = db.insert("t_registro_cliente",null,values);
 
         }catch (Exception e ){
